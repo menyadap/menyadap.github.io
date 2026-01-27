@@ -17,6 +17,7 @@ const iconImg = settings.meta.iconimage.slice(15);
 const siteFont = integration.siteFont;
 
 module.exports = {
+  pathPrefix: `/menyadap.github.io`,
   flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: settings.meta,
   plugins: [

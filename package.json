@@ -5,13 +5,14 @@
   "author": "Inroweb",
   "license": "MIT",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --prefix-paths --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "cms": "npx netlify-cms-proxy-server",
     "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && git add -f public && git commit -m 'Deploy' && git subtree push --prefix public origin gh-pages",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
