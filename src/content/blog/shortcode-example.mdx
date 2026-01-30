@@ -1,0 +1,158 @@
+﻿---
+title: "Contoh Shortcode di Markdown"
+description: "Tutorial menggunakan shortcode (Astro Components) langsung di file Markdown"
+date: 2024-01-28T00:00:00.000Z
+---
+
+&lt;!-- shortcode-example.md - Contoh penggunaan shortcode di Markdown biasa (bukan MDX)
+  Komponen dapat dipanggil langsung di Markdown v4+ Astro -->
+
+## Pengenalan Shortcode di Astro
+
+Di Astro v4+, Anda dapat menggunakan **Astro Components** langsung dalam file Markdown biasa (bukan MDX) tanpa perlu import manual.
+
+---
+
+## 1. Menggunakan Komponen Alert
+
+Shortcode `Alert` bisa digunakan dengan berbagai tipe:
+
+### Alert Info
+
+&lt;Alert type="info" title="Informasi">
+Ini adalah pesan informasi penting yang ingin Anda sampaikan kepada pembaca.
+&lt;/Alert>
+
+### Alert Warning
+
+&lt;Alert type="warning" title="Perhatian!">
+Hati-hati dengan konten ini, pastikan Anda membaca dengan teliti sebelum melanjutkan.
+&lt;/Alert>
+
+### Alert Danger
+
+&lt;Alert type="danger" title="Bahaya!">
+Ini adalah peringatan serius yang harus diperhatikan dengan seksama oleh pembaca.
+&lt;/Alert>
+
+### Alert Success
+
+&lt;Alert type="success" title="Berhasil!">
+Tindakan Anda telah berhasil dilaksanakan dengan sempurna.
+&lt;/Alert>
+
+---
+
+## 2. Menggunakan Komponen QuestionCard
+
+Shortcode `QuestionCard` menampilkan card pertanyaan dengan CTA button:
+
+<div class="qc-wrapper">
+  <div class="qc-card">
+    <div class="h2 qc-title">Aplikasi Pengawas HP Jarak Jauh?</div>
+    <p class="qc-subtitle">📱 Mendukung iPhone & Android</p>
+    <img
+      src="/images/sadap-phone.webp"
+      alt="Layanan Monitoring Perangkat"
+      class="qc-image"
+    />
+    <div class="qc-features">
+      <p>• 💬 Monitoring aktivitas aplikasi pesan (WhatsApp, Telegram, Line, Instagram, Facebook, Skype, Viber, Snapchat)</p>
+      <p>• 📷 Pemantauan kamera & layar dengan izin pemilik perangkat</p>
+      <p>• 📞 Riwayat panggilan telepon & akses galeri</p>
+    </div>
+    <p class="qc-note">
+      🔒 Penggunaan sah & dengan persetujuan pemilik perangkat
+    </p>
+    <a
+      href="https://wa.me/62812345678"
+      class="qc-button"
+    >
+      Hubungi via WhatsApp
+    </a>
+  </div>
+</div>
+
+## 3. QuestionCard dengan Konten Custom
+
+Anda juga bisa menambahkan konten custom menggunakan slot:
+
+&lt;QuestionCard 
+  title="BUTUH BANTUAN?"
+  phone="6281234567890"
+  features={["Jawab pertanyaan 24/7", "Support teknis profesional"]}
+
+  &lt;p&gt;&lt;strong&gt;Hubungi tim support kami sekarang juga!&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;Kami siap membantu menjawab semua pertanyaan Anda tentang layanan kami.&lt;/p&gt;
+&lt;/QuestionCard>
+
+---
+
+## Cara Membuat Shortcode Sendiri
+
+Untuk membuat shortcode baru:
+
+1. **Buat file komponen** di `src/components/NamaKomponen.astro`
+2. **Tentukan props** yang diperlukan dalam interface
+3. **Gunakan di Markdown** cukup dengan `<NamaKomponen prop="value" />`
+4. **Tidak perlu import** - Astro secara otomatis mengenali komponen
+
+### Contoh Struktur Komponen
+
+```astro
+---
+// src/components/MyShortcode.astro
+interface Props {
+  title: string;
+  content?: string;
+}
+
+const { title, content } = Astro.props;
+---
+
+&lt;div class="shortcode">
+  <h3>{title}&lt;/h3>
+  &lt;slot />
+  {content && <p>{content}&lt;/p>}
+&lt;/div>
+
+<style>
+  .shortcode {
+    padding: 1rem;
+    border: 1px solid #ccc;
+  }
+&lt;/style>
+```
+
+---
+
+## Tips & Best Practices
+
+- ✅ Gunakan **PascalCase** untuk nama komponen (contoh: `MyComponent`)
+- ✅ Gunakan **slot** untuk konten dinamis
+- ✅ Tentukan **props default** agar komponen fleksibel
+- ✅ Tambahkan **scoped styles** dengan `<style>` tag
+- ❌ Jangan gunakan JavaScript logic kompleks di Markdown
+- ❌ Jangan bergantung pada library eksternal yang berat
+
+---
+
+## Konfigurasi Astro
+
+Pastikan `astro.config.mjs` sudah mengaktifkan markdown dengan components:
+
+```javascript
+export default defineConfig({
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: true,
+    },
+  },
+});
+```
+
+---
+
+**Catatan:** Fitur ini memerlukan Astro v4.0 atau lebih tinggi dan menggunakan markdown biasa (bukan MDX).
+

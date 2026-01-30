@@ -1,0 +1,148 @@
+
+> volks-typo@1.2.0 build C:\Users\a\Downloads\menyadap.github.io
+> astro build
+
+[2m19:36:56[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m19:37:04[22m [34m[content][39m Syncing content
+[2m19:37:15[22m [34m[content][39m Synced content
+[2m19:37:15[22m [34m[types][39m Generated [2m19.03s[22m
+[2m19:37:15[22m [34m[build][39m output: [34m"static"[39m
+[2m19:37:15[22m [34m[build][39m mode: [34m"static"[39m
+[2m19:37:15[22m [34m[build][39m directory: [34mC:\Users\a\Downloads\menyadap.github.io\dist\[39m
+[2m19:37:15[22m [34m[build][39m Collecting build info...
+[2m19:37:15[22m [34m[build][39m [32mΓ£ô Completed in 19.22s.[39m
+[2m19:37:15[22m [34m[build][39m Building static entrypoints...
+[2m19:37:40[22m [34m[vite][39m [32mΓ£ô built in 24.88s[39m
+[2m19:37:40[22m [34m[build][39m [32mΓ£ô Completed in 25.22s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m19:37:40[22m [34m[vite][39m transforming...
+[2m19:37:41[22m [34m[vite][39m [32mΓ£ô[39m 3 modules transformed.
+[2m19:37:41[22m [34m[vite][39m rendering chunks...
+[2m19:37:41[22m [34m[vite][39m [32mΓ£ô built in 708ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m19:37:43[22m [32mΓû╢[39m src/pages/about.astro
+[2m19:37:43[22m   [34mΓööΓöÇ[39m [2m/about/index.html[22m [2m(+36ms)[22m 
+[2m19:37:43[22m [32mΓû╢[39m src/pages/blog.astro
+[2m19:37:43[22m   [34mΓööΓöÇ[39m [2m/blog/index.html[22m [2m(+48ms)[22m 
+[2m19:37:44[22m [32mΓû╢[39m src/pages/blog/[...slug].astro
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/10-aplikasi-social-spy-sadap-wa-014c687/index.html[22m [2m(+66ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/10-sadap-hp-tersembunyi-suami-selingkuh-13a3b/index.html[22m [2m(+63ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/12-aplikasi-sadap-wa-gratis-tanpa-ketahuan-5117c/index.html[22m [2m(+49ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/9-sadap-hp-pacar-tanpa-ketahuan-bdb42/index.html[22m [2m(+13ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/akses-whatsapp-komputer-laptop-28/index.html[22m [2m(+52ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/aplikasi-hacking-android-95/index.html[22m [2m(+33ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/aplikasi-keyologger-android-41/index.html[22m [2m(+23ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/aplikasi-sadap-safespy/index.html[22m [2m(+54ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/aplikasi-sadap-spyic/index.html[22m [2m(+20ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/aplikasi-sadap-spyzie/index.html[22m [2m(+201ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/aplikasi-teensafe/index.html[22m [2m(+103ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/backdoor-metasploit-termux-76/index.html[22m [2m(+16ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/bajak-wa-getcontact-39/index.html[22m [2m(+32ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-cek-whatsapp-disadap-27/index.html[22m [2m(+118ms)[22m 
+[2m19:37:44[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-hack-admin-grup-whatsapp-94/index.html[22m [2m(+22ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-hack-akun-facebook-lupa-password/index.html[22m [2m(+90ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-hack-akun-instagram-lupa-password-1dc/index.html[22m [2m(+79ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-hack-akun-sosial-media-85/index.html[22m [2m(+92ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-hack-email-google-75/index.html[22m [2m(+77ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-hack-password-twitter-69/index.html[22m [2m(+52ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-hack-telegram-89/index.html[22m [2m(+105ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-sadap-nomor-31/index.html[22m [2m(+44ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-sadap-nomor-35/index.html[22m [2m(+18ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-sadap-wa-dengan-kode-21/index.html[22m [2m(+21ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-sadap-wa-lewat-imei-71/index.html[22m [2m(+13ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/cara-whatsapp-tidak-disadap-53/index.html[22m [2m(+112ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/fakta-termux-sering-digunakan-hacker-23/index.html[22m [2m(+36ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/fitur-aplikasi-appspy-90/index.html[22m [2m(+43ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/fitur-aplikasi-sadap-xnspy-74/index.html[22m [2m(+34ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/fitur-aplikasi-social-spy-02/index.html[22m [2m(+18ms)[22m 
+[2m19:37:45[22m   [34mΓö£ΓöÇ[39m [2m/blog/fitur-smartphonelog-apk-82/index.html[22m [2m(+151ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/flexispy-penyadap-hp-iphone/index.html[22m [2m(+105ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-akun-instagram-android-86/index.html[22m [2m(+86ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-android-tanpa-root-31/index.html[22m [2m(+86ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-chat-whatsapp-pacar-email-64/index.html[22m [2m(+59ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-data-instagram-96/index.html[22m [2m(+76ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-facebook-tanpa-aplikasi-29/index.html[22m [2m(+9ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-hp-orang-via-hotspot-92/index.html[22m [2m(+12ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-instagram-dengan-sql-injection-25/index.html[22m [2m(+24ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-kamera-cctv-private-75/index.html[22m [2m(+12ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-lacak-lokasi-android-98/index.html[22m [2m(+168ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-messenger-facebook-orang-lain-62/index.html[22m [2m(+24ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-sadap-hp-android-jarak-jauh-20/index.html[22m [2m(+212ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-sidik-jari-smartphone-63/index.html[22m [2m(+25ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-spy-wa-whatsapp-teman-pacar-87/index.html[22m [2m(+84ms)[22m 
+[2m19:37:46[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-wa-dengan-cmd-74/index.html[22m [2m(+24ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-wa-social-spy-whatsapp-87/index.html[22m [2m(+97ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-wa-terminal-emulator-apk-41/index.html[22m [2m(+110ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-whatsapp-airdroid-33/index.html[22m [2m(+39ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-whatsapp-extension-chrome-65/index.html[22m [2m(+86ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/hack-whatsapp-ss7-40/index.html[22m [2m(+14ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/highstermobile/index.html[22m [2m(+91ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/install-kali-nethunter-termux-67/index.html[22m [2m(+29ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/ispyoo-sadap-whatsapp-apk-80/index.html[22m [2m(+108ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/kembalikan-sms-hilang-di-android-51/index.html[22m [2m(+40ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/kidsguard-pro/index.html[22m [2m(+15ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/link-sadap-wa-88/index.html[22m [2m(+40ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/login-instagram-tanpa-diketahui-53/index.html[22m [2m(+62ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/melihat-pesan-messenger-dihapus-83/index.html[22m [2m(+147ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/mengendalikan-hp-android-jarak-jauh-87/index.html[22m [2m(+30ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/mengetahui-akun-fb-di-bajak-90/index.html[22m [2m(+48ms)[22m 
+[2m19:37:47[22m   [34mΓö£ΓöÇ[39m [2m/blog/mengetahui-chat-whatsapp-dihapus-23/index.html[22m [2m(+70ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/mengetahui-yang-hack-wa-35/index.html[22m [2m(+60ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/menyadap-hp-suami-jarak-jauh-78/index.html[22m [2m(+42ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/menyadap-whatsapp-tanpa-verifikasi-29/index.html[22m [2m(+21ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/meretas-bobol-facebook-83/index.html[22m [2m(+88ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/mobile-spy/index.html[22m [2m(+11ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/ownspy-penyadap-hp-pasangan/index.html[22m [2m(+142ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/panduan-line-login-via-email/index.html[22m [2m(+31ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/panduan-sadap-hp-termux-45/index.html[22m [2m(+41ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/penyadap-fonemonitor/index.html[22m [2m(+90ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/penyadap-hp-pasangan-selingkuh/index.html[22m [2m(+60ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/penyadap-pasangan-selingkuh-xnspy/index.html[22m [2m(+17ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/penyadap-thetruthspy/index.html[22m [2m(+72ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/perangkat-sadap-trackmyfone/index.html[22m [2m(+18ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-android-gratis-tanpa-rooting-d04c/index.html[22m [2m(+179ms)[22m 
+[2m19:37:48[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-android-tanpa-root-80/index.html[22m [2m(+183ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-hp-gratis-istri-selingkuh-29f9f/index.html[22m [2m(+75ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-hp-istri-tanpa-diketahui-24/index.html[22m [2m(+19ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-hp-lewat-akun-google-71/index.html[22m [2m(+159ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-hp-mspy/index.html[22m [2m(+27ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-hp-pacar-ldr-61/index.html[22m [2m(+21ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-iphone-android-tanpa-pinjam/index.html[22m [2m(+173ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-iphone-ipad-dengan-itunes-977c1/index.html[22m [2m(+24ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-kamera-hp-86/index.html[22m [2m(+81ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-pesan-tanpa-pinjam-hp-76/index.html[22m [2m(+99ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-wa-dengan-vpn-84/index.html[22m [2m(+22ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-whatsapp-dengan-termux-32/index.html[22m [2m(+45ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-whatsapp-kali-linux-89/index.html[22m [2m(+17ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/sadap-whatsapp-pacar-via-kode-21/index.html[22m [2m(+53ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/shortcode-example/index.html[22m [2m(+58ms)[22m 
+[2m19:37:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/termux-android-untuk-hacking-76/index.html[22m [2m(+120ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tips-cek-tiktok-lagi-disadap-39/index.html[22m [2m(+67ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tips-hack-kamera-hp-termux-45/index.html[22m [2m(+59ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tips-telegram-kena-hack-23/index.html[22m [2m(+50ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tool-darknet-sadap-whatsapp-24/index.html[22m [2m(+32ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tool-hack-pegasus-whatsapp-apk-23/index.html[22m [2m(+15ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tool-hack-pointszone-whatsapp-v2/index.html[22m [2m(+179ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tool-pointszone-net-v2-whatshack-83/index.html[22m [2m(+15ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tool-social-spy-whatsapp-71/index.html[22m [2m(+36ms)[22m 
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/blog/tutorial-whatsdog-apk-73/index.html[22m [2m(+107ms)[22m 
+[2m19:37:50[22m   [34mΓööΓöÇ[39m [2m/blog/whatsapp-social-spy-tool-apk-24/index.html[22m [2m(+41ms)[22m 
+[2m19:37:50[22m [32mΓû╢[39m src/pages/categories/[category].astro
+[2m19:37:50[22m   [34mΓö£ΓöÇ[39m [2m/categories/penyadap/index.html[22m [2m(+170ms)[22m 
+[2m19:37:51[22m   [34mΓööΓöÇ[39m [2m/categories/bajak/index.html[22m [2m(+33ms)[22m 
+[2m19:37:51[22m [32mΓû╢[39m src/pages/categories.astro
+[2m19:37:51[22m   [34mΓööΓöÇ[39m [2m/categories/index.html[22m [2m(+34ms)[22m 
+[2m19:37:51[22m [32mΓû╢[39m src/pages/contact.astro
+[2m19:37:51[22m   [34mΓööΓöÇ[39m [2m/contact/index.html[22m [2m(+53ms)[22m 
+[2m19:37:53[22m [35m╬╗[39m src/pages/rss.xml.js
+[2m19:37:53[22m   [34mΓööΓöÇ[39m [2m/rss.xml[22m [2m(+44ms)[22m 
+[2m19:37:53[22m [35m╬╗[39m src/pages/search.json.js
+[2m19:37:53[22m   [34mΓööΓöÇ[39m [2m/search.json[22m [2m(+56ms)[22m 
+[2m19:37:53[22m [32mΓû╢[39m src/pages/index.astro
+[2m19:37:53[22m   [34mΓööΓöÇ[39m [2m/index.html[22m [2m(+15ms)[22m 
+[2m19:37:53[22m [32mΓ£ô Completed in 12.10s.
+[39m
+[2m19:37:54[22m [34m[build][39m 109 page(s) built in [1m57.77s[22m
+[2m19:37:54[22m [34m[build][39m [1mComplete![22m

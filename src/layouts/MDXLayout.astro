@@ -1,0 +1,21 @@
+---
+import QuestionCard from '../components/QuestionCard.astro';
+
+interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    date?: string;
+    [key: string]: any;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<!-- MDX content will be wrapped by this layout, providing components to MDX -->
+<QuestionCard />
+
+<!-- Fallback to slot -->
+<slot />
+

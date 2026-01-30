@@ -1,0 +1,15 @@
+---
+import QuestionCard from '../QuestionCard.astro';
+
+interface Props {
+  components?: Record<string, any>;
+}
+
+const { components = {} } = Astro.props;
+const allComponents = {
+  QuestionCard,
+  ...components,
+};
+---
+
+<slot />

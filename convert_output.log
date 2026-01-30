@@ -1,0 +1,11 @@
+At C:\Users\a\Downloads\menyadap.github.io\convert_html_card_to_markdown.ps1:67 char:11
++     catch {
++           ~
+Missing closing '}' in statement block or type definition.
+At C:\Users\a\Downloads\menyadap.github.io\convert_html_card_to_markdown.ps1:42 char:41
++ foreach ($file in $files | Sort-Object) {
++                                         ~
+Missing closing '}' in statement block or type definition.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingEndCurlyBrace
+ 

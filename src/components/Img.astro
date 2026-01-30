@@ -1,0 +1,64 @@
+---
+// Img.astro - Shortcode untuk menampilkan gambar dengan caption
+// Gunakan di file .md dengan: <Img src="/path/image.jpg" caption="Deskripsi" />
+
+interface Props {
+  src: string;
+  caption?: string;
+  alt?: string;
+  width?: string | number;
+  height?: string | number;
+}
+
+const {
+  src,
+  caption,
+  alt = "Gambar artikel",
+  width = "100%",
+  height = "auto"
+} = Astro.props;
+---
+
+<!-- Shortcode untuk gambar dengan caption -->
+<figure class="img-wrapper">
+  <img
+    {src}
+    {alt}
+    {width}
+    {height}
+    class="img-fluid"
+    loading="lazy"
+  />
+  {caption && (
+    <figcaption class="img-caption">
+      {caption}
+    </figcaption>
+  )}
+</figure>
+
+<style>
+  .img-wrapper {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .img-caption {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: #666;
+    font-style: italic;
+  }
+
+  [data-theme="dark"] .img-caption {
+    color: #aaa;
+  }
+</style>

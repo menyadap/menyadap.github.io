@@ -1,0 +1,65 @@
+---
+// Rekomendasi.astro - Shortcode untuk section rekomendasi produk/layanan
+// Gunakan di file .md dengan: <Rekomendasi />
+
+interface Props {
+  title?: string;
+  showAds?: boolean;
+}
+
+const {
+  title = "Rekomendasi Produk Terbaik",
+  showAds = true
+} = Astro.props;
+---
+
+<!-- Shortcode untuk section rekomendasi -->
+{showAds && (
+  <section class="rekomendasi-section">
+    <div class="rekomendasi-container">
+      <h3 class="rekomendasi-title">{title}</h3>
+      <div class="rekomendasi-content">
+        <slot />
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  .rekomendasi-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #0066cc;
+  }
+
+  .rekomendasi-container {
+    max-width: 100%;
+  }
+
+  .rekomendasi-title {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .rekomendasi-content {
+    color: #555;
+    line-height: 1.6;
+  }
+
+  [data-theme="dark"] .rekomendasi-section {
+    background-color: #2a2a2a;
+    border-left-color: #4a9eff;
+  }
+
+  [data-theme="dark"] .rekomendasi-title {
+    color: #fff;
+  }
+
+  [data-theme="dark"] .rekomendasi-content {
+    color: #ddd;
+  }
+</style>

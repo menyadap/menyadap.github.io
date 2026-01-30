@@ -1,0 +1,27 @@
+# Markdown replacement content untuk blockquote
+# Disimpan di file terpisah untuk menghindari encoding issue
+
+> ## ADA **PERTANYAAN**?
+>
+> ![Layanan Monitoring Perangkat](/images/monitoring-device.webp)
+>
+> 📱 **Mendukung iPhone & Android**
+>
+> 💬 Monitoring aktivitas aplikasi pesan  
+> (WhatsApp, Telegram, Line, Instagram, Facebook, Skype, Viber, Snapchat)
+>
+> 📷 Pemantauan layar & kamera **dengan izin pemilik perangkat**
+>
+> 📞 Riwayat panggilan telepon & akses galeri
+>
+> 🔒 **Ketentuan penggunaan & privasi berlaku**  
+> Layanan ini hanya untuk **pengawasan sah**, seperti:
+> - kontrol orang tua
+> - monitoring perangkat pribadi
+> - pengelolaan perangkat kerja
+>
+> 😋 **Masih ada pertanyaan?**  
+> Tinggal klik aja 👇
+>
+> 👉 **Chat WhatsApp:**  
+> https://wa.me/628128398998288

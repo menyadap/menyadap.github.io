@@ -1,0 +1,5 @@
+
+> volks-typo@1.2.0 dev C:\Users\a\Downloads\menyadap.github.io
+> astro dev
+
+[2m19:38:11[22m [34m[types][39m Generated [2m3ms[22m

@@ -17,20 +17,22 @@ export interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-  title: "Volks-Typo",
-  description: "A blog exploring the intersection of design, typography, and history",
+  title: "menyadap.github.io",
+  description: "Blog panduan keamanan digital dan teknik penyadapan untuk Indonesia",
   author: {
-    name: "Your Name",
-    bio: "Writer, designer, and explorer of aesthetic tensions between past and present.",
+    name: "menyadap.github.io",
+    bio: "Panduan lengkap tentang keamanan digital dan monitoring perangkat untuk Indonesia.",
     // avatar: "/images/avatar.jpg" // Uncomment and add your avatar image to public/images/
   },
   social: {
-    github: "https://github.com/yourusername",
-    twitter: "https://twitter.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
-    email: "your.email@example.com"
+    github: "https://github.com/menyadap",
+    twitter: "https://twitter.com/menyadap",
+    linkedin: "https://linkedin.com/in/menyadap",
+    email: "info@menyadap.github.io"
   },
-  siteUrl: "https://volks-typo.example.com"
+  siteUrl: "https://menyadap.github.io",
+  language: "id",
+  country: "ID"
 };
 
 // Export constants for SEO component

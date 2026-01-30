@@ -1,0 +1,146 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  phone?: string;
+  imageUrl?: string;
+  features?: string[];
+}
+
+const {
+  title = "Aplikasi Pengawas HP Jarak Jauh?",
+  subtitle = "Mendukung iPhone & Android",
+  phone = "62812345678",
+  imageUrl = "/images/sadap-phone.webp",
+  features = [
+    "💬 Monitoring aktivitas aplikasi pesan (WhatsApp, Telegram, Line, Instagram, Facebook, Skype, Viber, Snapchat)",
+    "📷 Pemantauan kamera & layar dengan izin pemilik perangkat",
+    "📞 Riwayat panggilan telepon & akses galeri"
+  ]
+} = Astro.props;
+---
+
+<div class="qc-wrapper">
+  <div class="qc-card">
+
+    <div class="h2 qc-title">{title}</div>
+    <p class="qc-subtitle">📱 {subtitle}</p>
+
+    {imageUrl && (
+      <img
+        src={imageUrl}
+        alt="Layanan Monitoring Perangkat"
+        class="qc-image"
+      />
+    )}
+
+    <div class="qc-features">
+      {features.map(feature => (
+        <p>• {feature}</p>
+      ))}
+    </div>
+
+    <slot />
+
+    <p class="qc-note">
+      🔒 Penggunaan sah & dengan persetujuan pemilik perangkat
+    </p>
+
+    <a
+      href={`https://wa.me/${phone.replace(/\D/g, "")}`}
+      class="qc-button"
+    >
+      Hubungi via WhatsApp
+    </a>
+
+  </div>
+</div>
+
+<style>
+  .qc-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 1rem;
+  }
+
+  .qc-card {
+    max-width: 520px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    border-top: 6px solid #dc2626;
+  }
+
+  [data-theme="dark"] .qc-card {
+    background: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .qc-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #dc2626;
+    margin-bottom: 0.5rem;
+  }
+
+  .qc-subtitle {
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+
+  [data-theme="dark"] .qc-subtitle {
+    color: #ccc;
+  }
+
+  .qc-image {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    margin: 1.5rem 0;
+  }
+
+  .qc-features {
+    text-align: left;
+    margin: 1.5rem 0;
+    color: #333;
+  }
+
+  [data-theme="dark"] .qc-features {
+    color: #ddd;
+  }
+
+  .qc-features p {
+    margin: 0.4rem 0;
+    line-height: 1.6;
+  }
+
+  .qc-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 1.5rem 0;
+  }
+
+  [data-theme="dark"] .qc-note {
+    color: #999;
+  }
+
+  .qc-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    background: #dc2626;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .qc-button:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+  }
+</style>

@@ -1,0 +1,248 @@
+---
+// FAQ Component - Display frequently asked questions
+interface FAQItem {
+  question: string;
+  answer: string;
+  category: string;
+}
+
+const faqs: FAQItem[] = [
+  {
+    category: "Umum",
+    question: "Apa itu pelacak HP?",
+    answer: "Aplikasi pemantauan mobile adalah solusi khusus yang dirancang untuk memberi Anda akses ke HP anak Anda. Orang tua dapat menggunakan aplikasi seperti itu untuk melihat aktivitas dari jarak jauh dan mengendalikan HP lain tanpa perlu akses fisik. Aplikasi ini juga menawarkan kerahasiaan sehingga tidak pernah mengingatkan pengguna HP."
+  },
+  {
+    category: "Umum",
+    question: "Bisakah Anda memantau HP seseorang tanpa mereka ketahui?",
+    answer: "Ya, Anda dapat menggunakan aplikasi pemantauan yang bekerja secara senyap dan mengumpulkan log aktivitas dari HP tanpa sepengetahuan pengguna. Salah satu solusi terpercaya untuk memantau seseorang tanpa sepengetahuan mereka adalah XNSPY."
+  },
+  {
+    category: "Instalasi",
+    question: "Bagaimana cara menginstal XNSPY?",
+    answer: "Instalasi hanya membutuhkan waktu 5-9 menit dan semudah mengikuti petunjuk di layar. Anda memerlukan akses fisik ke perangkat satu kali. Unduh aplikasi, ikuti wizard instalasi, dan setelah selesai, aplikasi akan berfungsi dengan sangat tersembunyi di perangkat target."
+  },
+  {
+    category: "Instalasi",
+    question: "Bisakah saya menginstal XNSPY tanpa akses fisik?",
+    answer: "Sayangnya, tidak ada cara yang andal untuk menginstal aplikasi di HP tanpa memiliki akses fisik ke sana. Paling baik, Anda dapat mengirim tautan yang mengunduh aplikasi, tetapi tidak akan menyelesaikan instalasi dengan sendirinya. Untuk instalasi, dibutuhkan akses fisik satu kali."
+  },
+  {
+    category: "Fitur",
+    question: "Apakah XNSPY bekerja secara real-time?",
+    answer: "Ya, XNSPY memberikan statistik penggunaan dan data aktivitas secara real-time. Karena bekerja melalui internet, aplikasi tersinkronisasi secepat koneksi internet memungkinkan."
+  },
+  {
+    category: "Fitur",
+    question: "Apakah perangkat lunak pelacakan XNSPY dapat dideteksi?",
+    answer: "Tidak, XNSPY adalah salah satu aplikasi pemantauan HP yang tidak dapat dideteksi di perangkat target. Saat menginstal aplikasi, Anda dapat memilih untuk menyembunyikan ikon aplikasi, yang membuatnya benar-benar tidak terlihat di HP target."
+  },
+  {
+    category: "Keamanan",
+    question: "Apakah XNSPY aman?",
+    answer: "Ya. Dasbor online kami dilindungi dengan enkripsi SSL tingkat militer, dengan data disimpan dengan aman di database terenkripsi. Kami sangat serius tentang keamanan data."
+  },
+  {
+    category: "Pembelian",
+    question: "Apakah XNSPY gratis?",
+    answer: "XNSPY menawarkan opsi uji coba gratis dan paket berbayar. Berhati-hatilah dengan aplikasi apa pun yang menawarkan pelacakan HP yang sepenuhnya gratis, karena ini sering kali malware yang dirancang untuk mencuri informasi. XNSPY menyediakan paket terjangkau dengan harga transparan."
+  }
+];
+
+const categories = ["Umum", "Instalasi", "Fitur", "Keamanan", "Pembelian"];
+---
+
+<section class="faq-section">
+  <div class="container">
+    <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+    <p class="section-subtitle">Temukan jawaban untuk pertanyaan umum tentang aplikasi pemantauan XNSPY</p>
+    
+    <div class="faq-container">
+      {categories.map(category => (
+        <div class="faq-category">
+          <h3 class="category-title">{category} Questions</h3>
+          <div class="faq-items">
+            {faqs.filter(faq => faq.category === category).map((faq, index) => (
+              <details class="faq-item" key={index}>
+                <summary class="faq-question">
+                  <span class="question-text">{faq.question}</span>
+                  <span class="toggle-icon">+</span>
+                </summary>
+                <div class="faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="faq-cta">
+      <p>Tidak menemukan jawaban Anda?</p>
+      <a href="/contact" class="btn btn-primary">Hubungi Dukungan</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: 4rem 1rem;
+    background: var(--color-light-gray);
+  }
+
+  [data-theme="dark"] .faq-section {
+    background: #0a0a0a;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading-primary);
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .faq-container {
+    margin-bottom: 3rem;
+  }
+
+  .faq-category {
+    margin-bottom: 3rem;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--color-accent);
+    font-family: var(--font-heading-secondary);
+  }
+
+  .faq-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .faq-item {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    border-left: 4px solid var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  [data-theme="dark"] .faq-item {
+    background: var(--color-surface);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  [data-theme="dark"] .faq-item {
+    background: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    user-select: none;
+    list-style: none;
+  }
+
+  .faq-question:hover {
+    background: var(--color-light-gray);
+  }
+
+  [data-theme="dark"] .faq-question:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .question-text {
+    text-align: left;
+    flex: 1;
+  }
+
+  .toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 1rem;
+    color: var(--color-accent);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  details[open] .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    padding: 1.5rem;
+    padding-top: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    background: var(--color-light-gray);
+  }
+
+  [data-theme="dark"] .faq-answer {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .faq-cta {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-white);
+    border-radius: 12px;
+    border-top: 6px solid var(--color-accent);
+  }
+
+  [data-theme="dark"] .faq-cta {
+    background: #1a1a1a;
+  }
+
+  .faq-cta p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+
+    .faq-question {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-answer {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>

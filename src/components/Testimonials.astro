@@ -1,0 +1,185 @@
+---
+// Testimonials Component - Display user reviews
+---
+
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">Dengarkan Apa Kata Pengguna XNSPY Asli!</h2>
+    <p class="section-subtitle">Dipercaya oleh orang tua dan keluarga di seluruh dunia</p>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h3 class="testimonial-title">Solusi Pemantauan yang Mengesankan!</h3>
+        <p class="testimonial-text">
+          "XNSPY telah menjadi alat yang luar biasa untuk memantau aktivitas online anak saya. 
+          Ini memberi saya wawasan komprehensif dan memungkinkan saya memastikan keselamatan mereka dengan mudah. 
+          Sangat direkomendasikan!"
+        </p>
+        <div class="testimonial-author">Eleanor L. • 30 Mei 2023</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h3 class="testimonial-title">Benar-benar Keren</h3>
+        <p class="testimonial-text">
+          "Saya dan istri saya memiliki rutinitas kerja yang sibuk, dan memantau dua remaja kami adalah beban. 
+          Kami senang menginstal aplikasi pemantauan XNSPY di ponsel mereka dengan ancaman online yang meningkat. 
+          Aplikasi ini membuat parenting jauh lebih mudah!"
+        </p>
+        <div class="testimonial-author">Edward Lorry • 21 Mei 2024</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <h3 class="testimonial-title">Investasi Terbaik untuk Keselamatan Keluarga</h3>
+        <p class="testimonial-text">
+          "Sebagai orang tua tunggal, mengetahui apa yang dilakukan anak-anak saya secara online memberi saya ketenangan pikiran. 
+          XNSPY mudah digunakan dan memberikan semua informasi yang saya butuhkan untuk menjaga mereka tetap aman. 
+          Sebanding dengan setiap rupiah!"
+        </p>
+        <div class="testimonial-author">Sarah M. • 15 Maret 2024</div>
+      </div>
+    </div>
+
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-number">13M+</div>
+        <div class="stat-label">Unduhan</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Tahun Layanan</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4.8⭐</div>
+        <div class="stat-label">Rating Rata-rata</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    padding: 4rem 1rem;
+    background: var(--color-background);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading-primary);
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem;
+    background: var(--color-surface);
+    border-radius: 12px;
+    border-left: 6px solid var(--color-accent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  [data-theme="dark"] .testimonial-card {
+    background: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .stars {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .testimonial-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading-secondary);
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem;
+    background: var(--color-light-gray);
+    border-radius: 12px;
+    border-top: 6px solid var(--color-accent);
+  }
+
+  [data-theme="dark"] .stats-container {
+    background: #1a1a1a;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    font-family: var(--font-heading-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .stats-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+</style>

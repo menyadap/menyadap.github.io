@@ -1,5 +1,11 @@
 ---
 import Layout from '../components/Layout.astro';
+import FeaturesGrid from '../components/FeaturesGrid.astro';
+import ThreeStepProcess from '../components/ThreeStepProcess.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import DarkModeRSSSection from '../components/DarkModeRSSSection.astro';
+
 const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
 const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
 
@@ -9,21 +15,21 @@ const sortedPosts = allPosts
   .slice(0, 3);
 ---
 
-<Layout title="Volks-Typo: Bauhaus Meets Monumental Design" description="An Astro blog theme exploring the aesthetic tension between Bauhaus modernism and WW2-era monumental design. Where functionalism meets grandeur in dissonant harmony." showSidebar={false}>
+<Layout title="Jasa Install Aplikasi XNspy Pengawas HP Anak Dari Jarak Jauh" description="Layanan profesional instalasi aplikasi XNspy untuk pengawasan HP anak dari jarak jauh dengan aman dan legal." showSidebar={false}>
   <div class="landing-page">
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1 class="hero-title">Volks-Typo</h1>
-        <p class="hero-subtitle">Bauhaus Meets Monumental</p>
+        <h1 class="hero-title">Jasa Install Aplikasi XNspy</h1>
+        <p class="hero-subtitle">Pengawas HP Anak Dari Jarak Jauh</p>
         <p class="hero-description">
-          An aesthetic exploration where Bauhaus functionalism collides with 
-          monumental grandeur. Form follows function, with a twist.
+          Layanan profesional instalasi aplikasi XNspy untuk pengawasan perangkat anak 
+          secara aman, legal, dan terpercaya dari jarak jauh.
         </p>
         <hr class="hero-rule" />
         <div class="hero-actions">
-          <a href="#demo" class="btn btn-primary">View Demo</a>
-          <a href="#installation" class="btn btn-secondary">Get Started</a>
+          <a href="#demo" class="btn btn-primary">Lihat Demo</a>
+          <a href="#installation" class="btn btn-secondary">Mulai Sekarang</a>
         </div>
       </div>
     </section>
@@ -31,10 +37,10 @@ const sortedPosts = allPosts
     <!-- Demo Section -->
     <section class="demo-section" id="demo">
       <div class="container">
-        <h2 class="section-title">Live Demo</h2>
+        <h2 class="section-title">Demo Langsung</h2>
         <p class="demo-description">
-          See the theme in action with sample blog posts that demonstrate all typography, 
-          layout, and design elements working together in perfect dissonant harmony.
+          Lihat tema dalam aksi dengan contoh postingan blog yang mendemonstrasikan semua tipografi, 
+          tata letak, dan elemen desain yang bekerja bersama dengan harmoni sempurna.
         </p>
         
         {sortedPosts.length > 0 && (
@@ -47,13 +53,13 @@ const sortedPosts = allPosts
                 
                 <div class="demo-post-meta">
                   <time class="demo-post-date" datetime={post.frontmatter.date}>
-                    {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+                    {new Date(post.frontmatter.date).toLocaleDateString('id-ID', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
                     })}
                   </time>
-                  <span class="demo-post-reading-time">5 min read</span>
+                  <span class="demo-post-reading-time">5 menit baca</span>
                 </div>
                 
                 {post.frontmatter.excerpt && (
@@ -73,103 +79,25 @@ const sortedPosts = allPosts
         )}
         
         <div class="demo-actions">
-          <a href={`${import.meta.env.BASE_URL}blog`} class="btn btn-primary">View Blog</a>
+          <a href={`${import.meta.env.BASE_URL}blog`} class="btn btn-primary">Lihat Blog</a>
         </div>
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="container">
-        <h2 class="section-title">Design Philosophy</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3 class="feature-title">Dissonant Harmony</h3>
-            <p class="feature-description">Bauhaus minimalism meets monumental design. Clean aesthetics with bold, commanding presence.</p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Perfect Readability</h3>
-            <p class="feature-description">Optimized typography with ideal line lengths and spacing for maximum comprehension.</p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Left Aligned</h3>
-            <p class="feature-description">Natural reading flow with consistent left alignment throughout all content.</p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Typographic Tension</h3>
-            <p class="feature-description">Cormorant Garamond meets Inter. Classical serif headings contrast modern sans-serif body.</p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Constructivist Grid</h3>
-            <p class="feature-description">8-point grid system creates structural order. Blood-red rules command attention.</p>
-          </div>
-          <div class="feature-card">
-            <h3 class="feature-title">Fast Performance</h3>
-            <p class="feature-description">Zero JavaScript, minimal CSS, self-hosted fonts for blazing speed.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Features Grid Component -->
+    <FeaturesGrid />
 
-    <!-- Typography Showcase -->
-    <section class="typography-showcase">
-      <div class="container">
-        <h2 class="section-title">Typography</h2>
-        <p class="typography-description">
-          Work Sans provides exceptional readability across all text sizes and contexts
-        </p>
-        
-        <div class="typography-samples">
-          <div class="type-sample">
-            <h1 class="sample-h1">MONUMENTAL TYPE</h1>
-            <p class="type-meta">Cormorant Garamond • 900 Weight • Blood Red</p>
-          </div>
-          
-          <div class="type-sample">
-            <p class="sample-body">Bauhaus-inspired body text in Inter creates perfect readability. Function meets form in every letterform, optimized for modern screens.</p>
-            <p class="type-meta">Inter • 400 Weight • Charcoal Black</p>
-          </div>
-          
-          <div class="type-sample">
-            <code class="sample-code">npm install volks-typo</code>
-            <p class="type-meta">JetBrains Mono • Monospace Code</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Three Step Process Component -->
+    <ThreeStepProcess />
 
-    <!-- Installation Section -->
-    <section class="installation" id="installation">
-      <div class="container">
-        <h2 class="section-title">Quick Start</h2>
-        <div class="install-steps">
-          <div class="step">
-            <h3 class="step-number">01</h3>
-            <div class="step-content">
-              <h4 class="step-title">Clone Repository</h4>
-              <pre class="code-block"><code>git clone https://github.com/yourusername/volks-typo.git
-cd volks-typo</code></pre>
-            </div>
-          </div>
-          
-          <div class="step">
-            <h3 class="step-number">02</h3>
-            <div class="step-content">
-              <h4 class="step-title">Install Dependencies</h4>
-              <pre class="code-block"><code>npm install</code></pre>
-            </div>
-          </div>
-          
-          <div class="step">
-            <h3 class="step-number">03</h3>
-            <div class="step-content">
-              <h4 class="step-title">Start Development</h4>
-              <pre class="code-block"><code>npm run dev</code></pre>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Testimonials Component -->
+    <Testimonials />
+
+    <!-- FAQ Component -->
+    <FAQ />
+
+    <!-- Dark Mode and RSS Section -->
+    <DarkModeRSSSection />
   </div>
 </Layout>
 

@@ -1,0 +1,28 @@
+
+> volks-typo@1.2.0 build C:\Users\a\Downloads\menyadap.github.io
+> astro build
+
+[2m02:05:52[22m [34m[content][39m Syncing content
+[2m02:05:53[22m [34m[content][39m Synced content
+[2m02:05:53[22m [34m[types][39m Generated [2m1.69s[22m
+[2m02:05:53[22m [34m[build][39m output: [34m"static"[39m
+[2m02:05:53[22m [34m[build][39m mode: [34m"static"[39m
+[2m02:05:53[22m [34m[build][39m directory: [34mC:\Users\a\Downloads\menyadap.github.io\dist\[39m
+[2m02:05:53[22m [34m[build][39m Collecting build info...
+[2m02:05:53[22m [34m[build][39m [32mΓ£ô Completed in 1.80s.[39m
+[2m02:05:53[22m [34m[build][39m Building static entrypoints...
+02:06:04 [ERROR] [vite] Γ£ù Build failed in 11.78s
+[@mdx-js/rollup] Could not parse expression with acorn
+file: C:/Users/a/Downloads/menyadap.github.io/src/content/blog/sadap-whatsapp-kali-linux-89.mdx:76:117
+  Location:
+    C:/Users/a/Downloads/menyadap.github.io/src/content/blog/sadap-whatsapp-kali-linux-89.mdx:76:117
+  Stack trace:
+    at Object.transform (file:///C:/Users/a/Downloads/menyadap.github.io/node_modules/.pnpm/@astrojs+mdx@4.3.13_astro@5_6d8dbe65f3a655cb7d6d4529d24d6b13/node_modules/@astrojs/mdx/dist/vite-plugin-mdx.js:62:15)
+  Caused by:
+  Expecting Unicode escape sequence \uXXXX
+    at pp$4.raise (file:///C:/Users/a/Downloads/menyadap.github.io/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn/dist/acorn.mjs:3731:13)
+    at pp.readWord1 (file:///C:/Users/a/Downloads/menyadap.github.io/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn/dist/acorn.mjs:6142:16)
+    at pp.readToken (file:///C:/Users/a/Downloads/menyadap.github.io/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn/dist/acorn.mjs:5445:19)
+    at pp.nextToken (file:///C:/Users/a/Downloads/menyadap.github.io/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn/dist/acorn.mjs:5438:15)
+    at pp$9.eat (file:///C:/Users/a/Downloads/menyadap.github.io/node_modules/.pnpm/acorn@8.15.0/node_modules/acorn/dist/acorn.mjs:700:10)
+ΓÇëELIFECYCLEΓÇë Command failed with exit code 1.

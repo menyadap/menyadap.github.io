@@ -1,0 +1,51 @@
+---
+// src/components/Code.astro
+// Shortcode untuk highlight code block dengan custom styling
+// Gunakan: <Code lang="javascript">const x = 1;</Code>
+
+interface Props {
+  lang?: string;
+  title?: string;
+}
+
+const { lang = 'text', title } = Astro.props;
+---
+
+<div class="code-block">
+  {title && <div class="code-title">{title}</div>}
+  <pre class={`language-${lang}`}><code>
+    <slot />
+  </code></pre>
+</div>
+
+<style>
+  .code-block {
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #1e1e1e;
+  }
+
+  .code-title {
+    background: #2d2d2d;
+    color: #d4d4d4;
+    padding: 0.75rem 1rem;
+    font-family: monospace;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #3e3e3e;
+    margin: 0;
+  }
+
+  pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  code {
+    color: #d4d4d4;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+</style>
