@@ -4,7 +4,6 @@ import FeaturesGrid from '../components/FeaturesGrid.astro';
 import ThreeStepProcess from '../components/ThreeStepProcess.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FAQ from '../components/FAQ.astro';
-import DarkModeRSSSection from '../components/DarkModeRSSSection.astro';
 
 const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
 const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
@@ -95,9 +94,6 @@ const sortedPosts = allPosts
 
     <!-- FAQ Component -->
     <FAQ />
-
-    <!-- Dark Mode and RSS Section -->
-    <DarkModeRSSSection />
   </div>
 </Layout>
 
