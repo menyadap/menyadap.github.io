@@ -9,6 +9,8 @@ export default defineConfig({
   // Only use base path for GitHub Pages deployments
   // For Netlify/Vercel, leave this undefined (no base path)
   base: process.env.BASE_PATH || undefined,
+  // Prevent trailing slash redirect on GitHub Pages
+  trailingSlash: 'never',
   integrations: [
     mdx({
       jsxImportSource: 'astro',
