@@ -1,19 +1,19 @@
 export async function GET() {
-  // Get all blog posts
-  const posts = await import.meta.glob('../content/blog/*.md');
+  // Get all blog posts (.md and .mdx)
+  const posts = await import.meta.glob('../content/blog/*.{md,mdx}');
   
   const searchData = [];
   
   for (const path in posts) {
     const post = await posts[path]();
-    const url = path.replace('../content', '').replace('.md', '');
-    
+    const url = path.replace('../content', '').replace(/\.(md|mdx)$/, '');
+
     searchData.push({
-      title: post.frontmatter.title || 'Untitled',
+      title: post.frontmatter?.title || 'Untitled',
       url: url,
-      date: post.frontmatter.date || new Date().toISOString(),
-      excerpt: post.frontmatter.excerpt || post.frontmatter.description || '',
-      categories: post.frontmatter.categories || []
+      date: post.frontmatter?.date || new Date().toISOString(),
+      excerpt: post.frontmatter?.excerpt || post.frontmatter?.description || '',
+      categories: post.frontmatter?.categories || []
     });
   }
   

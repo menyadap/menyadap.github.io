@@ -47,7 +47,7 @@ const sortedPosts = allPosts
             {sortedPosts.map(post => (
               <article class="demo-post-card">
                 <h3 class="demo-post-title">
-                  <a href={post.url}>{post.frontmatter.title}</a>
+                  <a href={`${import.meta.env.BASE_URL}blog/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}`}>{post.frontmatter.title}</a>
                 </h3>
                 
                 <div class="demo-post-meta">
