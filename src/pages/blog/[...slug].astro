@@ -19,7 +19,7 @@ export async function getStaticPaths() {
     const allHeadings = extractHeadings(rawContent);
     const tocHeadings = filterHeadingsForTOC(allHeadings);
     
-    return {
+      return {
       params: { slug: post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '') },
       props: { post, readingTime, tocHeadings }
     };
@@ -58,7 +58,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
         {frontmatter.categories && frontmatter.categories.length > 0 && (
           <div class="post-categories">
             {frontmatter.categories.map((category: string) => (
-              <a href={`${base}categories/${category.toLowerCase().replace(/[\/\s]+/g, '-')}`} class="category-tag">
+              <a href={`${base}categories/${category.toLowerCase().replace(/[\/\s]+/g, '-')}/`} class="category-tag">
                 {category}
               </a>
             ))}
@@ -93,7 +93,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
       )}
       
       <div class="post-navigation">
-        <a href={`${base}blog`} class="back-to-blog">← Back to Blog</a>
+        <a href={`${base}blog/`} class="back-to-blog">← Back to Blog</a>
       </div>
     </footer>
   </article>
@@ -173,7 +173,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
     text-decoration: none;
   }
 
-  /* Dark mode category tag styles */
+  /*/ Dark mode category tag styles */
   :global([data-theme="dark"]) .category-tag {
     background-color: var(--color-surface);
     color: var(--color-text-primary);
@@ -276,14 +276,14 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
     font-size: inherit;
   }
 
-  /* Custom Prism syntax highlighting for German flag colors */
-  /* CSS selectors like h1 - use gold */
+  /*/ Custom Prism syntax highlighting for German flag colors */
+  /*/ CSS selectors like h1 - use gold */
   .post-content :global(.token.selector),
   .post-content :global(.token.tag) {
     color: #ffd700 !important;
   }
 
-  /* CSS properties and functions - use red */
+  /*/ CSS properties and functions - use red */
   .post-content :global(.token.property),
   .post-content :global(.token.class-name),
   .post-content :global(.token.function) {
@@ -312,7 +312,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
     color: #66d9ef !important;
   }
 
-  /* Reset default Prism styles and apply our theme */
+  /*/ Reset default Prism styles and apply our theme */
   .post-content :global(pre[class*="language-"]) {
     background: #000000 !important;
     color: #ffffff !important;

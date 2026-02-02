@@ -3,48 +3,157 @@ export interface Props {
   title?: string;
   description?: string;
   image?: string;
-  type?: 'website' | 'article';
+  type?: 'website' | 'article' | 'page';
   publishedTime?: string;
   canonical?: string;
+  isHomepage?: boolean;
 }
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION, config as SITE_CONFIG } from '../config';
 
 const {
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
-  image = '/og-image.png',
+  image = '/default.jpg',
   type = 'website',
   publishedTime,
   canonical,
+  isHomepage = false,
 } = Astro.props;
 
 const pageTitle = title === SITE_TITLE ? title : `${title} | ${SITE_TITLE}`;
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 const imageURL = new URL(image, Astro.site);
+
+const twitterHandle = SITE_CONFIG?.social?.twitter
+  ? SITE_CONFIG.social.twitter.split('/').pop()
+  : undefined;
+
+const authorName = SITE_CONFIG?.author?.name || SITE_TITLE;
+const locale = `${SITE_CONFIG?.language || 'en'}_${SITE_CONFIG?.country || 'US'}`;
+
+let structuredData = null;
+if (isHomepage) {
+  // Provide both Organization and WebSite schema for homepage.
+  // WebSite schema includes potentialAction SearchAction so search terms
+  // can be recognized by search engines (sitelinks search box).
+  const org = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_TITLE,
+    url: new URL('/', Astro.site).href,
+    description: SITE_DESCRIPTION,
+    logo: new URL('/default.jpg', Astro.site).href,
+    sameAs: [
+      SITE_CONFIG?.social?.twitter,
+      SITE_CONFIG?.social?.github,
+      SITE_CONFIG?.social?.instagram,
+      SITE_CONFIG?.social?.linkedin,
+    ].filter(Boolean),
+    contact: {
+      "@type": "ContactPoint",
+      contactType: "Customer Service",
+      email: SITE_CONFIG?.social?.email,
+    },
+  };
+
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_TITLE,
+    url: new URL('/', Astro.site).href,
+    description: SITE_DESCRIPTION,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: new URL('/search', Astro.site).href + '?q={search_term_string}',
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  // Emit both as an array so validators see Organization and WebSite (with SearchAction)
+  structuredData = [org, website];
+} else if (type === 'article') {
+  // Article schema for blog posts
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title || SITE_TITLE,
+    image: [imageURL.href],
+    datePublished: publishedTime || undefined,
+    dateModified: publishedTime || undefined,
+    author: {
+      "@type": "Person",
+      name: authorName,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_TITLE,
+      logo: {
+        "@type": "ImageObject",
+        url: new URL('/default.jpg', Astro.site).href,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalURL.href,
+    },
+  };
+} else if (type === 'page') {
+  // WebPage schema for regular pages
+  structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: pageTitle,
+    description: description,
+    url: canonicalURL.href,
+    image: imageURL.href,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_TITLE,
+      logo: {
+        "@type": "ImageObject",
+        url: new URL('/default.jpg', Astro.site).href,
+      },
+    },
+    mainEntity: {
+      "@type": "WebSite",
+      name: SITE_TITLE,
+      url: new URL('/', Astro.site).href,
+    },
+  };
+}
 ---
 
 <title>{pageTitle}</title>
 <meta name="description" content={description} />
-<meta name="author" content="Your Name" />
+<meta name="author" content={authorName} />
 
-<link rel="canonical" href={canonicalURL} />
+<link rel="canonical" href={canonicalURL.href} />
+
+<meta property="og:locale" content={locale} />
 
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content={type} />
-<meta property="og:url" content={canonicalURL} />
-<meta property="og:image" content={imageURL} />
+<meta property="og:url" content={canonicalURL.href} />
+<meta property="og:image" content={imageURL.href} />
 <meta property="og:site_name" content={SITE_TITLE} />
 {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={pageTitle} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={imageURL} />
+<meta name="twitter:image" content={imageURL.href} />
+
+{twitterHandle && (
+  <meta name="twitter:creator" content={twitterHandle} />
+)}
 
 <meta name="robots" content="index, follow" />
 <meta name="googlebot" content="index, follow" />
 
 <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href="/rss.xml" />
 <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+{structuredData && (
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+)}

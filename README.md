@@ -178,7 +178,7 @@ export const config = {
   title: "Volks-Typo",
   description: "A blog exploring the intersection of design, typography, and history",
   author: {
-    name: "Your Name",
+    name: "menyadap.github.io",
     bio: "Writer, designer, and explorer of aesthetic tensions.",
     avatar: "/avatar.jpg"
   },
@@ -288,7 +288,7 @@ Create blog posts as Markdown or MDX files in `src/content/blog/`:
 ---
 title: "The Intersection of Function and Form"
 date: "2024-01-15"
-author: "Your Name"
+author: "menyadap.github.io"
 excerpt: "Exploring how Bauhaus principles shaped modern design thinking"
 categories: ["Design", "History"]
 tags: ["bauhaus", "modernism", "typography"]

@@ -26,9 +26,9 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
       <nav class="main-navigation" role="navigation" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href={base} class="nav-link">Home</a></li>
-          <li><a href={base + "blog"} class="nav-link">Blog</a></li>
-          <li><a href={base + "categories"} class="nav-link">Categories</a></li>
-          <li><a href={base + "about"} class="nav-link">About</a></li>
+          <li><a href={base + "blog/"} class="nav-link">Blog</a></li>
+          <li><a href={base + "categories/"} class="nav-link">Categories</a></li>
+          <li><a href={base + "about/"} class="nav-link">About</a></li>
         </ul>
       </nav>
       
@@ -50,9 +50,9 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <ul class="mobile-nav-list">
     <li><a href={base} class="mobile-nav-link">Home</a></li>
-    <li><a href={base + "blog"} class="mobile-nav-link">Blog</a></li>
-    <li><a href={base + "categories"} class="mobile-nav-link">Categories</a></li>
-    <li><a href={base + "about"} class="mobile-nav-link">About</a></li>
+    <li><a href={base + "blog/"} class="mobile-nav-link">Blog</a></li>
+    <li><a href={base + "categories/"} class="mobile-nav-link">Categories</a></li>
+    <li><a href={base + "about/"} class="mobile-nav-link">About</a></li>
   </ul>
 </nav>
 
@@ -267,8 +267,8 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     height: 48px;
     width: auto;
     max-width: 280px;
-    border: none !important; /* Override global img styles */
-    margin: 0 !important; /* Override global img styles */
+    border: none !important; /*/ Override global img styles */
+    margin: 0 !important; /*/ Override global img styles */
   }
 
   .header-controls {
@@ -472,7 +472,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     color: white;
   }
 
-  /* Dark mode search category styles */
+  /*/ Dark mode search category styles */
   :global([data-theme="dark"]) .search-category {
     background-color: var(--color-surface);
     color: var(--color-text-primary);
@@ -545,14 +545,14 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     border: 0;
   }
 
-  /* Desktop controls - visible by default */
+  /*/ Desktop controls - visible by default */
   .mobile-controls {
     display: flex;
     align-items: center;
     gap: calc(var(--grid-unit) * 2);
   }
 
-  /* Hide mobile-only hamburger by default */
+  /*/ Hide mobile-only hamburger by default */
   .mobile-only {
     display: none !important;
   }
@@ -623,7 +623,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     outline: none;
   }
 
-  /* Mobile menu - hidden by default */
+  /*/ Mobile menu - hidden by default */
   .mobile-menu {
     position: fixed;
     top: 0;
@@ -681,7 +681,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
       padding: 0 calc(var(--grid-unit) * 2);
     }
 
-    /* Show mobile hamburger on far left */
+    /*/ Show mobile hamburger on far left */
     .mobile-only {
       display: flex !important;
       justify-self: start;
@@ -690,7 +690,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     .site-title {
       justify-self: center;
       text-align: center;
-      grid-column: 2; /* Explicitly place in center column */
+      grid-column: 2; /*/ Explicitly place in center column */
     }
 
     .site-title a {
@@ -706,15 +706,15 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
     .header-controls {
       justify-self: end;
       gap: 0;
-      grid-column: 3; /* Explicitly place in right column */
+      grid-column: 3; /*/ Explicitly place in right column */
     }
     
-    /* Hide desktop navigation on mobile */
+    /*/ Hide desktop navigation on mobile */
     .main-navigation {
       display: none;
     }
     
-    /* Show mobile controls on right */
+    /*/ Show mobile controls on right */
     .mobile-controls {
       display: flex !important;
       gap: calc(var(--grid-unit) * 1.5);
@@ -765,7 +765,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
       margin-bottom: calc(var(--grid-unit) * 4);
     }
     
-    /* Adjust GitHub button for mobile */
+    /*/ Adjust GitHub button for mobile */
     .github-star-button {
       padding: calc(var(--grid-unit) * 0.75);
       border-width: 1px;
@@ -777,7 +777,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
   }
   
   @media (max-width: 480px) {
-    /* Even smaller mobile adjustments */
+    /*/ Even smaller mobile adjustments */
     .mobile-controls {
       gap: calc(var(--grid-unit)) !important;
     }

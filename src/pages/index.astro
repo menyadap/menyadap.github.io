@@ -14,7 +14,7 @@ const sortedPosts = allPosts
   .slice(0, 3);
 ---
 
-<Layout title="Jasa Install Aplikasi XNspy Pengawas HP Anak Dari Jarak Jauh" description="Layanan profesional instalasi aplikasi XNspy untuk pengawasan HP anak dari jarak jauh dengan aman dan legal." showSidebar={false}>
+<Layout title="Jasa Install Aplikasi XNspy Pengawas HP Anak Dari Jarak Jauh" description="Layanan profesional instalasi aplikasi XNspy untuk pengawasan HP anak dari jarak jauh dengan aman dan legal." showSidebar={false} isHomepage={true}>
   <div class="landing-page">
     <!-- Hero Section -->
     <section class="hero">
@@ -47,7 +47,7 @@ const sortedPosts = allPosts
             {sortedPosts.map(post => (
               <article class="demo-post-card">
                 <h3 class="demo-post-title">
-                  <a href={`${import.meta.env.BASE_URL}blog/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}`}>{post.frontmatter.title}</a>
+                  <a href={`${import.meta.env.BASE_URL}blog/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}/`}>{post.frontmatter.title}</a>
                 </h3>
                 
                 <div class="demo-post-meta">
@@ -78,7 +78,7 @@ const sortedPosts = allPosts
         )}
         
         <div class="demo-actions">
-          <a href={`${import.meta.env.BASE_URL}blog`} class="btn btn-primary">Lihat Blog</a>
+          <a href={`${import.meta.env.BASE_URL}blog/`} class="btn btn-primary">Lihat Blog</a>
         </div>
       </div>
     </section>
@@ -205,7 +205,7 @@ const sortedPosts = allPosts
     transform: translateY(-2px);
   }
 
-  /* Dark mode button styles */
+  /*/ Dark mode button styles */
   :global([data-theme="dark"]) .btn-primary {
     background-color: var(--color-accent);
     color: white;
@@ -287,7 +287,7 @@ const sortedPosts = allPosts
     margin: 0;
   }
 
-  /* Typography Showcase */
+  /*/ Typography Showcase */
   .typography-showcase {
     padding: calc(var(--grid-unit) * 8) 0;
     background-color: var(--color-surface);
@@ -473,7 +473,7 @@ const sortedPosts = allPosts
     border-radius: 2px;
   }
 
-  /* Dark mode demo category styles */
+  /*/ Dark mode demo category styles */
   :global([data-theme="dark"]) .demo-category {
     background-color: var(--color-surface);
     color: var(--color-text-primary);

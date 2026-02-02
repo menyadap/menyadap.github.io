@@ -37,7 +37,7 @@ const sortedCategories = Object.entries(categoryMap)
   });
 ---
 
-<Layout title="Categories | menyadap" description="Jelajahi artikel berdasarkan kategori" showSidebar={true}>
+<Layout title="Categories | menyadap" description="Jelajahi artikel berdasarkan kategori" showSidebar={true} type="page">
   <div class="categories-page">
     <header class="page-header">
       <h1 class="page-title">Categories</h1>
@@ -50,7 +50,7 @@ const sortedCategories = Object.entries(categoryMap)
     <div class="categories-grid">
       {sortedCategories.map(([category, posts]: [string, any[]]) => (
         <div class="category-card">
-          <a href={`${base}categories/${category.toLowerCase().replace(/[\/\s]+/g, '-')}`} class="category-link">
+          <a href={`${base}categories/${category.toLowerCase().replace(/[\/\s]+/g, '-')}/`} class="category-link">
             <h2 class="category-title">{category}</h2>
             <p class="category-count">
               {posts.length} article{posts.length === 1 ? '' : 's'}

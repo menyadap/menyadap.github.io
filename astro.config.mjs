@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,13 +10,18 @@ export default defineConfig({
   // Only use base path for GitHub Pages deployments
   // For Netlify/Vercel, leave this undefined (no base path)
   base: process.env.BASE_PATH || undefined,
-  // Prevent trailing slash redirect on GitHub Pages
-  trailingSlash: 'never',
+  // GitHub Pages requires trailing slash for proper routing
+  trailingSlash: 'always',
   integrations: [
     mdx({
       jsxImportSource: 'astro',
       optimize: true,
-    })
+    }),
+    sitemap({
+      // Don't add trailing slash to sitemap XML files
+      changefreq: 'weekly',
+      priority: 0.7,
+    }),
   ],
   
   // Markdown configuration untuk mendukung Astro Components (shortcode)

@@ -18,27 +18,50 @@ import Header from './Header.astro';
 import Sidebar from './Sidebar.astro';
 import Footer from './Footer.astro';
 import SEO from './SEO.astro';
+import { config as SITE_CONFIG } from '../config';
 
 export interface Props {
   title: string;
   description?: string;
   showSidebar?: boolean;
   image?: string;
-  type?: 'website' | 'article';
+  type?: 'website' | 'article' | 'page';
   publishedTime?: string;
   canonical?: string;
+  isHomepage?: boolean;
 }
 
-const { title, description, showSidebar = true, image, type, publishedTime, canonical } = Astro.props;
+const { title, description, showSidebar = true, image, type, publishedTime, canonical, isHomepage = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={SITE_CONFIG?.language || 'en'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script is:inline src="/theme-init.js"></script>
+    <script is:inline>
+      // Normalize internal /blog/.../ links by adding trailing slash if missing
+      (function () {
+        if (typeof document === 'undefined') return;
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('a[href]').forEach(function (a) {
+            try {
+              var href = a.getAttribute('href');
+              if (!href) return;
+              var u = new URL(href, location.origin);
+              if (u.pathname.startsWith('/blog/') && !u.pathname.endsWith('/')) {
+                u.pathname = u.pathname + '/';
+                a.href = u.toString();
+              }
+            } catch (e) {
+              // ignore malformed URLs
+            }
+          });
+        });
+      })();
+    </script>
     <SEO
       title={title}
       description={description}
@@ -46,6 +69,7 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
       type={type}
       publishedTime={publishedTime}
       canonical={canonical}
+      isHomepage={isHomepage}
     />
   </head>
   <body>
