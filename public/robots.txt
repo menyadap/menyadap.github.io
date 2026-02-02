@@ -1,28 +1,8 @@
-# Allow all crawlers to index the site
 User-agent: *
 Allow: /
 
-# Allow RSS and Sitemap
-Allow: /rss.xml
-Allow: /sitemap-index.xml
-
-# Disallow sensitive paths
 Disallow: /search
 Disallow: /api/
-Disallow: /*.json$
 
-# Crawl delay (optional - in seconds)
-Crawl-delay: 1
-
-# Sitemap locations
 Sitemap: https://menyadap.github.io/sitemap-index.xml
 Sitemap: https://menyadap.github.io/rss.xml
-
-# Additional crawl directives for major search engines
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0.5
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1

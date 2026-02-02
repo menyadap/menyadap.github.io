@@ -129,7 +129,7 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
 
   .author-name {
     font-family: var(--font-heading-secondary);
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 700;
     color: var(--color-accent);
     margin-bottom: calc(var(--grid-unit));
