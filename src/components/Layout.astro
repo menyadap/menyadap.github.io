@@ -117,10 +117,10 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
   .content {
     min-width: 0;
     padding: calc(var(--grid-unit) * 3) 0;
+    order: -1;
   }
 
   .sidebar {
-    order: -1;
     padding-top: calc(var(--grid-unit) * 3);
   }
 
@@ -129,8 +129,11 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
       grid-template-columns: var(--sidebar-width) 1fr;
     }
     
-    .sidebar {
+    .content {
       order: 0;
+    }
+    
+    .sidebar {
       padding-top: calc(var(--grid-unit) * 3);
     }
   }
