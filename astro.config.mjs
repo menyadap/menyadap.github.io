@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,6 +27,15 @@ export default defineConfig({
   
   // Markdown configuration untuk mendukung Astro Components (shortcode)
   markdown: {
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: ['nofollow', 'noreferrer'],
+        },
+      ],
+    ],
     shikiConfig: {
       theme: 'github-dark',
       wrap: true,
