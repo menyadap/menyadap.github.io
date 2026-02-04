@@ -46,12 +46,12 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
       
       <div class="post-meta">
         <time class="post-date" datetime={frontmatter.date}>
-          {new Date(frontmatter.date).toLocaleDateString('en-US', {
+          {new Date(frontmatter.date).toLocaleDateString('id-ID', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
           })}
-        </time>
+          </time>
         
         <span class="post-reading-time">{readingTime}</span>
         

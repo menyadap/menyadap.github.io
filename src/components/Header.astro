@@ -200,7 +200,7 @@ const { base = '' } = Astro.site ? { base: import.meta.env.BASE_URL } : { base: 
         <h3 class="search-result-title">
           <a href="${base}${post.url.startsWith('/') ? post.url.slice(1) : post.url}">${post.title}</a>
         </h3>
-        <time class="search-result-date">${new Date(post.date).toLocaleDateString('en-US', {
+        <time class="search-result-date">${new Date(post.date).toLocaleDateString('id-ID', {
           year: 'numeric',
           month: 'long',
           day: 'numeric'

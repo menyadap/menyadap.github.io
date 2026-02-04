@@ -1,0 +1,103 @@
+---
+thumbnail: "/uploads/media/default_3.png"
+date: "2022-07-05T17:00:00+09:00"
+tags:
+  - "software"
+draft: true
+toc: true
+title: "##8 Aplikasi Font Viewer Gratis dan Terbaik"
+description: "8 Aplikasi Font Viewer Gratis dan Terbaik"
+link_referral:
+  - "https://www.wartangetop.com/804/8-aplikasi-font-viewer-gratis-dan-terbaik.html"
+categories:
+  - "ulasan"
+---
+
+Font viewer adalah perangkat lunak yang membuat penggunanya bisa mendapatkan detail lengkap dari setiap font yang diinstal dan dihapus di sistem mereka. Selain melihat font, pengguna dapat belajar tentang properti font seperti ukuran, warna, warna latar belakang, gaya, dan banyak lagi.
+
+Sebagian besar  **Font viewer**  yang tersedia online dapat menangani font TrueType dan OpenType. Beberapa Font viewer yang tercantum di bawah ini bahkan akan membuat Anda dapat mengkategorikan dan mengatur font Anda juga. Setelah mengatur dan mengatur font secara berurutan, Anda kemudian dapat menerapkan gaya yang berbeda ke teks font pilihan Anda yang ada.
+
+Font viewer akan membuat Anda dapat mengidentifikasi font dan menyimpan namanya dengan cara yang mudah dibaca sehingga Anda dapat mengaksesnya dengan mudah. Memfilter font berdasarkan jenis/kategori/lebar/tinggi, menyaring informasi gaya, pemeriksa kualitas, menampilkan semua metadata font apa pun, menampilkan teks pribadi/ASCII/Glyph, mengelola font dengan menginstal/menghapus sementara, sistem parameter baris perintah adalah fitur tambahan dari sebagian besar Font viewer.
+
+DAFTAR ISI
+
+Toggle
+
+## Berikut Kami Rangkum 8 Aplikasi Font Viewer Gratis dan Terbaik
+
+### 1. Aplikasi CPS Font Viewer
+
+CPS Font Viewer dirancang untuk para desainer dan pengembang yang ingin memeriksa karakteristik font apa pun untuk tugas desain mereka. Ini akan membuat Anda bisa mendapatkan pratinjau dan detail lain dari font yang terpasang di sistem Anda. Akan ada jendela pratinjau kecil tempat Anda dapat melihat tampilan font yang Anda pilih.
+
+Sistem filter CPS Font Viewer telah dilewati sehingga memungkinkan penggunanya untuk melihat contoh teks yang perlu diterapkan pengguna. Cara untuk menyesuaikan font tertentu juga diperbolehkan seperti mengubah warna latar belakang, mengubah warna teks, gaya, ukuran font dan beberapa font lainnya.
+
+Jadi, keuntungan utama menggunakan CPS Font Viewer adalah Anda dapat memiliki font yang Anda inginkan dalam tata letak yang dirancang karena tersedianya sistem kustomisasi.
+
+Beberapa fitur CPS Font Viewer yang membuatnya direkomendasikan untuk semua jenis proyek adalah ringan yang memerlukan konfigurasi sistem yang berat, mudah digunakan, antarmuka yang ramah pengguna, sistem untuk kustomisasi untuk mendapatkan hasil yang diinginkan dll. Jika Anda ingin menggunakan ini penampil font, Anda akan diminta untuk menginstal Windows .NET Framework 4.0.
+
+[](https://www.wartangetop.com/786/5-software-virtual-router-terbaik-yang-perlu-kamu-coba.html)
+
+
+
+
+### 2. Aplikasi AMP Font Viewer
+
+AMP Font Viewer adalah pengelola dan pengatur font all-in-one, yang membuat Anda dapat menjelajahi setiap bagian font sebelum menginstalnya di sistem atau web untuk tujuan desain Anda. Penampil Font adalah salah satu cara terbaik untuk mendapatkan gambaran umum singkat dan analisis mendalam tentang font apa pun. Ada sesuatu yang luar biasa tentang alat ini yang dapat digunakan untuk menjelajahi font yang diinstal dan dihapus di sistem Anda.
+
+Anda akan diizinkan untuk mengkategorikan dan mengatur font Anda ke dalam kategori juga. Beberapa fitur dan fungsi unggulan utama dari AMP Font Viewer adalah dukungan untuk font OpenType/TrueType, dukungan untuk font Type1, menghapus font yang terpasang, pemasangan font sementara, mendapatkan tampilan font yang beragam, dan banyak lagi. Versi AMP Font Viewer saat ini memiliki banyak fitur dan fungsi baru. Anda sekarang akan menyalin file yang terkait dengan font yang Anda instal ke folder juga dari jendela Daftar Font.
+
+### 3. Aplikasi Font Viewer TypeFacer
+
+TypeFacer adalah salah satu cara paling sederhana dan termudah untuk melihat semua font yang terpasang di sistem Anda. Penampil font ini tersedia secara bebas untuk keperluan pribadi dan komersial. Itu dapat memindai font apa pun yang diinstal di komputer Anda dan kemudian menampilkan semuanya di layar Anda.
+
+Alat ini akan memungkinkan dan memudahkan Anda untuk dengan cepat melihat pratinjau berbagai font yang tersedia dan ideal untuk Anda. TypeFacer sudah menggabungkan area teks virtual untuk memungkinkan Anda memvisualisasikan gambaran umum.
+
+Namun, Anda juga dapat menambahkan teks Anda sendiri untuk melihat pratinjau hasilnya. Untuk kemudahan pengguna, peta karakter dasar juga merupakan bagian dari TypeFacer untuk memudahkan identifikasi dan penyalinan simbol. Yah, fitur dan fungsionalitas penampil font ini bagus, tetapi pilihannya sedikit.
+
+### 4. Dp4 Font Viewer
+
+Dp4 Font Viewer adalah penampil font terbaik untuk melihat font TrueType dan OpenType. Program kecil dan gratis ini akan memungkinkan Anda untuk melihat font yang diinstal atau dihapus dari folder dan tujuan mana pun. Ada penampil font minimal yang dapat memeriksa status font yang dihapus. Nah, dengan font ini, Anda harus memeriksa font TrueType dan OpenType Anda tanpa menginstalnya.
+
+[](https://www.wartangetop.com/4607/aplikasi-edit-foto-collage.html)
+
+
+
+
+Beberapa fitur dan fungsi hebat adalah mendukung dua font terkemuka TrueType dan OpenType, memfilter font berdasarkan jenis/kategori/lebar/tinggi, menyaring informasi gaya, pemeriksa kualitas, menampilkan semua metadata untuk font apa pun, menampilkan teks pribadi/ASCII/Glyph , mengelola font Dengan menginstal/menghapus sementara, sistem parameter baris perintah, Unicode dan tampilan kunci, pencetakan font, DPI tinggi, dan banyak lagi. Daftar opsi dan fitur yang tersedia di Dp4 Font Viewer sangat mengesankan dan disusun dalam antarmuka yang sederhana dan mudah digunakan.
+
+### 5. FontViewOK
+
+FontViewOK adalah penampil font dan solusi yang memberi Anda masalah dan kesempatan untuk melihat font yang diinstal dan dihapus. Perangkat lunak ini dapat membuat gambaran visual dari semua font yang diinstal dan kemudian membuat pengguna dapat membandingkan beberapa font. Bagian terbaik tentang alat ini adalah ia menawarkan proses penyebaran yang sederhana, jadi tidak ada persyaratan file bantuan.
+
+Beberapa fitur dan fungsi intuitifnya adalah tinjauan font cepat, perbandingan semua font, pencetakan dengan fungsi pratinjau cetak, ukuran/gaya/warna font yang dapat diubah, daftar semua font dari folder tertentu, pratinjau font ganda untuk perbandingan cepat antar font, multi- ketersediaan bahasa, Gunakan font tanpa instalasi sama sekali dan portabel.
+
+Versi terbaru tersedia untuk semua versi sistem operasi Windows hingga 10. Berbagai perubahan telah dilakukan di versi terbaru tentang menambahkan bahasa baru, menyalin jalur ke clipboard untuk font yang dipilih, sistem penyimpanan otomatis, dll.
+
+### 6. MyFontbook Font Viewer
+
+MyFontbook adalah penampil font untuk semua jenis font di sistem Anda. Ini adalah alat baru yang memungkinkan Anda melihat koleksi font dari browser web. Ini memungkinkan Anda untuk dengan mudah meninjau dan mengkategorikan semua font tanpa melalui proses instalasi aplikasi.
+
+Aplikasi ini membantu desainer untuk melihat font sempurna yang dia inginkan. Cukup luncurkan platform ini dan mulai tanpa proses pendaftaran atau pendaftaran apa pun. Platform ini juga memberikan banyak perspektif. Selain itu, penting untuk membahas beberapa manfaatnya, seperti pratinjau halaman, pratinjau paragraf, pratinjau avatar, dan daftar font favorit Anda.
+
+[](https://www.wartangetop.com/4566/aplikasi-pembersih-sampah-pc.html)
+
+
+
+
+### 7. Aplikasi PigFontViewer
+
+PigFontViewer adalah penampil font yang sederhana, mudah, namun kuat dan elegan. Penampil font dan pengelola font tersedia untuk semua sistem operasi terkemuka seperti Windows, Linux dan Mac OS X. Penampil font ini akan memungkinkan Anda untuk mendapatkan informasi tentang font yang diinstal di direktori sistem folder kustom dan pratinjau bentuk teks selama instalasi, uninstall atau bersepeda . Penampil font ini ditulis dalam C++ sehingga Anda dapat dengan mudah mendapatkan pratinjau mendetail dari semua font yang diinstal di komputer Anda.
+
+Untuk informasi pembaca, ini lebih berfokus pada informasi dasar font apa pun, sehingga Anda tidak akan dapat menikmati opsi lanjutan atau pengaturan yang dapat disesuaikan dalam perangkat lunak ini. Yah, itu karena dibuat sederhana dan mudah digunakan untuk semua jenis pengguna.
+
+Tiga area utama operasinya dieksplorasi, melihat contoh teks, dan menginstal atau menghapus instalan font apa pun. Ini adalah penampil font yang disarankan bagi mereka yang ingin melihat pratinjau font yang diinstal dan dihapus sebelum memilihnya untuk proyek mereka.
+
+### 8. Opcion Font Viewer
+
+Opcion Font Viewer adalah penampil font sumber terbuka dan gratis yang memungkinkan Anda mendapatkan tampilan font yang diinstal dan dihapus di sistem Anda. Memungkinkan pengguna untuk memilih font yang sesuai untuk proyek mereka. Itu ditulis dalam bahasa Java.
+
+Inilah sebabnya mengapa menjadi lebih mudah bagi pengguna untuk melihat font, melihat bagaimana mereka akan muncul diterapkan pada tagline/logo/nama, dan melacak font melakukan berbagai fungsi lainnya. Ini memungkinkan penggunanya untuk melihat font yang diinstal dan dihapus dari sudut pandang yang berbeda. Ini sepenuhnya kompatibel dengan semua sistem operasi yang mendukung Java Runtime.
+
+Ini akan memberi Anda tampilan default yang memungkinkan Anda untuk menampilkan satu baris pada satu waktu atau pergi ke sistem menu untuk menampilkan beberapa baris. Anda dapat menambahkan font lain ke daftar favorit Anda.
+
+Fitur dan fungsi utama Opcion Font Viewer adalah tampilan font yang diinstal dan dihapus, tampilan daftar font yang diinstal dan dihapus, menambah / menghapus font favorit, menyimpan font favorit, sampel / teks tampilan yang dapat disesuaikan, sistem ukuran font yang dapat disesuaikan, Dapatkan properti font yang dapat disesuaikan, font yang dapat diubah ditampilkan per halaman dalam tampilan daftar dan banyak lagi.

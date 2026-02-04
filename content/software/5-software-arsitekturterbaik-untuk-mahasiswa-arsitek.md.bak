@@ -1,0 +1,121 @@
++++
+thumbnail= "/uploads/media/default_3.png"
+date= "2022-07-05T17:00:00+09:00"
+tags= ["software"]
+draft=true
+toc=true
+title= "##5 Software ArsitekturTerbaik Untuk Mahasiswa Arsitek"
+description= "5 Software ArsitekturTerbaik Untuk Mahasiswa Arsitek"
+link_referral= ["https://www.wartangetop.com/5682/software-arsitekturterbaik.html"]
+categories= ["ulasan"]
++++
+
+**– Arsitektur perangkat lunak** adalah rencana yang mendefinisikan semua struktur perangkat lunak yang diperlukan untuk pembangunan perangkat lunak dan diperlukan untuk melihatnya dari tingkat tinggi. Kita dapat mengekspresikan arsitektur perangkat lunak sebagai organisasi dan kerangka dari keseluruhan sistem.
+
+
+
+
+source: google.com
+
+software ini adalah cara sistematis untuk menggambarkan bagaimana sistem harus berperilaku pada tingkat tertinggi. Arsitektur perangkat lunak menggambarkan fungsi perangkat lunak, semua komponennya, kendala, fitur modul perangkat lunak dan hubungan di antara mereka. Biasanya ini bukan tentang bagaimana sistem dibuat, ini tentang apa yang dilakukan. Desain perangkat lunak berkaitan dengan bagaimana sistem dibangun. Kita dapat berbicara tentang dua level abstrak untuk arsitektur perangkat lunak:
+
+1.  Tingkat pertama menyangkut arsitektur sistem itu sendiri. Level ini menunjukkan komponen sistem dari sudut pandang arsitektur.
+2.  Di tingkat lain, arsitektur pada umumnya; Ini mencakup arsitektur sistem perusahaan yang kompleks yang mencakup sistem lain, program dan komponen program ini.Di sini kita juga dapat melihat sistem eksternal yang dimiliki dan dikelola oleh unit yang berbeda dari tingkat atas, atau bahkan oleh perusahaan yang berbeda.
+
+## **Model**
+
+Model arsitektur (juga dikenal sebagai pola atau gaya) adalah cara untuk mewakili, berbagi, dan menggunakan kembali informasi. Model arsitektur juga merupakan deskripsi bergaya dari pengalaman desain yang baik yang telah dicoba dan diuji di lingkungan yang berbeda.
+
+Arsitektur perangkat lunak menjelaskan bagaimana bagian-bagian yang membentuk suatu sistem dirancang secara keseluruhan dan bagaimana mereka berinteraksi. Untuk sistem perangkat lunak, konsep yang menunjukkan hubungan dan pembentukan perangkat lunak disebut **model arsitektur** . model arsitektur; Ini dapat dianggap sebagai solusi yang dapat digunakan kembali yang menyediakan seperangkat struktur, termasuk asosiasi dengan aturan dan peta jalan yang mendefinisikan peran, tanggung jawab, dan hubungan mereka.
+
+Model arsitektur yang telah diuji di lingkungan yang berbeda menyediakan infrastruktur untuk memberikan sistem perangkat lunak berkualitas tinggi, memperkirakan biaya berdasarkan pemahaman sistem arsitektur, dan juga mempercepat waktu proyek. Ini terutama digunakan untuk menggambarkan fitur umum aplikasi, meningkatkan fungsionalitas produk, dan meningkatkan efisiensi dan produktivitas proses pembuatan aplikasi. Model arsitektur ini harus berisi informasi tentang kapan berguna atau tidak. Model dapat direpresentasikan menggunakan anotasi tabular dan grafis.
+
+Sejak arsitektur perangkat lunak dirancang dengan tujuan sistem dalam pikiran, pola arsitektur yang cocok untuk digunakan kembali, berbagi dan representasi telah dikembangkan untuk memecahkan masalah umum. Mengenai ruang lingkup aplikasi dan ruang lingkup perusahaan, ada banyak model arsitektur yang meningkatkan produktivitas dan efisiensi. Untuk menghindari penundaan proyek, perlu memiliki pemahaman yang baik tentang pola arsitektur dan untuk aplikasi mana yang paling cocok sehingga Anda dapat memilih salah satu yang sesuai dengan kebutuhan perangkat lunak Anda. Di bagian ini Anda dapat menemukan model arsitektur umum dan terkenal:
+
+[](https://www.wartangetop.com/919/aplikasi-belajar-mengetik-di-laptop.html)
+
+
+
+
+### **1. Model-View-Controller (MVC)**
+
+Apa itu MVC? **Model arsitektur MVC** , yang pertama kali dijelaskan pada 1970-an dan mencakup arsitektur aplikasi daripada pola desain , adalah salah satu arsitektur yang banyak digunakan. Tujuan utama MVC adalah untuk memisahkan logika bisnis dan data dari detail presentasi, memungkinkan mereka untuk berubah secara independen. MVC memisahkan logika aplikasi (aplikasi) dan bagian presentasi sebagai lapisan terpisah. Presentasi juga dibagi menjadi pengontrol dan tampilan. Mari kita jelaskan 3 komponen logis MVC ini di mana pola ini sesuai dengan logika aplikasi:
+
+**Model:** Logika aplikasi (kadang-kadang disebut lapisan domain) terkait dengan bagian arsitektur ini. Ini dianggap yang terendah dari 3 komponen. Ini adalah bagian dengan fungsi dasar. Hal ini juga bertanggung jawab untuk perlindungan data. Banyak aplikasi menggunakan mekanisme penyimpanan, seperti database persisten, untuk menyimpan data. Manajemen sumber daya dicakup oleh “Model”. Ini memproses data secara logis dan menyimpan status aplikasi.
+
+**Controller:** Komponen ini berhubungan dengan interaksi pengguna aplikasi. Ini menyediakan tautan antara “Tampilan” dan “Model”. Ini mengelola operasi pada dan pada data. Ia menerima, memproses, mentransmisikan ke View dan Model dan menanggapi tindakan yang disebut peristiwa seperti klik tombol, terutama tindakan pengguna. Dengan kata lain, “Controller” melakukan permintaan yang dibuat oleh pengguna. Bekerja dengan model, ia memilih tampilan yang sesuai untuk ditampilkan. Satu-satunya interaksi antara View (antarmuka) dan Model (logika aplikasi) adalah melalui Controller.
+
+**Tampilan:** Komponen ini digunakan untuk menyiapkan antarmuka pengguna aplikasi yang berinteraksi dengan pengguna aplikasi. Ini digunakan untuk mengubah tampilan data dalam model menjadi bentuk yang sesuai untuk interaksi, yaitu, frontend yang kami nyatakan sebagai UI (antarmuka pengguna).
+
+Misalnya, model ini adalah dasar untuk manajemen interaksi dari banyak aplikasi web:
+
+Ketiga komponen ini mudah digunakan karena dapat dirancang, dikembangkan, dan digunakan secara mandiri. Hal ini memungkinkan data untuk berubah terlepas dari bagaimana itu disajikan. Di sisi lain, kompleksitas dalam arsitektur MVC tinggi. Ini dapat digunakan ketika ada beberapa cara untuk melihat dan berinteraksi dengan data.
+
+### **2.** **Layered Architecture**
+
+Layered Architecture adalah salah satu cara alternatif yang paling banyak digunakan untuk logika kerja independen dan terpisah. Juga disebut sebagai multitier atau n-tier. Berguna untuk aplikasi dengan sub-fungsi yang dapat dipisahkan pada tingkat abstraksi yang berbeda. Dalam model ini, setiap lapisan menawarkan fungsionalitas yang berbeda. Lapisan terluar adalah tempat data dimasukkan ke dalam sistem. Secara umum, lapisan pertama dirancang sebagai lapisan presentasi, kemudian ada lapisan seperti lapisan bisnis, lapisan layanan jarak jauh, lapisan persistensi, lapisan basis data.
+
+[](https://www.wartangetop.com/4497/aplikasi-edit-foto-dan-video.html)
+
+
+
+
+Setiap lapisan melayani lapisan atas. Lapisan berinteraksi dengan cara satu arah; yaitu, setiap lapisan bergantung pada layanan yang ditawarkan oleh lapisan di bawahnya untuk layanannya sendiri.
+
+Dalam aplikasi, adalah menguntungkan untuk mengatur setiap fungsi sebagai lapisan yang berbeda dan menggunakan lapisan ini secara terpisah. Dalam gaya arsitektur ini, lapisan lain tidak terpengaruh oleh perubahan tertentu pada lapisan lain, sehingga lebih mudah untuk diatur ulang. Mengubah antarmuka lapisan hanya mempengaruhi lapisan yang berdekatan dengannya. Pemisahan lapisan dapat bersifat fisik dan juga logis. Sebuah layer dapat diganti dengan layer lain yang setara selama interfacenya tidak berubah.
+
+Dalam praktiknya, seringkali sulit untuk mempertahankan pemisahan yang bersih antara lapisan, dan lapisan tingkat atas mungkin perlu berinteraksi langsung dengan lapisan tingkat yang lebih rendah daripada yang langsung di bawahnya. Performa dapat menjadi masalah karena permintaan layanan diinterpretasikan pada berbagai level saat diproses di setiap level.
+
+Kapan digunakan? Ini digunakan ketika keamanan multi-level diperlukan, saat menambahkan fitur baru di atas sistem yang ada, membangun fungsionalitas baru, ketika tanggung jawab setiap lapisan didelegasikan ke tim yang terpisah.
+
+### **3.** **Client-Server**
+
+
+
+
+source: google.com
+
+Pada dasarnya ada 2 komponen utama dalam model ini: Client dan Server. Jika klien adalah server yang membuat permintaan, itu adalah salah satu yang memenuhi permintaan, yaitu yang menyediakan layanan. Dalam model ini, setidaknya satu komponen dalam peran server dan setidaknya satu komponen dalam peran klien. Kedua komponen ini dapat ditempatkan pada infrastruktur yang sama, meskipun biasanya pada lapisan yang berbeda.
+
+Klien mengirimkan permintaan ke server yang memproses dan meresponsnya. Ketika server menerima permintaan dari klien, itu membuka koneksi dengan klien melalui protokol tertentu. Server bisa “stateful” atau “stateless”. Jika server menyimpan catatan permintaan dari klien, catatan ini disebut sesi.
+
+Model ini adalah model sistem terdistribusi yang menunjukkan data dan bagaimana data didistribusikan di antara sekumpulan komponen yang diproses. Ini dapat digunakan ketika database bersama perlu diakses dari lokasi yang berbeda, sistem klien yang berbeda dan beban pada sistem bervariasi.
+
+Keuntungan paling penting dari model client-server adalah bahwa itu adalah arsitektur terdistribusi. Layanan sisi server tersedia untuk semua klien. Tidak perlu menyediakan semua layanan untuk layanan ini. Keuntungan penting lainnya adalah bahwa layanan yang diberikan bersifat independen dan terpisah satu sama lain. Sangat mudah untuk menambahkan server baru dan mengintegrasikannya dengan seluruh sistem atau memperbarui server tanpa mempengaruhi bagian lain dari sistem. Di sisi lain, sebagai kerugian, jika layanan disediakan oleh server pusat, terjadi situasi yang disebut “satu titik kegagalan”, yaitu jika ada masalah dengan server, layanan ini tidak akan diberikan. Masalah kinerja dapat tidak dapat diprediksi karena bergantung pada jaringan dan juga sistem. Mungkin juga ada masalah manajemen jika server dimiliki oleh organisasi yang berbeda.
+
+[](https://www.wartangetop.com/4357/aplikasi-untuk-melacak-nomor-hp.html)
+
+
+
+
+Klien mungkin harus mengetahui nama server yang ada dan layanan yang mereka sediakan. Namun, server tidak perlu mengetahui siapa kliennya atau berapa banyak klien yang mengakses layanan yang mereka berikan.
+
+### **4.** **Pipe & Filter**
+
+**Model arsitektur Pipe dan Filter** dianggap sebagai arsitektur yang sangat kuat dan kokoh, berkat pemisahan modular pemrosesan sekuensialnya. Arsitektur ini memiliki komponen penyaringan terpisah. Ada juga tautan lokal di antara filter. Sambungan ini disebut **pipa** . Setiap komponen memiliki satu set input dan output. Setiap filter memproses data yang diterimanya dan mentransfernya ke filter berikutnya. Filter dapat memperkaya data, menyembunyikan detail, mengonversi ke representasi lain, dll. Ada pipa (konektor) yang memungkinkan data ditransfer dari salah satu filter ini ke filter lainnya.
+
+Data dilewatkan melalui konektor antara filter yang berdekatan. Semua filter bekerja secara bersamaan. Dengan cara ini, utas atau coroutine yang berbeda dapat dijalankan pada saat yang sama atau filter dapat ditempatkan pada mesin yang berbeda. Pada akhir proses, data ditransfer ke tujuan data yang disebut **sink .**
+
+
+
+
+source: google.com
+
+Arsitektur ini menyediakan konkurensi. Pemrosesan data lebih cepat karena filter dapat berjalan secara bersamaan selama tidak bergantung satu sama lain. Salah satu fitur hebat dari arsitektur ini adalah filter dan konektor baru yang bekerja secara bersamaan dapat dengan mudah ditambahkan dan dengan demikian ditingkatkan dengan cepat. Juga mudah untuk menggunakan kembali filter individual. Di sisi lain, arsitektur ini tidak ideal untuk sistem yang membutuhkan lebih banyak interaksi antara filter dan umpan balik langsung atau interaksi dengan penggunanya.
+
+Model arsitektur ini cocok untuk proses besar yang dapat dipisahkan menjadi beberapa langkah. Contoh yang paling terkenal adalah **[shell UNIX](https://www.google.com/search?q=shell+UNIX&oq=shell+UNIX&aqs=chrome..69i57j0i512j0i22i30l8.293j0j9&sourceid=chrome&ie=UTF-8).** Pemrosesan gambar dan kompiler juga merupakan area yang terkenal dan banyak digunakan dari model arsitektur ini.
+
+### **5.** **Repository**
+
+Semua data dalam suatu sistem dikelola dalam repositori pusat yang dapat diakses oleh semua komponen sistem. Komponen tidak berinteraksi secara langsung, hanya secara langsung melalui repositori. Arsitektur repositori terdiri dari struktur data pusat (biasanya database) dan komponen independen yang bekerja dengan struktur data pusat.
+
+
+
+
+source: google.com
+
+Komponen dapat berdiri sendiri, tidak perlu mengetahui keberadaan komponen lain. Komponen dapat menambahkan data ke penyimpanan data, yaitu repositori, dan mengekstrak data darinya. Perubahan yang dibuat oleh komponen dapat menyebar ke semua komponen. Karena semua data ada di satu tempat, data dapat dikelola secara konsisten (misalnya, pencadangan simultan.)
+
+Seperti beberapa kelemahan; Karena ada **satu titik kegagalan** dalam repositori, masalah dalam repositori mempengaruhi keseluruhan sistem. Mungkin ada kekurangan dalam mengatur semua komunikasi melalui repositori. Mungkin juga sulit untuk mendistribusikan di antara mesin yang berbeda.
+
+Model arsitektur ini harus digunakan untuk sistem yang menghasilkan informasi dalam jumlah besar yang perlu disimpan untuk waktu yang lama. Ini banyak digunakan dalam sistem manajemen basis data. Anda juga dapat menggunakannya pada sistem berbasis data di mana menambahkan data ke repositori memicu tindakan atau alat.
