@@ -15,7 +15,7 @@ toc: true
 ---
 ![sitemap generator](/uploads/media/sitemap-generator-tool-terbaik.jpg)
 
-Jika mencari generator sitemap gratis, sudah mampir di tempat yang tepat! Dalam panduan praktis dari *sadapphone.com*, kami membagikan beberapa alat untuk pembuat sitemap untuk situs web / blog dan menjelaskan nilai sitemap untuk hasil pencarian secara keseluruhan.
+Jika mencari generator sitemap gratis, sudah mampir di tempat yang tepat! Dalam panduan praktis dari *menyadap.github.io*, kami membagikan beberapa alat untuk pembuat sitemap untuk situs web / blog dan menjelaskan nilai sitemap untuk hasil pencarian secara keseluruhan.
 
 ## Apa itu sitemap?
 
@@ -53,7 +53,7 @@ Pertama, dapat melakukannya secara manual, yang tidak akan kami bahas di sini, a
 
 Ada banyak tool sitemap generator online gratis yang dapat dipilih sehingga mungkin tidak tahu harus menggunakan yang mana.
 
-Kami telah melakukan review untuk pengunjung situs *sadapphone.com* dan telah menyusun daftar sembilan generator sitemap gratis terbaik di web.
+Kami telah melakukan review untuk pengunjung situs *menyadap.github.io* dan telah menyusun daftar sembilan generator sitemap gratis terbaik di web.
 
 {{< rekomendasi-blog >}}
 

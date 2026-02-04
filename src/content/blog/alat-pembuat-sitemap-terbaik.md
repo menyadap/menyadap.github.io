@@ -24,7 +24,7 @@ Alat pembuat sitemap adalah perangkat lunak yang membuat peta situs untuk situs 
 
 Sitemap generator terbaik untuk situs web bergantung pada platform yang digunakan, ukuran, dan kontrol yang diinginkan atas file tersebut.
 
-Misalnya, *sadapphone.com* adalah situs WordPress, dan kami menggunakan plugin seperti ***Yoast SEO*** untuk membuat sitemap dan mengelola seluruh tugas SEO jauh lebih mudah.
+Misalnya, *menyadap.github.io* adalah situs WordPress, dan kami menggunakan plugin seperti ***Yoast SEO*** untuk membuat sitemap dan mengelola seluruh tugas SEO jauh lebih mudah.
 
 Tetapi, Plugin Yoast bukan satu-satunya cara untuk menangani membuat sitemap. Selain itu, Kecuali Anda tidak menggunakan WordPress.
 
