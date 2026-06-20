@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://menyadap.github.io/sitemap-generator.xml
+Sitemap: https://menyadap.github.io/sitemap.xml
