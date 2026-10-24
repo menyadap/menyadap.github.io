@@ -1,0 +1,285 @@
+---
+// PenyadapIntro - Section penjelasan produk penyadap ponsel.
+// Pemetaan data:
+//   highlights  -> daftar fitur (checklist)
+//   blocks[0]   -> blok lead ("Penyadap yang memiliki fitur lengkap!")
+//   blocks[1]   -> blok "Apa itu Software penyadap ponsel?"
+//   blocks[2]   -> blok "Mengapa saya harus menggunakan penyadap ini?"
+const highlights: string[] = [
+  'Cekal nomor telepon dari panggilan dan pesan teks',
+  'Tetapkan batasan waktu dan blokir secara khusus yang Anda pilih',
+  'Perintah track lokasi secara real time',
+  'Pantau pesan SMS, WhatsApp, Facebook & Skype dan dapatkan lansiran aktivitas khusus',
+  'Kompatibel dengan Android, iPhone dan iPad',
+];
+
+const blocks: { title: string; html: string }[] = [
+  {
+    title: 'Penyadap yang memiliki fitur lengkap!',
+    html: `Perangkat ini melampaui keinginan memungkinkan Anda menetapkan batas waktu penggunaan
+      ponsel anak Anda. Anda dapat menentukan siapa mereka atau tidak dapat berkomunikasi dengan,
+      memblokir situs web atau aplikasi dan melihat aktivitas yang target lakukan.`,
+  },
+  {
+    title: 'Apa itu Software penyadap ponsel?',
+    html: `Apa yang dilakukan anak Anda di perangkat seluler yang Anda berikan? Khawatir mereka
+      menyalahgunakan ponsel atau tablet mereka? <a href="/">Penyadap hp</a> memungkinkan Anda untuk
+      memantau tindakan dan menyaring apa saja yang tidak Anda inginkan. Anda bahkan bisa membuat
+      jadwal untuk waktu penggunaan ponsel yang diizinkan.<br /><br />
+      <strong>Software penyadap</strong> ini adalah generasi baru perangkat lunak pengawas, bagi orang
+      tua untuk ponsel dan tablet. Apakah Anda memerlukan kemampuan untuk memfilter, memblokir dan
+      memantau bagaimana anak Anda menggunakan perangkat mobile nya? Jika iya, maka software ini
+      sangat ideal untuk Anda. pemasangan program yang sederhana ke perangkat yang digunakan anak
+      Anda untuk mulai memantau.<br /><br />
+      Setelah Anda menginstal perangkat sadap yang dilindungi kata sandi, Anda akan dapat memblokir
+      aktivitas yang Anda tentukan dan membuat log dari setiap tindakan yang dilakukan anak Anda.
+      Anda memiliki pilihan untuk menunjukkan kepada anak Anda sebuah pemberitahuan perangkat dan
+      icon menu tamper-proof untuk memberi tahu mereka bahwa mereka sedang dipantau. Pilihan ini
+      bisa dimatikan.<br /><br />
+      Dengan menggunakan kemampuan Internet dari ponsel atau tablet Anda, aktivitas yang dipantau
+      dan lokasi GPS dengan cepat dimasukkan ke akun penyadap Anda. Untuk melihat hasilnya, Anda
+      cukup login ke akun Anda di web penyadap. Log ditampilkan menurut kategori dan diurutkan untuk
+      memudahkan penjelajahan.`,
+  },
+  {
+    title: 'Mengapa saya harus menggunakan penyadap ini?',
+    html: `Dengan menggunakan perangkat lunak parental pertama untuk memantau smartphone Windows
+      Mobile, iPhone dan Android, app sadap dengan menetapkan fitur standar yang lengkap. ini
+      membuktikan kita berdiri di belakang produk dan layanan. Teruslah membaca lebih banyak alasan
+      mengapa Anda harus menggunakan penyadap ponsel.<br /><br />
+      <strong>Dukungan Pelanggan 24/7 Live</strong><br />
+      Kami menawarkan dukungan langsung 24/7 untuk menjawab setiap pertanyaan yang mungkin Anda
+      miliki. Jika Anda memerlukan bantuan seputar perangkat sadap cukup kunjungi halaman
+      <a href="/contact/">contact</a> dengan kami dan mintalah tim kami untuk memandu Anda melalui
+      prosesnya.<br /><br />
+      <strong>Bukan Spyware</strong><br />
+      Perangkat lunak sadap ini dapat terlihat di daftar menu dan memberi tahu anak Anda bahwa mereka
+      sedang dipantau. Karena mereka tahu perangkat lunak mata-mata terinstal, mereka akan lebih
+      berhati-hati dengan pengawasan Anda. Pilihan ini dapat dinonaktifkan dengan menyembunyikan
+      icon sadap dari daftar menu hp target (bila memungkinkan).`,
+  },
+];
+---
+
+<section class="penyadap-section" id="penyadap" aria-labelledby="penyadap-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Tentang Software</span>
+      <h2 class="section-title" id="penyadap-title">Mengenal Software Penyadap Ponsel</h2>
+      <p class="section-subtitle">
+        Pahami cara kerja, fitur unggulan, dan alasan menggunakan software pengawas ponsel generasi terbaru.
+      </p>
+    </div>
+
+    <!-- Daftar fitur unggulan -->
+    <ul class="penyadap-highlights">
+      {highlights.map((item) => (
+        <li class="highlight-item">{item}</li>
+      ))}
+    </ul>
+
+    <div class="penyadap-blocks">
+      {blocks.map((block, index) => (
+        <article class:list={['penyadap-card', { 'penyadap-card--lead': index === 0 }]}>
+          <h3 class="penyadap-card-title">{block.title}</h3>
+          <div class="penyadap-card-body" set:html={block.html} />
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .penyadap-section {
+    padding: calc(var(--grid-unit) * 8) 0;
+    background: var(--color-background);
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+  }
+
+  /* === Kepala section === */
+  .section-head {
+    text-align: center;
+    margin-bottom: calc(var(--grid-unit) * 7);
+  }
+
+  .section-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-accent);
+    background: rgba(227, 2, 32, 0.08);
+    border: 1px solid rgba(227, 2, 32, 0.25);
+    border-radius: 999px;
+    padding: calc(var(--grid-unit) * 0.5) calc(var(--grid-unit) * 1.5);
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .section-title {
+    font-family: var(--font-heading-secondary);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* === Highlights: checklist fitur === */
+  .penyadap-highlights {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 2.5rem;
+    margin: 0 0 calc(var(--grid-unit) * 6);
+    padding: calc(var(--grid-unit) * 3);
+    background: var(--color-white);
+    border-radius: 12px;
+    border-top: 6px solid var(--color-accent);
+    box-shadow: 0 4px 14px rgba(36, 32, 36, 0.05);
+  }
+
+  :global([data-theme="dark"]) .penyadap-highlights {
+    background: var(--color-surface);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .highlight-item::before {
+    content: '\2713';
+    color: var(--color-accent);
+    font-weight: 700;
+    line-height: 1.6;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 720px) {
+    .penyadap-highlights {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  /* === Blok artikel === */
+  .penyadap-blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--grid-unit) * 3);
+  }
+
+  @media (min-width: 900px) {
+    .penyadap-blocks {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Blok lead membentang penuh di atas dua kolom */
+    .penyadap-card--lead {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .penyadap-card {
+    padding: calc(var(--grid-unit) * 3);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    border-left: 6px solid var(--color-accent);
+    box-shadow: 0 4px 14px rgba(36, 32, 36, 0.05);
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  :global([data-theme="dark"]) .penyadap-card {
+    background: var(--color-surface);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .penyadap-card--lead {
+    background: linear-gradient(160deg, var(--color-white) 0%, var(--color-surface) 100%);
+  }
+
+  :global([data-theme="dark"]) .penyadap-card--lead {
+    background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-background) 100%);
+  }
+
+  .penyadap-card-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .penyadap-card--lead .penyadap-card-title {
+    font-size: 1.6rem;
+    color: var(--color-accent);
+  }
+
+  .penyadap-card-body {
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+  }
+
+  .penyadap-card-body :global(a) {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .penyadap-card-body :global(a:hover),
+  .penyadap-card-body :global(a:focus) {
+    text-decoration-thickness: 2px;
+  }
+
+  .penyadap-card-body :global(strong) {
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .section-head {
+      margin-bottom: calc(var(--grid-unit) * 5);
+    }
+
+    .penyadap-highlights {
+      padding: calc(var(--grid-unit) * 2.5);
+      margin-bottom: calc(var(--grid-unit) * 4);
+    }
+
+    .penyadap-card {
+      padding: calc(var(--grid-unit) * 2.5);
+    }
+
+    .penyadap-card--lead .penyadap-card-title {
+      font-size: 1.35rem;
+    }
+  }
+</style>

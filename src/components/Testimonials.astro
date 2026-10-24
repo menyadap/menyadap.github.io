@@ -1,170 +1,176 @@
 ---
-// Testimonials Component - Display user reviews
+// Testimonials Component - Menampilkan testimoni pelanggan
+// Pola: array data terstruktur, mirip komponen lain di situs.
+interface Testimonial {
+  name: string;
+  description: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    name: "Yuanita Putri",
+    description: `Saya benar-benar percaya bahwa program ini membantu menyelamatkan anak remaja saya dari terus menyusuri
+    pergaulan buruk dari luar rumah. Ini memungkinkan saya untuk melihat pesan teks dan informasi lainnya untuk
+    menemukan pengaruh buruk dan memisahkan anak saya dari temannya.`
+  },
+  {
+    name: "Erwin",
+    description: `Saya suka program ini bekerja hebat dan membantu saya memantau semua pesan SMS
+    dari ponsel target. Saya mencoba mencegah pornografi agar tidak sampai ke ponsel anak saya.`
+  },
+  {
+    name: "M. Gunawan",
+    description: `Satu-satunya cara untuk menemukan kebenarannya adalah dengan menyadap SMS, WhatsApp &amp; Facebook
+    dengan perangkat lunak sadap handphone ini, bisa menangkap pesan-pesan rahasia.`
+  },
+  {
+    name: "Juliani",
+    description: `Ini melebihi perkiraan yang saya anggap sebagai produk penyadap biasa, ternyata sangat lengkap fiturnya
+    dan bagus! Anda dapat mengandalkan dukungan dan referensi saya pada produk Anda ke teman-teman,
+    yang mana lebih stabil dan bekerja lebih baik daripada yang lain.`
+  }
+];
 ---
 
-<section class="testimonials-section">
+<section class="testimonials-section" aria-labelledby="testimonials-title">
   <div class="container">
-    <h2 class="section-title">Dengarkan Apa Kata Pengguna XNSPY Asli!</h2>
-    <p class="section-subtitle">Dipercaya oleh orang tua dan keluarga di seluruh dunia</p>
-    
+    <h2 class="section-title" id="testimonials-title">Testimoni Pelanggan</h2>
+    <p class="section-subtitle">
+      Apa kata mereka yang sudah menggunakan layanan kami.
+    </p>
+
     <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <h3 class="testimonial-title">Solusi Pemantauan yang Mengesankan!</h3>
-        <p class="testimonial-text">
-          "XNSPY telah menjadi alat yang luar biasa untuk memantau aktivitas online anak saya. 
-          Ini memberi saya wawasan komprehensif dan memungkinkan saya memastikan keselamatan mereka dengan mudah. 
-          Sangat direkomendasikan!"
-        </p>
-        <div class="testimonial-author">Budi Santoso • 30 Mei 2023</div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <h3 class="testimonial-title">Benar-benar Keren</h3>
-        <p class="testimonial-text">
-          "Saya dan istri saya memiliki rutinitas kerja yang sibuk, dan memantau dua remaja kami adalah beban. 
-          Kami senang menginstal aplikasi pemantauan XNSPY di ponsel mereka dengan ancaman online yang meningkat. 
-          Aplikasi ini membuat parenting jauh lebih mudah!"
-        </p>
-        <div class="testimonial-author">Siti Aminah • 21 Mei 2024</div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <h3 class="testimonial-title">Investasi Terbaik untuk Keselamatan Keluarga</h3>
-        <p class="testimonial-text">
-          "Sebagai orang tua tunggal, mengetahui apa yang dilakukan anak-anak saya secara online memberi saya ketenangan pikiran. 
-          XNSPY mudah digunakan dan memberikan semua informasi yang saya butuhkan untuk menjaga mereka tetap aman. 
-          Sebanding dengan setiap rupiah!"
-        </p>
-        <div class="testimonial-author">Rizal Pratama • 15 Maret 2024</div>
-      </div>
-    </div>
-
-    <div class="stats-container">
-      <div class="stat-item">
-        <div class="stat-number">13M+</div>
-        <div class="stat-label">Unduhan</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">Tahun Layanan</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">4.8⭐</div>
-        <div class="stat-label">Rating Rata-rata</div>
-      </div>
+      {testimonials.map((item, index) => (
+        <article class="testimonial-card" key={index}>
+          <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="testimonial-text">
+            {item.description}
+          </blockquote>
+          <footer class="testimonial-author">
+            <span class="author-name">{item.name}</span>
+          </footer>
+        </article>
+      ))}
     </div>
   </div>
 </section>
 
 <style>
   .testimonials-section {
-    padding: 4rem 1rem;
+    padding: calc(var(--grid-unit) * 8) 0;
     background: var(--color-background);
   }
 
   .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 var(--content-padding);
   }
 
   .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    text-align: center;
-    margin-bottom: 0.5rem;
     font-family: var(--font-heading-primary);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: calc(var(--grid-unit) * 2);
   }
 
   .section-subtitle {
     font-size: 1.1rem;
+    line-height: 1.6;
     color: var(--color-text-secondary);
     text-align: center;
-    margin-bottom: 3rem;
+    max-width: 600px;
+    margin: 0 auto calc(var(--grid-unit) * 6);
   }
 
   .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
+    grid-template-columns: 1fr;
+    gap: calc(var(--grid-unit) * 4);
   }
 
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Kartu testimonial: gaya editorial dengan quote mark merah */
   .testimonial-card {
-    padding: 2rem;
-    background: var(--color-surface);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 3);
+    background: linear-gradient(160deg, var(--color-white) 0%, var(--color-surface) 100%);
+    border: 1px solid var(--color-border);
+    border-top: 6px solid var(--color-accent);
     border-radius: 12px;
-    border-left: 6px solid var(--color-accent);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
 
-  [data-theme="dark"] .testimonial-card {
-    background: #1a1a1a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: 0 14px 30px rgba(227, 2, 32, 0.12);
   }
 
-  .stars {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    letter-spacing: 0.25rem;
+  :global([data-theme="dark"]) .testimonial-card {
+    background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-background) 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
-  .testimonial-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-    margin-bottom: 0.5rem;
-    font-family: var(--font-heading-secondary);
+  :global([data-theme="dark"]) .testimonial-card:hover {
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .quote-mark {
+    position: absolute;
+    top: calc(var(--grid-unit) * 1.5);
+    right: calc(var(--grid-unit) * 2.5);
+    font-family: var(--font-heading-primary);
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--color-accent);
+    opacity: 0.18;
+    pointer-events: none;
+    user-select: none;
   }
 
   .testimonial-text {
-    font-size: 0.95rem;
-    color: var(--color-text-primary);
+    flex: 1;
+    margin: 0 0 calc(var(--grid-unit) * 3);
+    font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 1rem;
+    color: var(--color-text-secondary);
     font-style: italic;
   }
 
   .testimonial-author {
-    font-size: 0.85rem;
-    color: var(--color-text-primary);
-    font-weight: 500;
-  }
-
-  .stats-container {
     display: flex;
-    justify-content: center;
-    gap: 4rem;
-    padding: 2rem;
-    background: var(--color-light-gray);
-    border-radius: 12px;
-    border-top: 6px solid var(--color-accent);
+    align-items: center;
+    gap: calc(var(--grid-unit));
+    padding-top: calc(var(--grid-unit) * 2);
+    border-top: 2px solid var(--color-border);
   }
 
-  [data-theme="dark"] .stats-container {
-    background: #1a1a1a;
-  }
-
-  .stat-item {
-    text-align: center;
-  }
-
-  .stat-number {
-    font-size: 2rem;
+  .author-name {
+    font-family: var(--font-heading-secondary);
+    font-size: 1rem;
     font-weight: 700;
-    color: var(--color-accent);
-    font-family: var(--font-heading-primary);
-    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
 
-  .stat-label {
-    font-size: 0.9rem;
-    color: var(--color-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  .author-name::before {
+    content: '— ';
+    color: var(--color-accent);
   }
 
   @media (max-width: 768px) {
@@ -172,14 +178,16 @@
       font-size: 1.8rem;
     }
 
-    .testimonials-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .testimonial-card {
+      padding: calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 2.5) calc(var(--grid-unit) * 2.5);
     }
 
-    .stats-container {
-      flex-direction: column;
-      gap: 2rem;
+    .testimonial-text {
+      font-size: 0.9rem;
+    }
+
+    .quote-mark {
+      font-size: 3rem;
     }
   }
 </style>

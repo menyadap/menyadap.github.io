@@ -58,52 +58,54 @@ const config = alertConfig[type];
     font-weight: 600;
   }
 
+  /*/ Warna mengikuti palet Red/Black/White: info & success netral,
+      warning pakai tint merah, danger solid Spanish Red */
   .alert-info {
-    color: #004085;
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
-  }
-
-  [data-theme="dark"] .alert-info {
-    color: #7dd3fc;
-    background-color: #0c2d3a;
-    border-color: #06486a;
-  }
-
-  .alert-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
-  }
-
-  [data-theme="dark"] .alert-warning {
-    color: #fbbf24;
-    background-color: #3a2e0b;
-    border-color: #7c2d12;
-  }
-
-  .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-  }
-
-  [data-theme="dark"] .alert-danger {
-    color: #fca5a5;
-    background-color: #3a1c1c;
-    border-color: #5a1a1a;
+    color: var(--color-text-primary);
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
   }
 
   .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    color: var(--color-text-primary);
+    background-color: var(--color-surface);
+    border-color: var(--color-text-primary);
+  }
+
+  .alert-warning {
+    color: #8a0b18;
+    background-color: #fde7ea;
+    border-color: #f3b9c1;
+  }
+
+  .alert-danger {
+    color: #ffffff;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent-red-strong);
+  }
+
+  [data-theme="dark"] .alert-info {
+    color: var(--color-text-primary);
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
   }
 
   [data-theme="dark"] .alert-success {
-    color: #86efac;
-    background-color: #1a3a1a;
-    border-color: #2a5a2a;
+    color: var(--color-text-primary);
+    background-color: var(--color-surface);
+    border-color: var(--color-gainsboro);
+  }
+
+  [data-theme="dark"] .alert-warning {
+    color: #ffc2c9;
+    background-color: #3a2226;
+    border-color: #7d1220;
+  }
+
+  [data-theme="dark"] .alert-danger {
+    color: #ffffff;
+    background-color: var(--color-accent-red-strong);
+    border-color: var(--color-accent);
   }
 </style>
 

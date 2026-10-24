@@ -2,23 +2,31 @@
 
 /* Color Variables */
 :root {
+  /* Palette: Red, Black & White (schemecolor.com/red-black-white) */
+  --color-spanish-red: #e30220;
+  --color-guardsman-red: #bf0000;
+  --color-raisin-black: #242024;
+  --color-gainsboro: #dddddd;
+  --color-white-gray: #f3f4f5;
+
   /* Monotone Palette */
   --color-white: #ffffff;
-  --color-light-gray: #f5f5f5;
-  --color-medium-gray: #888888;
-  --color-dark-gray: #333333;
-  --color-black: #000000;
-  
+  --color-light-gray: var(--color-white-gray);
+  --color-medium-gray: #6b6570; /* Turunan Raisin Black untuk teks muted */
+  --color-dark-gray: var(--color-raisin-black);
+  --color-black: var(--color-raisin-black);
+
   /* Accent Color */
-  --color-accent-red: #dc2626;
-  
+  --color-accent-red: var(--color-spanish-red);
+  --color-accent-red-strong: var(--color-guardsman-red);
+
   /* Semantic Colors */
   --color-background: var(--color-white);
-  --color-surface: var(--color-light-gray);
-  --color-text-primary: var(--color-black);
-  --color-text-secondary: var(--color-dark-gray);
+  --color-surface: var(--color-white-gray);
+  --color-text-primary: var(--color-raisin-black);
+  --color-text-secondary: #4a444d; /* Turunan Raisin Black */
   --color-text-muted: var(--color-medium-gray);
-  --color-border: var(--color-medium-gray);
+  --color-border: var(--color-gainsboro);
   --color-accent: var(--color-accent-red);
   
   /* Typography */
@@ -37,23 +45,24 @@
 /* Dark Mode Theme */
 [data-theme="dark"] {
   /* Monotone Palette - Dark Mode */
-  --color-white: #0a0a0a;
-  --color-light-gray: #1a1a1a;
-  --color-medium-gray: #888888;
-  --color-dark-gray: #b8b8b8;
-  --color-black: #f5f5f5;
-  
-  /* Accent Color */
-  --color-accent-red: #ff3333;
-  
+  --color-white: var(--color-raisin-black);
+  --color-light-gray: #2e292e; /* Turunan Raisin Black */
+  --color-medium-gray: #a9a5a9;
+  --color-dark-gray: var(--color-gainsboro);
+  --color-black: var(--color-white-gray);
+
+  /* Accent Color - Spanish Red versi terang agar kontras di latar gelap */
+  --color-accent-red: #ff5252;
+  --color-accent-red-strong: var(--color-spanish-red);
+
   /* Semantic Colors - Dark Mode */
-  --color-background: #0a0a0a;
-  --color-surface: #1a1a1a;
-  --color-text-primary: #f5f5f5;
-  --color-text-secondary: #b8b8b8;
-  --color-text-muted: #888888;
-  --color-border: #333333;
-  --color-accent: #ff3333; /* Slightly brighter red for dark mode */
+  --color-background: var(--color-raisin-black);
+  --color-surface: #2e292e;
+  --color-text-primary: var(--color-white-gray);
+  --color-text-secondary: var(--color-gainsboro);
+  --color-text-muted: #a9a5a9;
+  --color-border: #3a343a;
+  --color-accent: var(--color-accent-red);
 }
 
 /* Smooth theme transitions */
@@ -276,6 +285,8 @@ hr {
   width: 100%;
   max-height: 320px;
   object-fit: contain;
+  /* Radius dalam = radius kartu (16px) - lebar border (1px) */
+  border-radius: 15px;
   margin: 1.5rem 0;
   display: block;
 }
@@ -315,11 +326,11 @@ hr {
 }
 
 .qc-button:hover {
-  background: #b91c1c;
+  background: var(--color-accent-red-strong);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 12px rgba(191, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .qc-button:hover {
-  box-shadow: 0 4px 12px rgba(255, 51, 51, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
 }

@@ -12,9 +12,13 @@ const currentYear = new Date().getFullYear();
         © {currentYear} {config.author.name}. All rights reserved.
       </p>
       <p class="theme-credit">
-        Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a> 
-        • <a href="https://github.com/menyadap/menyadap.github.io" target="_blank" rel="noopener">menyadap.github.io</a>
+        Design By menyadap.github.io
       </p>
+      <nav class="footer-links" aria-label="Ketentuan dan kebijakan">
+        <a href={base + "ketentuan-layanan/"}>Ketentuan Layanan</a>
+        <span class="footer-links-separator" aria-hidden="true">•</span>
+        <a href={base + "privacy-police/"}>Privacy Policy</a>
+      </nav>
     </div>
     
     <div class="social-links">
@@ -169,6 +173,31 @@ const currentYear = new Date().getFullYear();
     text-decoration: underline;
   }
 
+  .footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: calc(var(--grid-unit));
+    margin-top: calc(var(--grid-unit) / 2);
+    font-size: 0.9rem;
+  }
+
+  .footer-links a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover,
+  .footer-links a:focus {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .footer-links-separator {
+    color: var(--color-text-secondary);
+  }
+
   .social-links {
     display: flex;
     gap: calc(var(--grid-unit) * 1.5);
@@ -266,8 +295,8 @@ const currentYear = new Date().getFullYear();
   }
 
   .toggle-checkbox:checked + .toggle-switch {
-    background-color: #4a90e2;
-    border-color: #2c5aa0;
+    background-color: var(--color-accent);
+    border-color: var(--color-accent-red-strong);
   }
 
   .toggle-checkbox:checked + .toggle-switch .toggle-inner {
@@ -296,6 +325,10 @@ const currentYear = new Date().getFullYear();
 
     .footer-info {
       order: 2;
+    }
+
+    .footer-links {
+      justify-content: center;
     }
 
     .social-links {

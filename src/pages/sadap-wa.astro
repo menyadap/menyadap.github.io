@@ -1,0 +1,1028 @@
+---
+import Layout from '../components/Layout.astro';
+import Disclaimer from '../components/Disclaimer.astro';
+
+// 4 demo screenshot (content lapangan)
+const demos = [
+  {
+    title: 'SADAP CHATTING WHATSAPP',
+    image: '/images/whatsapp.jpg',
+    dest: 'Demo hasil Sadap data pesan chat WhatsApp dari HP target.'
+  },
+  {
+    title: 'LACAK LOKASI GPS',
+    image: '/images/gps-locations.jpg',
+    dest: 'Demo hasil Sadap data GPS Lokasi (realtime) dari HP target.'
+  },
+  {
+    title: 'SADAP BROWSER',
+    image: '/images/websites-visited.jpg',
+    dest: 'Demo Sadap data histori kunjungan Website dari HP target.'
+  },
+  {
+    title: 'SADAP MEDIA & KAMERA',
+    image: '/images/photos.jpg',
+    dest: 'Demo hasil Sadap data Foto & Kamera dari HP target.'
+  }
+];
+
+// Daftar fitur paket BASIC
+const pricingFeatures = [
+  'Phone Call recording',
+  'Phone Call interception*',
+  'Spycall*',
+  'Environment recording',
+  'RemCam',
+  'RemVid',
+  'Spoof SMS*',
+  'SMS Keyword deletion*',
+  'Facebook Messenger*',
+  'Hike Messenger*',
+  'Kik Messenger*',
+  'Instagram Direct Messages*',
+  'LINE Messages*',
+  'Skype Messages*',
+  'Viber Messages',
+  'WhatsApp Messages',
+  'Hangout Messages*',
+  'QQ Messages*',
+  'Telegram Messages*',
+  'Tinder Messages*',
+  'WeChat Message*',
+  'Email*',
+  'Gmail',
+  'Application Screenshots*',
+  'SIM Changed Notification*',
+  'Call logs',
+  'Address book',
+  'SMS messages',
+  'MMS',
+  'Location tracking',
+  'Geo-Fencing',
+  'Browsing activity*',
+  'Browser bookmarks*',
+  'Network connections',
+  'Application activity',
+  'Installed applications',
+  'Photos',
+  'Videos',
+  'Audio files',
+  'Wallpaper images',
+  'Calendar',
+  'Easy to install',
+  'Visibility Option',
+  'Dashboard Alerts',
+  'Send Remote Commands from Web',
+  'SMS Remote Commands*',
+  'Check Device Battery Status',
+  'Remotely restart device*',
+  'Remotely change software features',
+  'Renew Anytime',
+  'Run in Hidden Mode',
+  'Hide Rooting*'
+];
+
+// Tips mengawasi pergaulan remaja
+const remajaTips = [
+  {
+    title: 'Tetapkan aturan',
+    text: 'Berikan penjelasan anak remaja Anda bahwa penggunaan ob4t terlarang dan penggunaan sosial media yang tidak tepat, hal tidak dapat diterima. Dengan penjelasan ini untuk dapat membuatnya tetap waspada, tetapkan batasan dengan konsekuensi yang jelas untuk mencegahnya.'
+  },
+  {
+    title: 'Pujilah dan pahamilah',
+    text: 'perilaku yang baik untuk kepatuhan dan tegaskan konsekuensi ketidakpatuhan, pada setiap perbuataan salah yang dilakukan anak remaja.'
+  },
+  {
+    title: 'Ketahui di mana remaja Anda pergi',
+    text: 'Apa yang akan dia lakukan selama tanpa diawasi. penelitian menunjukkan bahwa remaja dengan waktu tanpa pengawasan tiga kali lebih mungkin menggunakan ob4t terlarang lainnya. remaja yang tidak diawasi juga cenderung melakukan perilaku berisiko seperti minum yang tidak selayaknya dikonsumsi untuk usia dibawah umur, aktivitas s3x bebas, dan sosial media dibandingkan remaja lainnya yang selalu diawasi. hal ini sangat penting ketika bermain sepulang dari sekolah, di malam hari, dan juga saat libur.'
+  },
+  {
+    title: 'Bicaralah dengan anak remaja Anda',
+    text: 'Cobalah ajak berbicara dengan anak Anda, dengan santai bertanya kepadanya bagaimana keadaan di sekolah, tentang teman-temannya, apa rencananya untuk masa depan, dan masih banyak lainnya.'
+  },
+  {
+    title: 'Jaga agar anak tetap sibuk',
+    text: 'terutama antara jam 3 sore sampai 6 sore sampai petang. Libatkan remaja Anda dalam kegiatan setelah sekolah. Daftarkan anak Anda dalam program pendidikan yang lain seperti olahraga atau kegiatan positif lainnya, penelitian menunjukkan bahwa remaja yang terlibat dalam kegiatan konstruktif dan yang diawasi cenderung tidak menggunakan 0bat-0batan daripada remaja lainnya.'
+  },
+  {
+    title: 'Tetapkan "pernyataan nilai inti" untuk keluarga Anda',
+    text: 'Pertimbangkan untuk mengembangkan sebuah pernyataan misi keluarga yang mencerminkan nilai-nilai inti keluarga Anda. ini mungkin akan dibahas dan dibuat selama pertemuan keluarga atau ketika makan bersama. berbicara tentang konsekuensi pergaulan bebas sangat penting pada saat remaja. tentang isu-isu seperti n4rkoba, s3k, cyberbullying, kekerasan dan petunjuk untuk membimbing anak-anak Anda.'
+  },
+  {
+    title: 'Luangkan waktu bersama',
+    text: 'sebagai keluarga secara teratur dan orangtua harus terlibat dalam kehidupan anak remaja. buat ikatan dengan anak Anda. membangun masukan dengan anak Anda sehingga akan jauh lebih mudah untuk menegakkan perilaku disiplin.'
+  },
+  {
+    title: 'Luangkan waktu untuk mempelajari fakta',
+    text: 's3x bebas terkait tentang pergaulan bebas, minuman terlarang untuk di konsumsi bawah umur dan penggunaan zat-zat terlarang lainnya. kemudian bicarakan dengan remaja Anda tentang efek kesehatan, sosial, pembelajaran, dan mental yang berbahaya bagi siapapun, anak usia muda khususnya.'
+  },
+  {
+    title: 'Kenali teman anak Anda',
+    text: 'Dengan mengundang mereka kerumah atau berbicara dengan mereka dengan anak remaja Anda, atau aktivitas positif lainnya.'
+  }
+];
+
+// FAQ khusus halaman pemantau WhatsApp
+const faqs = [
+  {
+    q: 'Apakah bisa menyadap WhatsApp jarak jauh tanpa akses fisik ke HP target?',
+    a: 'Tidak. Instalasi aplikasi sadap WhatsApp tetap memerlukan akses fisik satu kali ke perangkat target untuk memasang dan mengaktifkannya. Setelah terpasang, seluruh data WhatsApp dapat Anda pantau jarak jauh dari dashboard.'
+  },
+  {
+    q: 'Apa bedanya pemantau WhatsApp ini dengan WhatsApp Web?',
+    a: 'WhatsApp Web hanya menampilkan chat pada akun yang sama dan harus terhubung manual setiap saat. Pemantau WhatsApp jarak jauh bekerja otomatis di latar belakang dan mengirim data chat, media, serta panggilan dari HP target ke dashboard Anda.'
+  },
+  {
+    q: 'Perangkat apa saja yang didukung?',
+    a: 'Aplikasi sadap kompatibel untuk smartphone dan tablet Android maupun iPhone / iPad. Saat ini belum mendukung Symbian atau BlackBerry.'
+  },
+  {
+    q: 'Data WhatsApp apa saja yang bisa dipantau?',
+    a: 'Pesan teks, gambar, video, dokumen, serta riwayat panggilan WhatsApp lengkap dengan tanggal dan waktu pengiriman.'
+  },
+  {
+    q: 'Apakah aplikasi sadap terlihat oleh pemilik HP target?',
+    a: 'Aplikasi dapat dijalankan dalam mode tersembunyi sehingga tidak muncul di daftar menu. Anda juga dapat memunculkan ikon pemberitahuan bila ingin pemilik perangkat mengetahuinya.'
+  },
+  {
+    q: 'Berapa biaya dan apakah ada biaya bulanan?',
+    a: 'Cukup pembayaran satu kali sebesar 300.000 IDR untuk paket BASIC, sudah termasuk update gratis. Tidak ada biaya langganan bulanan.'
+  }
+];
+
+// Artikel terkait (internal link)
+const relatedLinks = [
+  { href: '/jasa-sadap/', title: 'Jasa Sadap HP Jarak Jauh' },
+  { href: '/blog/cara-cek-whatsapp-disadap-27/', title: 'Cara Cek WhatsApp Sedang Disadap' },
+  { href: '/blog/akses-whatsapp-komputer-laptop-28/', title: 'Akses WhatsApp via Komputer & Laptop' },
+  { href: '/blog/sadap-iphone-android-tanpa-pinjam/', title: 'Sadap iPhone & Android Tanpa Pinjam HP' }
+];
+
+// Structured data: BreadcrumbList & FAQPage
+const siteUrl = 'https://menyadap.github.io';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Beranda', item: `${siteUrl}/` },
+    { '@type': 'ListItem', position: 2, name: 'Pemantau WhatsApp Jarak Jauh', item: `${siteUrl}/sadap-wa/` }
+  ]
+};
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a }
+  }))
+};
+---
+
+<Layout
+  title="Pemantau WhatsApp Jarak Jauh Alternatif WhatsApp Web"
+  description="Ketentuan penggunaan, disclaimer, dan kebijakan layanan pemantauan WhatsApp jarak jauh sebagai alternatif WhatsApp Web."
+  showSidebar={false}
+  type="page"
+  image="/menyadap-github-io.svg"
+>
+  <article class="page-wrapper">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Beranda</a></li>
+        <li aria-current="page">Pemantau WhatsApp Jarak Jauh</li>
+      </ol>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-title">Pemantau WhatsApp Jarak Jauh Alternatif WhatsApp Web</h1>
+      <hr class="page-rule" />
+      <p class="page-description">
+        Ketentuan penggunaan, disclaimer, dan kebijakan layanan yang berlaku
+        untuk pemantauan WhatsApp jarak jauh sebagai alternatif WhatsApp Web.
+      </p>
+    </header>
+
+    <!-- content_823: Intro / Hero -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Aplikasi Pemantauan Untuk Sadap HP Android dan iPhone</h2>
+        <p class="section-text">
+          Cara terbaik untuk menjaga anak remaja Anda tetap aman dari pergaulan &amp;
+          cyberbullying langsung dari ponsel. Solusi sadap WhatsApp ini menjadi
+          alternatif WhatsApp Web untuk pemantauan jarak jauh.
+        </p>
+        <figure class="section-figure logo-figure">
+          <img src="/menyadap-github-io.svg" alt="Logo Menyadap.github.io" width="96" height="96" loading="lazy" />
+        </figure>
+        <ul class="feature-list">
+          <li>Monitoring Aktivitas Sosial Media, Facebook, WhatsApp, Instagram, Telegram, Skype, Facebook Messenger dan Snapchat</li>
+          <li>Rekam data SMS / Gmail, Panggilan Telepon, Lacak GPS, Remote Kamera, Akses File Foto / Video, dan lainnya!</li>
+          <li>Pembayaran satu kali. Update Gratis versi aplikasi penyadap hp (Android dan iPhone)</li>
+          <li>Ketentuan Penggunaan Berlaku⚠️⚠️⚠️ <em>(memerlukan izin pemasangan aplikasi untuk mulai bajak hp)</em></li>
+        </ul>
+        <p class="warning-note">
+          <strong>Hati-hati</strong> apabila ada pihak yang mengatasnamakan kami, selain dari
+          nomor berikut kami tidak bertanggung jawab: (+6285111426625)
+        </p>
+        <p class="cta-wrap">
+          <a class="cta-button" href="https://wa.me/6285111426625" target="_blank" rel="nofollow noopener">Pesan via WhatsApp</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- content_111: Kompatibilitas -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">SADAP IPHONE &amp; ANDROID / TABLET</h2>
+        <figure class="section-figure">
+          <img src="/images/lindungi-keluarga.png" alt="Lindungi Keluarga" loading="lazy" />
+        </figure>
+
+        <h3 class="subhead">Persyaratan Perangkat</h3>
+        <p class="section-text">
+          Aplikasi Sadap Kompatibel Smartphone iPhone atau iPad dan Android atau tablet
+          Android. Saat ini tidak kompatibel dengan Symbian atau BlackBerry.
+        </p>
+
+        <h3 class="subhead">Sadap Sosial Media</h3>
+        <p class="section-text">
+          Jasa Hack data komunikasi pesan chat seperti Facebook Messenger, Line, Skype,
+          SnapChat, WhatsApp, Telegram, Instagram. Dengan aplikasi social spy.
+        </p>
+
+        <h3 class="subhead">Rekam Panggilan Telepon &amp; Suara Sekitar</h3>
+        <p class="section-text">
+          Rekam setiap data panggilan suara di HP target dengan mudah, baik dari panggilan
+          telepon atau rekam suara yang ada disekitar ruangan.
+        </p>
+
+        <h3 class="subhead">Syarat Penggunaan</h3>
+        <ul class="feature-list">
+          <li>Pastikan mendapatkan izin pemasangan aplikasi, untuk perlindungan tambahan anak</li>
+          <li>Diperuntukan untuk mengawasi pergaulan remaja</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- fitur_111: 3 fitur utama -->
+    <section class="section">
+      <div class="container container--wide">
+        <h2 class="section-title">Fitur Pemantau WhatsApp Jarak Jauh</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="7em" height="7em" viewBox="0 0 16 16" class="bi bi-chat-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" /><path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" /></svg>
+            </div>
+            <h3 class="feature-title">SADAP CHATTING</h3>
+            <p class="feature-desc">
+              Penyadap akan mencatat semua pesan chat yang dikirim dan diterima dari layanan
+              messenger seperti iMessage, WhatsApp, Telegram, Line, Instagram dan Facebook.
+              Fitur sadap WhatsApp ini mencakup pesan teks, gambar, dan dokumen yang dikirim
+              maupun diterima.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="7em" height="7.0625em" viewBox="0 0 16 17" class="bi bi-compass" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" /><path d="M6.94 7.44l4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" /></svg>
+            </div>
+            <h3 class="feature-title">LACAK LOKASI</h3>
+            <p class="feature-desc">
+              Data lokasi GPS terbaru dari perangkat target pada interval waktu yang ditentukan.
+              Latitude, Longitude dengan tampilan API Google Maps untuk memudahkan melihat setiap lokasi.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="7em" height="7em" viewBox="0 0 16 16" class="bi bi-telephone-inbound" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0zm-12.2 1.182a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" /></svg>
+            </div>
+            <h3 class="feature-title">SADAP PANGGILAN</h3>
+            <p class="feature-desc">
+              Informasi setiap panggilan keluar &amp; masuk yang sudah dilakukan target dengan
+              keterangan nomor, disertai tanggal waktu &amp; data suara rekaman panggilan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- demo_111: 4 demo screenshot -->
+    <section class="section section--alt">
+      <div class="container container--wide">
+        <h2 class="section-title">Contoh Hasil Sadap WhatsApp dari HP Target</h2>
+        <div class="demo-grid">
+          {demos.map((demo) => (
+            <div class="demo-card">
+              <h3 class="feature-title">{demo.title}</h3>
+              <img src={demo.image} alt={`Demo ${demo.title}`} loading="lazy" />
+              <p class="feature-desc">{demo.dest}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- fitur_222: 3 fitur lanjutan -->
+    <section class="section">
+      <div class="container container--wide">
+        <h2 class="section-title">Fitur Sadap Lainnya: Pesan, Browser &amp; Kamera</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="6em" height="6em" viewBox="0 0 16 16" class="bi bi-envelope-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z" /></svg>
+            </div>
+            <h3 class="feature-title">SADAP PESAN</h3>
+            <p class="feature-desc">
+              Sadap data pesan teks SMS dan Gmail yang dikirim dan diterima. bisa juga
+              mendapatkan detail pengirim, penerimaan, dan tanggal / waktu beserta pesan teks LENGKAP.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="6em" height="6em" viewBox="0 0 16 16" class="bi bi-globe2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539a8.372 8.372 0 0 1-1.198-.49 7.01 7.01 0 0 1 2.276-1.52 6.7 6.7 0 0 0-.597.932 8.854 8.854 0 0 0-.48 1.079zM3.509 7.5H1.017A6.964 6.964 0 0 1 2.38 3.825c.47.258.995.482 1.565.667A13.4 13.4 0 0 0 3.508 7.5zm1.4-2.741c.808.187 1.681.301 2.591.332V7.5H4.51c.035-.987.176-1.914.399-2.741zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5H7.5v2.409c-.91.03-1.783.145-2.591.332a12.343 12.343 0 0 1-.4-2.741zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696A12.63 12.63 0 0 1 7.5 11.91v3.014c-.67-.204-1.335-.82-1.887-1.855a7.776 7.776 0 0 1-.395-.872zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964a9.083 9.083 0 0 0-1.565.667A6.963 6.963 0 0 1 1.018 8.5h2.49a13.36 13.36 0 0 0 .437 3.008zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909c.81.03 1.577.13 2.282.287-.12.312-.252.604-.395.872-.552 1.035-1.218 1.65-1.887 1.855V11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5h-2.49a13.361 13.361 0 0 0-.437-3.008 9.123 9.123 0 0 0 1.565-.667A6.963 6.963 0 0 1 14.982 7.5zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343c-.705.157-1.473.257-2.282.287V1.077c.67.204 1.335.82 1.887 1.855.143.268.276.56.395.872z" /></svg>
+            </div>
+            <h3 class="feature-title">SADAP BROWSER</h3>
+            <p class="feature-desc">
+              Sadap semua situs web yang dikunjungi pada HP target yang akan dipantau dengan
+              tanggal / waktu dan alamat situs web. ada pilihan untuk blacklist / daftar blokir
+              situs yang dikunjungi atau yang sudah Anda ditandai.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="6em" height="6em" viewBox="0 0 16 16" class="bi bi-camera-video" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5zm11.5 5.175l3.5 1.556V4.269l-3.5 1.556v4.35zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H2z" /></svg>
+            </div>
+            <h3 class="feature-title">SADAP KAMERA</h3>
+            <p class="feature-desc">
+              Sadap data dari file folder manajer dan akses Kamera dari HP target. rincian seperti
+              tanggal / waktu, nama file, dan link download juga diberikan untuk pemantauan lengkap.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- pricing -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">Pantau Data Rahasia &amp; Buktikan Kebenarannya</h2>
+        <p class="section-text center">
+          Jangan ragu untuk lindungi, keluarga tercinta. Sadap WhatsApp dan media
+          sosial lainnya hanya dengan satu paket...
+        </p>
+
+        <div class="pricing-card">
+          <p class="pricing-label">Paket</p>
+          <span class="pricing-price"><strong>300.000</strong> idr <span class="period">(BASIC)</span></span>
+          <hr class="pricing-rule" />
+          <ul class="pricing-features">
+            {pricingFeatures.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+          <p class="cta-wrap center">
+            <a class="cta-button" href="https://wa.me/6285111426625" target="_blank" rel="nofollow noopener">Pesan via WhatsApp</a>
+          </p>
+        </div>
+
+        <figure class="section-figure">
+          <img src="/images/sadap-phone.jpg" alt="Aplikasi Sadap Ponsel" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- content_222: Artikel panjang -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Khawatir Tentang Penggunaan Ponsel atau Tablet Pasangan / Anak Remaja?</h2>
+
+        <h3 class="subhead">Penyadap Ponsel Yang Memiliki Fitur Lengkap!</h3>
+        <p class="section-text">
+          Perangkat ini memiliki fitur lengkap yang melampaui keinginan Anda memungkinkan Anda
+          menetapkan batas waktu penggunaan ponsel anak Anda. Termasuk fitur sadap WhatsApp yang
+          berfungsi sebagai alternatif WhatsApp Web untuk pemantauan jarak jauh. Anda dapat
+          menentukan siapa mereka agar tidak dapat berkomunikasi dengan siapapun yang tidak Anda
+          inginkan, memblokir situs web atau aplikasi dan melihat setiap aktivitas rahasia yang
+          target lakukan.
+        </p>
+
+        <h3 class="subhead">Apa Itu Software Penyadap Ponsel?</h3>
+        <p class="section-text">
+          Apa yang dilakukan anak Anda di perangkat seluler yang Anda berikan? Khawatir mereka
+          menyalahgunakan ponsel atau tablet mereka? Penyadap hp memungkinkan Anda untuk memantau
+          tindakan dan menyaring apa saja yang tidak Anda inginkan. Berbeda dengan WhatsApp Web
+          yang harus terhubung manual, pemantau WhatsApp jarak jauh ini bekerja secara otomatis
+          di latar belakang. Bahkan Anda bisa membuat jadwal untuk waktu penggunaan ponsel target.
+        </p>
+        <p class="section-text">
+          Software penyadap ini adalah generasi baru perangkat lunak sadap hp, bagi orang tua, yang
+          dikhususkan untuk smartphone dan tablet. Apakah Anda memerlukan kemampuan untuk memfilter,
+          memblokir dan memantau bagaimana anak Anda menggunakan perangkat ponselnya? Jika iya, maka
+          software ini sangat diperlukan untuk Anda. pemasangan program yang sederhana ke perangkat
+          yang digunakan anak Anda untuk mulai memantau.
+        </p>
+        <p class="section-text">
+          Setelah Anda menginstal perangkat sadap rahasia yang dilindungi kata sandi, Anda akan dapat
+          memblokir aktivitas yang Anda tentukan dan membuat log dari setiap tindakan yang dilakukan
+          anak Anda. Anda memiliki pilihan untuk menunjukkan kepada anak Anda sebuah pemberitahuan
+          perangkat dan icon menu tamper-proof untuk memberi tahu mereka bahwa mereka sedang dipantau.
+          <strong>Pilihan ini bisa dinonaktifkan</strong>.
+        </p>
+        <p class="section-text">
+          Dengan menggunakan kemampuan Internet dari ponsel atau tablet Anda, aktivitas yang Anda
+          pantau dan lokasi GPS dengan cepat dimasukkan ke panel penyadap. Untuk melihat data hasil
+          penyadapan, Anda cukup login. Setiap data akan ditampilkan menurut kategori dan diurutkan
+          untuk memudahkan Anda.
+        </p>
+
+        <h3 class="subhead">Mengapa Saya Harus Menggunakan Penyadap Hp?</h3>
+        <p class="section-text">
+          Dengan menggunakan perangkat lunak sadap hp pertama untuk memantau smartphone iPhone,
+          Android, dengan mudah, App Sadap dengan fitur yang lengkap. Fitur sadap WhatsApp
+          menjadikannya alternatif WhatsApp Web yang lebih praktis untuk pemantauan jarak jauh.
+          Hubungi kami untuk lebih detail, dan masih banyak alasan positif mengapa Anda harus
+          menggunakan penyadap ponsel kami.
+        </p>
+
+        <h3 class="subhead">Bantuan Penggunaan 24/7 Live</h3>
+        <p class="section-text">
+          Kami menawarkan dukungan langsung 24/7 untuk menjawab setiap pertanyaan yang mungkin Anda
+          miliki. Jika Anda memerlukan bantuan seputar perangkat sadap cukup hubungi kami melalui
+          panggilan atau pesan WhatsApp yang kami sediakan dan selebihnya tim kami akan memandu Anda
+          untuk menjelaskan cara kerja &amp; prosesnya.
+        </p>
+
+        <h3 class="subhead">Bukan Perangkat Spyware</h3>
+        <p class="section-text">
+          Perangkat lunak sadap memiliki opsi dapat memunculkan icon app di daftar menu dan memberi
+          tahu Anak Anda bahwa mereka sedang diawasi. Karena mereka tahu perangkat lunak mata-mata
+          terinstal, mereka akan lebih berhati-hati dengan pengawasan Anda. Pilihan ini dapat
+          dinonaktifkan dengan menyembunyikan icon software sadap dari menyembunyikan icon dari
+          daftar menu hp target <em>(bila situasi memungkinkan)</em>.
+        </p>
+      </div>
+    </section>
+
+    <!-- content_333: Tips mengawasi pergaulan remaja -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">Mengawasi Pergaulan Remaja?</h2>
+        <figure class="section-figure">
+          <img src="/images/mengawasi-remaja.jpg" alt="Mengawasi Pergaulan Remaja" loading="lazy" />
+        </figure>
+
+        <p class="section-text">
+          Ada beberapa langkah sederhana yang dapat Anda lakukan untuk monitoring aktivitas ponsel
+          anak Anda. Tentu saja, Anak-anak Anda mungkin menolak / tidak menyukai Anda mengawasi
+          kegiatan mereka dari ponsel. Dengan pemantau WhatsApp jarak jauh dan perangkat sadap,
+          cari tahu apa yang mereka lakukan dari ponsel. Menurut banyak ahli mengawasi anak tidak
+          melanggar hukum apabila masih dibawah umur.
+        </p>
+        <p class="section-text">
+          Beberapa tips untuk anak remaja bagi orang tua, solusi penyadapan ponsel bukanlah satu-satunya
+          cara untuk anak agar tidak terjerumus dalam pergaulan bebas.
+        </p>
+
+        <ol class="tips-list">
+          {remajaTips.map((tip) => (
+            <li><strong>{tip.title}</strong>. {tip.text}</li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <!-- content_444: Buktikan pasangan selingkuh -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Buktikan Pasangan Selingkuh?</h2>
+        <figure class="section-figure">
+          <img src="/images/pasangan-selingkuh.jpg" alt="Buktikan Pasangan Selingkuh" loading="lazy" />
+        </figure>
+
+        <p class="section-text">
+          Perangkat penyadap yang memiliki banyak manfaat. dengan app ini akan sangat berguna bagi Anda
+          yang memiliki pasangan, yang curiga dengan sikapnya, program sadap akan banyak membantu Anda
+          mencari info rahasia tahu lewat data HP target dengan lebih efisien perangkat memiliki mode
+          sembunyi agar pasangan Anda tidak curiga. salah satu permintaan paling sering di antara
+          pengguna yang ingin memata-matai pasangannya. dari antara semuanya kendalanya apakah target
+          tahu ponselnya sedang dimata-matai, perangkat sadap ini adalah salah satu yang paling
+          fleksibel untuk mengawasi ponsel.
+        </p>
+        <p class="section-text">
+          Beberapa situasi terjadi saat pasangan bersikap aneh &amp; acuh. Akibatnya pasangan saling
+          curiga dalam beberapa hal. Dan statistik mengatakan bahwa persentase perselingkuhan tidak
+          tergantung berapa lama Anda sudah menikah. pasangan bisa mulai melihat pria / wanita lain
+          setelah merasa tidak cocok / bahagia dengan pernikahannya. dalam kasus lain, orang dapat
+          menjaga kesetiaan sangatlah sulit.
+        </p>
+        <p class="section-text">
+          Jadi untuk membantu Anda apa yang terjadi dengan hubungan Anda - dengan menggunakan perangkat
+          penyadap ponsel terbaik.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section-title" id="faq-title">Pertanyaan Umum Seputar Sadap WhatsApp</h2>
+        <div class="faq-list">
+          {faqs.map((item) => (
+            <details class="faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Artikel terkait (internal link) -->
+    <section class="section" aria-labelledby="related-title">
+      <div class="container">
+        <h2 class="section-title" id="related-title">Artikel Terkait</h2>
+        <ul class="related-links">
+          {relatedLinks.map((link) => (
+            <li><a href={link.href}>{link.title}</a></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <Disclaimer />
+
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </article>
+</Layout>
+
+<style>
+  .page-wrapper {
+    width: 100%;
+  }
+
+  .page-header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: calc(var(--grid-unit) * 6) var(--content-padding) calc(var(--grid-unit) * 4);
+    text-align: center;
+  }
+
+  .page-title {
+    font-family: var(--font-heading-primary);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.15;
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .page-rule {
+    height: 6px;
+    background-color: var(--color-accent);
+    border: none;
+    width: 100%;
+    margin: calc(var(--grid-unit) * 3) 0;
+  }
+
+  .page-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+
+  /* === Breadcrumb === */
+  .breadcrumb {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: calc(var(--grid-unit) * 3) var(--content-padding) 0;
+  }
+
+  .breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: calc(var(--grid-unit) * 0.75);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb li:not(:first-child)::before {
+    content: '/';
+    margin-right: calc(var(--grid-unit) * 0.75);
+    color: var(--color-text-muted);
+  }
+
+  .breadcrumb a {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .breadcrumb li[aria-current] {
+    color: var(--color-text-muted);
+  }
+
+  /* === FAQ === */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 1.5);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: calc(var(--grid-unit) * 1.5) calc(var(--grid-unit) * 2);
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    content: '+';
+    float: right;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .faq-item[open] summary::after {
+    content: '\2212';
+  }
+
+  .faq-item p {
+    margin: calc(var(--grid-unit) * 1.5) 0 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  /* === Artikel terkait === */
+  .related-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(var(--grid-unit) * 1.5);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .related-links a {
+    display: block;
+    padding: calc(var(--grid-unit) * 2);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .related-links a:hover,
+  .related-links a:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(227, 0, 34, 0.15);
+    text-decoration: none;
+  }
+
+  /* === Sections === */
+  .section {
+    padding: calc(var(--grid-unit) * 8) 0;
+    background: var(--color-background);
+  }
+
+  .section--alt {
+    background: var(--color-light-gray);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+  }
+
+  .container--wide {
+    max-width: 1200px;
+  }
+
+  .section-title {
+    font-family: var(--font-heading-primary);
+    font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .section-text {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .section-text.center {
+    text-align: center;
+  }
+
+  .subhead {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: calc(var(--grid-unit) * 4) 0 calc(var(--grid-unit) * 1.5);
+  }
+
+  .section-figure {
+    margin: calc(var(--grid-unit) * 3) 0 calc(var(--grid-unit) * 4);
+    text-align: center;
+  }
+
+  .section-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* Logo situs: jaga tetap kecil dan seragam */
+  .logo-figure img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 1.5);
+    margin-bottom: calc(var(--grid-unit) * 3);
+    padding: 0;
+  }
+
+  .feature-list li {
+    position: relative;
+    padding-left: calc(var(--grid-unit) * 3.5);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+
+  .feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .warning-note {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    background: var(--color-surface);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 6px;
+    padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 3);
+    margin-bottom: calc(var(--grid-unit) * 3);
+  }
+
+  .warning-note strong {
+    color: var(--color-text-primary);
+  }
+
+  .cta-wrap {
+    margin: 0;
+  }
+
+  .cta-wrap.center {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: calc(var(--grid-unit) * 1.75) calc(var(--grid-unit) * 4);
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .cta-button:hover,
+  .cta-button:focus {
+    background: var(--color-accent-red-strong);
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+
+  /* === Feature grid === */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(var(--grid-unit) * 4);
+  }
+
+  .feature-card {
+    text-align: center;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 3);
+  }
+
+  .feature-icon {
+    display: flex;
+    justify-content: center;
+    color: var(--color-accent);
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .feature-icon svg {
+    width: 4.5rem;
+    height: auto;
+  }
+
+  .feature-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: calc(var(--grid-unit) * 1.5);
+  }
+
+  .feature-desc {
+    font-size: 0.9875rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+  }
+
+  /* === Demo grid === */
+  .demo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(var(--grid-unit) * 4);
+  }
+
+  .demo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    margin-bottom: calc(var(--grid-unit) * 1.5);
+  }
+
+  /* === Pricing === */
+  .pricing-card {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--color-surface);
+    border: 2px solid var(--color-accent);
+    border-radius: 10px;
+    padding: calc(var(--grid-unit) * 4);
+  }
+
+  .pricing-label {
+    text-align: center;
+    font-family: var(--font-heading-secondary);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+  }
+
+  .pricing-price {
+    display: block;
+    text-align: center;
+    font-family: var(--font-heading-primary);
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 900;
+    color: var(--color-accent);
+    margin-top: calc(var(--grid-unit));
+  }
+
+  .pricing-price .period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+
+  .pricing-rule {
+    height: 2px;
+    border: none;
+    background: var(--color-border);
+    margin: calc(var(--grid-unit) * 2) 0;
+  }
+
+  .pricing-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(var(--grid-unit) * 0.75) calc(var(--grid-unit) * 2);
+    padding: 0;
+    margin: 0 0 calc(var(--grid-unit) * 3);
+  }
+
+  .pricing-features li {
+    position: relative;
+    padding-left: calc(var(--grid-unit) * 2.5);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+  }
+
+  .pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  /* === Tips list === */
+  .tips-list {
+    list-style: decimal;
+    padding-left: calc(var(--grid-unit) * 3.5);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 2);
+    margin: 0;
+  }
+
+  .tips-list li {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+
+  .tips-list li strong {
+    color: var(--color-text-primary);
+  }
+
+  @media (max-width: 900px) {
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: calc(var(--grid-unit) * 4) var(--content-padding) calc(var(--grid-unit) * 3);
+    }
+
+    .page-description {
+      font-size: 1rem;
+    }
+
+    .feature-grid,
+    .demo-grid,
+    .pricing-features,
+    .related-links {
+      grid-template-columns: 1fr;
+    }
+
+    .section-text,
+    .tips-list li,
+    .feature-list li {
+      font-size: 1rem;
+    }
+
+    .subhead {
+      font-size: 1.2rem;
+    }
+
+    .pricing-card {
+      padding: calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 2);
+    }
+  }
+</style>

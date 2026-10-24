@@ -1,0 +1,452 @@
+---
+// Disclaimer Component - Menampilkan disclaimer pernyataan & kebijakan legal
+// Dua section: "disclaimer" (poin persetujuan tanpa judul) dan "legal" (kebijakan berjudul).
+// Pola: array data terstruktur, konten HTML dirender via set:html.
+
+interface DisclaimerPoint {
+  description: string;
+}
+
+interface LegalPolicy {
+  title: string;
+  description: string;
+}
+
+// 6 poin persetujuan pengguna (tanpa judul terpisah)
+const disclaimers: DisclaimerPoint[] = [
+  {
+    description: `Anda mengetahui dan menyetujui bahwa Anda memiliki perangkat selular yang akan Anda instal
+    ke perangkat lunak target ATAU bahwa Anda memiliki izin tertulis dari pemilik ponsel untuk menjadi
+    administrator resmi perangkatnya.`
+  },
+  {
+    description: `Anda setuju bahwa Anda HANYA akan memantau anak Anda, di mana Anda memiliki perwalian hukum.
+    Anda setuju bahwa di mana hukum melarangnya dalam mencuri data, Anda akan memberi tahu anak Anda
+    bahwa mereka akan dipantau sebelum penyadapan data dimulai.`
+  },
+  {
+    description: `Anda setuju bahwa Anda akan memberi tahu pihak ketiga mana perangkat yang mereka gunakan memiliki
+    perangkat lunak pemantauan yang terpasang dan penggunaannya.`
+  },
+  {
+    description: `Jika Anda menginstal perangkat lunak ini ke perangkat orang yang tidak Anda kenal atau memiliki
+    persetujuan yang benar, kami akan bekerja sama dengan petugas hukum semaksimal mungkin.
+    Ini termasuk membalikkan informasi pelanggan yang diminta, dan informasi terkait pembelian dan lainnya.`
+  },
+  {
+    description: `Anda setuju bahwa Anda akan memeriksa semua undang-undang yang berlaku,
+    untuk memastikan Anda mematuhi semua undang-undang di wilayah Anda. Mungkin ilegal di wilayah
+    Anda untuk memantau orang lain. Anda tidak dapat memperoleh izin apapun
+    untuk memantau orang lain selain anak remaja Anda yang memiliki perwalian legal.`
+  },
+  {
+    description: `Anda menyetujui persyaratan dalam (Perjanjian Lisensi Pengguna Akhir). Ini termasuk
+    bahwa kami tidak bertanggung jawab atas segala jenis kerusakan, tuntutan hukum, atau keadaan
+    yang mungkin timbul karena penggunaan atau penyalahgunaan <strong>Penyadap Handphone</strong> atau produk lainnya.`
+  }
+];
+
+// 6 kebijakan legal (dengan judul)
+const legalPolicies: LegalPolicy[] = [
+  {
+    title: "Kebijakan Pribadi",
+    description: `Ini adalah kebijakan kami bahwa database pelanggan kami tetap bersifat rahasia dan pribadi.
+    Kami belum, tidak akan, dan tidak akan pernah menjual nama ke "spammer" atau pihak lain yang ingin
+    menggunakan database kami untuk mengiklankan atau meminta produk atau layanan mereka.
+    Software penyadap tidak mengumpulkan informasi apapun dari perangkat Anda selain informasi yang
+    diperlukan untuk keberhasilan operasi mata-mata. Informasi pribadi Anda akan aman bersama kami.`
+  },
+  {
+    title: "Pemberitahuan Otomatis",
+    description: `Pada titik di mana Anda melakukan pembelian penyadapan dan memilih pemberhentian otomatis,
+    dengan ini Anda setuju bahwa Anda akan secara otomatis non-aktif pada akhir interval
+    yang Anda pilih:<br /><br />
+    Jika sewaktu-waktu, Anda bisa membatalkan rencana pemesanan. Bila ini terjadi,
+    rencana lisensi penagihan otomatis Anda akan dihentikan dan akun penyadap Anda akan
+    segera dinonaktifkan saat itu.<br /><br />
+    <strong>MEMATIKAN AKUN OTOMATIS</strong><br />
+    Untuk membatalkan perpanjangan rencana penggunaan otomatis Anda, silakan hubungi kami
+    dengan mengirimkan tiket dukungan di halaman <a href="/contact/">contact</a>.
+    Perlu diketahui bahwa ketika Anda membatalkan perpanjangan penggunaan otomatis,
+    akun software sadap Anda akan dinonaktifkan pada saat itu agar tidak digunakan lebih lanjut.
+    Sebaiknya Anda membatalkan rencana penggunaan untuk menghapus penyadap dari
+    semua perangkat yang terkait dengan akun Anda.`
+  },
+  {
+    title: "Kebijakan Pengembalian (menyadap.github.io)",
+    description: `Jika ada masalah yang tidak dapat diselesaikan dengan tepat waktu, pengembalian dana
+    dari harga pembelian akan dikeluarkan jika perangkat lunak terbukti rusak. Pengembalian
+    dana atau pengembalian produk lainnya (kecuali jika itu terbukti) dikenai biaya pemrosesan
+    pembayaran 10%. Kami berhak untuk mengembalikan pesanan dan menghentikan dukungan dan layanan
+    jika Anda mengancam kami atau kami menentukan bahwa Anda menggunakan layanan ini untuk tujuan
+    yang dilarang. Pelanggan disadarkan oleh dokumentasi ketentuan di situs ini,
+    akses fisik tidak terbatas ke perangkat yang harus disadap diperlukan.
+    Akses fisik yang tidak dibatasi didefinisikan sebagai:<br /><br />
+    <ul>
+    <li>Pelanggan memiliki akses ke perangkat saat perangkat berada di tangan Anda.</li>
+    <li>Pelanggan memiliki / mengetahui kata sandi, kode akses, kode layar kunci, dll untuk membuka kunci
+    perangkat agar bisa mengakses.</li>
+    </ul>
+    Jika pelanggan membeli perangkat lunak ini dan tidak memiliki akses fisik ke perangkat yang akan disadap,
+    pengembalian dana tidak akan dikeluarkan karena situasi berikut.<br /><br />
+    Karena berkaitan dengan jailbreaking iPhone atau iPad, kami tidak bertanggung
+    jawab atas proses ini atau membantu dalam proses ini karena bukan merupakan produk atau layanan.
+    Kompatibilitas halaman di website ini jelas menguraikan bahwa semua ponsel
+    iPhone dan iPad harus di-jailbreak sebelum instalasi dan juga, sebelum pembelian,
+    pelanggan setuju untuk persyaratan ini. Ini adalah tanggung jawab pelanggan terkait proses jailbreak
+    di iPhone atau iPad target sebelum membeli perangkat lunak. Pengembalian dana tidak
+    akan diberikan kepada pelanggan yang tidak dapat atau tidak
+    mau jailbreak pada iPhone dan iPad yang akan dipantau.<br /><br />
+    Juga, pengembalian dana tidak akan diberikan untuk masalah ketidakcocokan.
+    Situasi inkompatibilitas mencakup:<br /><br />
+    <ul>
+    <li>Perangkat ponsel yang akan dipantau yang menjalankan versi sistem operasi yang tidak didukung
+    telah diuraikan di halaman Kompatibilitas situs ini.</li>
+    <li>Seorang pelanggan memilih (berdasarkan kebijaksanaan mereka sendiri) untuk
+    meningkatkan perangkat yang ingin mereka monitor dan perangkat yang diinginkan yang
+    baru dipantau menjalankan versi sistem operasi yang tidak didukung dan juga telah diuraikan di
+    halaman Kompatibilitas situs ini.</li>
+    </ul>
+    Kompatibilitas halaman dalam website ini menguraikan semua sistem operasi yang kompatibel dan
+    versi program yang didukung sehingga pelanggan diusulkan meneliti untuk membeli perangkat lunak
+    penyadap akan tahu mana model perangkat dan versi sistem operasi yang kompatibel sebelum membeli.<br /><br />
+    Pengembalian dana tidak dikeluarkan jika anak Anda melakukan penyetelan ulang (me-reset)
+    lengkap perangkat yang akan menghapus semua perangkat lunak yang diinstal dari perangkat
+    termasuk perangkat lunak pemantauan ini. Jika anak Anda melakukan reset pada ponselnya,
+    Anda bertanggung jawab untuk mendapatkan akses ke perangkat
+    untuk menginstal ulang perangkat lunak agar terus memantau kegiatan ponsel tersebut.
+    Seperti yang dinyatakan sebelumnya, adalah tanggung jawab Anda untuk memberi tahu anak
+    Anda bahwa Anda akan melakukan memantau aktivitas mereka.<br /><br />
+    Setiap pelanggan yang mengklaim bahwa pembelian mereka dilakukan karena kesalahan atau informasi
+    palsu yang diajukan akan kehilangan hak atas pengembalian dana dan akan bertanggung jawab atas
+    semua tagihan atas transaksi tersebut. Situs kami memiliki pengaman bawaan untuk mencegah
+    pembelian palsu karena kesalahan. Juga, jika Anda merasa seseorang telah melakukan pembelian
+    menggunakan data informasi Anda, kami meminta Anda menghubungi pihak terkait Anda untuk mengirimkan
+    peringatan biaya palsu sehingga dapat menghubungi pihak-pihak yang tepat untuk menyelesaikannya.<br /><br />
+    Perlu diketahui bahwa setelah Anda baru membeli produk yang akan dipesan, pengembalian
+    dana tidak akan diberikan untuk jangka waktu tersebut. Jika Anda tidak ingin memperpanjang,
+    hubungi kami sebelum tanggal perpanjangan agar akun tidak diaktifkan.
+    Merupakan tanggung jawab pelanggan untuk menyimpan data informasi.<br /><br />
+    Karena terkait dengan ikon program, fitur "Tampilkan ikon dan notifikasi" dapat dimatikan.
+    Nama penyadap masih akan muncul dalam daftar aplikasi yang terpasang. Program ini bukan
+    program tersembunyi melainkan perangkat lunak pemantauan yang dimaksudkan untuk pemantauan
+    yang sah oleh orang tua. Pengembalian dana tidak akan diberikan sehubungan dengan ini.<br /><br />
+    Perlu diketahui bahwa semua pengembalian dana akan mengakibatkan penghentian
+    layanan dan dukungan.<br /><br />
+    Semua pembelian bersifat final.`
+  },
+  {
+    title: "Pengguna Yang Diizinkan Untuk Menggunakan Alat Sadap",
+    description: `Penyadap dirancang hanya untuk digunakan untuk memantau anak Anda.
+    Kami mendefinisikan ini sebagai:<br /><br />
+    <ul>
+    <li>Anak: Anak Anda sendiri yang berusia di bawah 18 tahun.
+    Anak harus dipantau menggunakan perangkat yang kompatibel dengan ponsel milik target.
+    Anda tidak dapat memantau anak jika Anda memiliki salah satu dari hubungan berikut:
+      <ul>
+      <li>Kakak adik</li>
+      <li>Saudara laki-laki / Saudara perempuan</li>
+      <li>Bapak / Ibu</li>
+      <li>Bibi / Paman</li>
+      <li>Sepupu / Keponakan</li>
+      <li>Kakek / Nenek</li>
+      <li>Nenek buyut / Nenek buyut</li>
+      </ul>
+    </li>
+    </ul>
+    Penyadap tidak dapat digunakan untuk memantau individu lain seperti
+    teman, orang lain, dll. Ini akan melanggar persyaratan
+    yang Anda setujui pada saat pembelian dan dikenai penghentian segera.`
+  },
+  {
+    title: "Tidak Diizinkan",
+    description: `Semua produk ini didistribusikan dengan dasar "sebagaimana adanya"
+    dan tidak ada jaminan apapun yang dijanjikan oleh kami mengenai kinerja,
+    keandalan, atau kesesuaian dengan tugas yang diberikan. Dalam hal apapun,
+    kami tidak bertanggung jawab atas kehilangan informasi atau
+    KERUGIAN APAPUN, keuangan, fisik, emosional atau lainnya,
+    yang mungkin timbul akibat penggunaannya.<br /><br />
+    Hal yang merupakan pelanggaran untuk menginstal
+    perangkat lunak pemantauan ke perangkat yang tidak Anda kenali atau memiliki otorisasi
+    yang tepat untuk dipasang. Mungkin juga merupakan pelanggaran di yurisdiksi Anda untuk
+    memantau aktivitas orang lain jika mereka bukan anak Anda. Periksa semua undang-undang
+    negara, sebelum memasang perangkat lunak pemantauan seperti
+    software penyadap. Hukum mengatur penggunaan beberapa jenis perangkat lunak;
+    Adalah tanggung jawab pengguna untuk mengikuti hukum tersebut.`
+  },
+  {
+    title: "Perjanjian Penggunaan",
+    description: `Dengan memasang, menjalankan, atau menggunakan produk penyadap atau layanan,
+    Anda menyetujui Kebijakan di atas. Selain itu Anda setuju bahwa Anda akan mengikuti
+    Kebijakan kami setiap saat menggunakan produk atau layanan penyadapan ponsel.
+    Gagal mematuhi kebijakan akan mengakibatkan akun dihentikan tanpa peringatan.`
+  }
+];
+---
+
+<section class="disclaimer-section" aria-labelledby="disclaimer-title">
+  <div class="container">
+    <h2 class="section-title" id="disclaimer-title">Disclaimer &amp; Kebijakan</h2>
+    <p class="section-subtitle">
+      Mohon baca dan pahami ketentuan berikut sebelum menggunakan layanan kami.
+    </p>
+
+    {/* Section 1: Poin persetujuan pengguna */}
+    <div class="disclaimer-block" aria-labelledby="disclaimer-points-title">
+      <h3 class="block-title" id="disclaimer-points-title">Disclaimer</h3>
+      <ol class="disclaimer-list">
+        {disclaimers.map((item, index) => (
+          <li class="disclaimer-item" key={index}>
+            <span class="item-number">{index + 1}</span>
+            <div class="item-text" set:html={item.description} />
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    {/* Section 2: Kebijakan legal (expandable) */}
+    <div class="legal-block" aria-labelledby="legal-policies-title">
+      <h3 class="block-title" id="legal-policies-title">Kebijakan</h3>
+      <div class="legal-items">
+        {legalPolicies.map((policy, index) => (
+          <details class="legal-item" key={index}>
+            <summary class="legal-summary">
+              <span class="legal-title">{policy.title}</span>
+              <span class="toggle-icon">+</span>
+            </summary>
+            <div class="legal-body" set:html={policy.description} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .disclaimer-section {
+    padding: calc(var(--grid-unit) * 8) 0;
+    background: var(--color-background);
+  }
+
+  :global([data-theme="dark"]) .disclaimer-section {
+    background: var(--color-background);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+  }
+
+  .section-title {
+    font-family: var(--font-heading-primary);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: calc(var(--grid-unit) * 2);
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto calc(var(--grid-unit) * 6);
+  }
+
+  .block-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: calc(var(--grid-unit) * 3);
+    padding-bottom: calc(var(--grid-unit) * 1.5);
+    border-bottom: 3px solid var(--color-accent);
+  }
+
+  /* === Disclaimer points === */
+  .disclaimer-block {
+    margin-bottom: calc(var(--grid-unit) * 6);
+  }
+
+  .disclaimer-list {
+    list-style: none;
+    counter-reset: disclaimer-counter;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit) * 2);
+    padding: 0;
+  }
+
+  .disclaimer-item {
+    display: flex;
+    gap: calc(var(--grid-unit) * 2);
+    padding: calc(var(--grid-unit) * 2.5);
+    background: var(--color-white);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  :global([data-theme="dark"]) .disclaimer-item {
+    background: var(--color-surface);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .item-number {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: var(--color-accent);
+    border-radius: 4px;
+    line-height: 1;
+  }
+
+  .item-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+
+  .item-text :global(strong) {
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+
+  /* === Legal policies (expandable) === */
+  .legal-items {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--grid-unit));
+  }
+
+  .legal-item {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    border-left: 4px solid var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  :global([data-theme="dark"]) .legal-item {
+    background: var(--color-surface);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .legal-summary {
+    padding: calc(var(--grid-unit) * 1.5);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    user-select: none;
+    list-style: none;
+  }
+
+  .legal-summary:hover {
+    background: var(--color-light-gray);
+  }
+
+  :global([data-theme="dark"]) .legal-summary:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .legal-title {
+    text-align: left;
+    flex: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-left: calc(var(--grid-unit));
+    color: var(--color-accent);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+
+  details[open] .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .legal-body {
+    padding: calc(var(--grid-unit) * 1.5);
+    padding-top: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    background: var(--color-light-gray);
+    font-size: 0.95rem;
+  }
+
+  :global([data-theme="dark"]) .legal-body {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  /* Konten HTML di dalam legal-body */
+  .legal-body :global(strong) {
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+
+  .legal-body :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .legal-body :global(ul) {
+    margin: calc(var(--grid-unit) * 1.5) 0;
+    padding-left: calc(var(--grid-unit) * 2.5);
+  }
+
+  .legal-body :global(li) {
+    margin-bottom: calc(var(--grid-unit) / 2);
+    list-style: disc;
+  }
+
+  /* Nested ul indent */
+  .legal-body :global(ul ul) {
+    margin-top: calc(var(--grid-unit));
+    padding-left: calc(var(--grid-unit) * 2);
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+
+    .disclaimer-item {
+      padding: calc(var(--grid-unit) * 2);
+    }
+
+    .item-text,
+    .legal-body {
+      font-size: 0.9rem;
+    }
+
+    .legal-summary {
+      padding: calc(var(--grid-unit));
+      font-size: 0.95rem;
+    }
+  }
+</style>

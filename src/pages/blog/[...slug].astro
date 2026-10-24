@@ -1,6 +1,7 @@
 ---
 import Layout from '../../components/Layout.astro';
 import TableOfContents from '../../components/TableOfContents.astro';
+import RelatedPosts from '../../components/RelatedPosts.astro';
 import { extractHeadings, filterHeadingsForTOC } from '../../utils/table-of-contents';
 import { calculateReadingTime, extractTextFromMarkdown } from '../../utils/reading-time';
 
@@ -96,6 +97,13 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
         <a href={`${base}blog/`} class="back-to-blog">← Back to Blog</a>
       </div>
     </footer>
+
+    <RelatedPosts
+      tags={frontmatter.tags}
+      currentSlug={Astro.params.slug}
+      title="Artikel Terkait"
+      limit={4}
+    />
   </article>
 </Layout>
 
@@ -337,7 +345,7 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
   .post-content :global(img) {
     border: 2px solid var(--color-border);
     margin: calc(var(--grid-unit) * 4) 0;
-    border-radius: 4px;
+    border-radius: 16px;
   }
 
   .post-content :global(ul),

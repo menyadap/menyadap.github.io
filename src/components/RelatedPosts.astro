@@ -1,0 +1,213 @@
+---
+// RelatedPosts - daftar artikel terkait untuk halaman single post.
+// Keterkaitan dihitung dari irisan `tags` frontmatter; bila skor sama
+// diurutkan berdasarkan tanggal terbaru.
+interface Props {
+  /** Tag milik artikel saat ini, dipakai sebagai dasar pencocokan. */
+  tags?: string[];
+  /** Slug artikel saat ini, agar tidak menampilkan dirinya sendiri. */
+  currentSlug?: string;
+  /** Judul section. */
+  title?: string;
+  /** Jumlah maksimal artikel terkait yang ditampilkan. */
+  limit?: number;
+}
+
+const { tags = [], currentSlug = '', title = 'Artikel Terkait', limit = 3 } = Astro.props;
+
+const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
+const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
+const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)] as any[];
+
+const base = import.meta.env.BASE_URL;
+const currentTags = tags.map((tag) => tag.toLowerCase());
+
+const related = allPosts
+  .map((post: any) => {
+    const slug = post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '') || '';
+    const postTags: string[] = post.frontmatter.tags || [];
+    const matched = postTags.filter((tag) => currentTags.includes(tag.toLowerCase())).length;
+    return { post, slug, matched };
+  })
+  .filter(({ slug, matched }) => matched > 0 && slug !== currentSlug)
+  .sort(
+    (a, b) =>
+      b.matched - a.matched ||
+      new Date(b.post.frontmatter.date).getTime() - new Date(a.post.frontmatter.date).getTime()
+  )
+  .slice(0, limit);
+---
+
+{related.length > 0 && (
+  <section class="related-posts" aria-labelledby="related-posts-title">
+    <h2 class="related-title" id="related-posts-title">{title}</h2>
+
+    <div class="related-grid">
+      {related.map(({ post, slug }) => {
+        const postTags: string[] = post.frontmatter.tags || [];
+        return (
+          <article class="related-card">
+            {post.frontmatter.thumbnail && (
+              <div class="related-media">
+                <img
+                  src={`${base}${String(post.frontmatter.thumbnail).replace(/^\/+/, '')}`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            )}
+
+            <div class="related-body">
+              <time class="related-date" datetime={post.frontmatter.date}>
+                {new Date(post.frontmatter.date).toLocaleDateString('id-ID', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+
+              <h3 class="related-card-title">
+                <a href={`${base}blog/${slug}/`}>{post.frontmatter.title}</a>
+              </h3>
+
+              {postTags.length > 0 && (
+                <div class="related-tags">
+                  {postTags.slice(0, 3).map((tag: string) => (
+                    <span class="related-tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+)}
+
+<style>
+  .related-posts {
+    margin-top: calc(var(--grid-unit) * 8);
+    padding-top: calc(var(--grid-unit) * 6);
+    border-top: 6px solid var(--color-accent);
+  }
+
+  .related-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: calc(var(--grid-unit) * 4);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--grid-unit) * 3);
+  }
+
+  @media (min-width: 640px) {
+    .related-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .related-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: calc(var(--grid-unit) * 2);
+    padding: calc(var(--grid-unit) * 2);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .related-card:hover,
+  .related-card:focus-within {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .related-media {
+    flex: 0 0 84px;
+    width: 84px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    /* Radius dalam = radius kartu (12px) - lebar border (1px) */
+    border-radius: 11px;
+    background-color: var(--color-background);
+  }
+
+  .related-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .related-body {
+    min-width: 0;
+  }
+
+  .related-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: calc(var(--grid-unit) / 2);
+  }
+
+  .related-card-title {
+    font-family: var(--font-heading-secondary);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: calc(var(--grid-unit));
+  }
+
+  .related-card-title a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .related-card-title a:hover,
+  .related-card-title a:focus {
+    color: var(--color-accent);
+  }
+
+  /* Stretched link: seluruh area kartu dapat diklik */
+  .related-card-title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .related-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .related-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 2px 8px;
+    white-space: nowrap;
+  }
+</style>

@@ -83,7 +83,7 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
           </aside>
         )}
         
-        <div class="content">
+        <div class:list={['content', { 'content--flush': isHomepage }]}>
           <slot />
         </div>
       </main>
@@ -98,6 +98,7 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   .main-content {
@@ -118,6 +119,12 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
     min-width: 0;
     padding: calc(var(--grid-unit) * 3) 0;
     order: -1;
+  }
+
+  /* Homepage: hero menempel penuh ke tepi atas & bawah, supaya latar
+     dot-grid + glow merah tidak terpotong padding. */
+  .content--flush {
+    padding: calc(var(--grid-unit) * 0) 0;
   }
 
   .sidebar {

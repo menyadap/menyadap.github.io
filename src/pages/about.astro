@@ -2,14 +2,20 @@
 import Layout from '../components/Layout.astro';
 import { config } from '../config';
 
+// Konten halaman ini dirujuk dari markdown di src/content/pages
+const aboutGlob = import.meta.glob('../content/pages/about-me.md', { eager: true });
+const aboutPage = Object.values(aboutGlob)[0] as any;
+
 const { title, description, author, social } = config;
-const pageDescription = `Learn more about ${author.name} and the ${title} blog`;
+const { frontmatter, Content } = aboutPage;
+const pageTitle = frontmatter.title || 'Tentang Kami';
+const pageDescription = frontmatter.description || description;
 ---
 
-<Layout title={`About | ${title}`} description={pageDescription} type="page">
+<Layout title={pageTitle} description={pageDescription} type="page">
   <div class="about-page">
     <header class="page-header">
-      <h1 class="page-title">About</h1>
+      <h1 class="page-title">{pageTitle}</h1>
       <hr class="page-rule" />
     </header>
 
@@ -75,23 +81,7 @@ const pageDescription = `Learn more about ${author.name} and the ${title} blog`;
     </div>
 
     <div class="content-section">
-      <h2>About This Blog</h2>
-      <p>{description}</p>
-      
-      <h2>Design Philosophy</h2>
-      <p>
-        Volks-Typo explores the fascinating intersection between Bauhaus modernism and 
-        bold typography. This theme creates a minimalist aesthetic that is 
-        visually striking, functional, and conceptually rich.
-      </p>
-
-      <h2>Core Principles</h2>
-      <ul>
-        <li><strong>Bold Typography</strong>: Strong typographic hierarchy with uppercase headings</li>
-        <li><strong>Minimalism as a Base</strong>: Clean, uncluttered aesthetic with generous white space</li>
-        <li><strong>Geometric Structure</strong>: Consistent 8-point grid system for layout harmony</li>
-        <li><strong>High Contrast</strong>: Clear visual separation between elements</li>
-      </ul>
+      <Content />
     </div>
   </div>
 </Layout>
@@ -203,7 +193,7 @@ const pageDescription = `Learn more about ${author.name} and the ${title} blog`;
     line-height: 1.7;
   }
 
-  .content-section h2 {
+  .content-section :global(h2) {
     font-family: var(--font-heading-secondary);
     font-size: 1.875rem;
     font-weight: 700;
@@ -214,26 +204,50 @@ const pageDescription = `Learn more about ${author.name} and the ${title} blog`;
     margin-bottom: calc(var(--grid-unit) * 3);
   }
 
-  .content-section p {
+  .content-section :global(p) {
     font-size: 1.125rem;
     line-height: 1.6;
     color: var(--color-text-primary);
     margin-bottom: calc(var(--grid-unit) * 3);
   }
 
-  .content-section ul {
+  .content-section :global(ul),
+  .content-section :global(ol) {
     margin: calc(var(--grid-unit) * 2) 0;
     padding-left: calc(var(--grid-unit) * 3);
   }
 
-  .content-section li {
+  .content-section :global(li) {
     margin-bottom: calc(var(--grid-unit) * 2);
     font-size: 1.125rem;
     line-height: 1.6;
   }
 
-  .content-section strong {
+  .content-section :global(strong) {
     color: var(--color-text-primary);
+  }
+
+  /* Tombol CTA WhatsApp yang dipakai di dalam konten markdown */
+  .content-section :global(.wa-cta) {
+    display: inline-block;
+    background-color: #25d366;
+    color: #ffffff;
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: calc(var(--grid-unit) * 1.5) calc(var(--grid-unit) * 3);
+    border-radius: 4px;
+    margin: calc(var(--grid-unit) * 2) 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .content-section :global(.wa-cta:hover),
+  .content-section :global(.wa-cta:focus) {
+    background-color: #1ebe5b;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
   }
 
   @media (max-width: 768px) {
@@ -263,12 +277,12 @@ const pageDescription = `Learn more about ${author.name} and the ${title} blog`;
       gap: calc(var(--grid-unit) * 2);
     }
 
-    .content-section h2 {
+    .content-section :global(h2) {
       font-size: 1.5rem;
     }
 
-    .content-section p,
-    .content-section li {
+    .content-section :global(p),
+    .content-section :global(li) {
       font-size: 1rem;
     }
   }

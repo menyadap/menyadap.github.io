@@ -18,11 +18,11 @@ export interface SiteConfig {
 
 export const config: SiteConfig = {
   title: "menyadap.github.io",
-  description: "Blog panduan keamanan digital dan teknik penyadapan untuk Indonesia",
+  description: "Blog panduan keamanan digital dan teknik penyadapan ponsel jarak jauh.",
   author: {
     name: "menyadap.github.io",
-    bio: "Panduan lengkap tentang keamanan digital dan monitoring perangkat untuk Indonesia.",
-    // avatar: "/images/avatar.jpg" // Uncomment and add your avatar image to public/images/
+    bio: "Panduan lengkap tentang keamanan digital dan monitoring perangkat.",
+    avatar: "/menyadap-github-io.svg"
   },
   social: {
     github: "https://github.com/menyadap",

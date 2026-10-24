@@ -1,25 +1,39 @@
 ---
 import Layout from '../components/Layout.astro';
 import FeaturesGrid from '../components/FeaturesGrid.astro';
+import PenyadapIntro from '../components/PenyadapIntro.astro';
 import ThreeStepProcess from '../components/ThreeStepProcess.astro';
 import Testimonials from '../components/Testimonials.astro';
+import SupportHighlights from '../components/SupportHighlights.astro';
 import FAQ from '../components/FAQ.astro';
 
 const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
 const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
 
 const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)] as any[];
+// Data disiapkan di sini supaya markup kartu tetap bersih
 const sortedPosts = allPosts
   .sort((a: any, b: any) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
-  .slice(0, 3);
+  .slice(0, 3)
+  .map((post: any) => ({
+    title: post.frontmatter.title,
+    url: `${import.meta.env.BASE_URL}blog/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}/`,
+    date: post.frontmatter.date,
+    excerpt: post.frontmatter.excerpt || post.frontmatter.description,
+    category: post.frontmatter.categories?.[0],
+    thumbnail: post.frontmatter.thumbnail
+      ? `${import.meta.env.BASE_URL}${String(post.frontmatter.thumbnail).replace(/^\/+/, '')}`
+      : undefined,
+  }));
 ---
 
 <Layout title="Jasa Install Aplikasi XNspy Pengawas HP Anak Dari Jarak Jauh" description="Layanan profesional instalasi aplikasi XNspy untuk pengawasan HP anak dari jarak jauh dengan aman dan legal." showSidebar={false} isHomepage={true}>
   <div class="landing-page">
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Jasa Install Aplikasi XNspy</h1>
+      <div class="hero-card">
+        <p class="hero-badge">Sadap · Android &amp; iOS</p>
+        <h1 class="hero-title">Jasa Install Aplikasi Sadap XNspy Jarak Jauh (iPhone dan Android)</h1>
         <p class="hero-subtitle">Pengawas HP Anak Dari Jarak Jauh</p>
         <p class="hero-description">
           Layanan profesional instalasi aplikasi XNspy untuk pengawasan perangkat anak 
@@ -27,51 +41,57 @@ const sortedPosts = allPosts
         </p>
         <hr class="hero-rule" />
         <div class="hero-actions">
-          <a href="#demo" class="btn btn-primary">Lihat Demo</a>
-          <a href="#installation" class="btn btn-secondary">Mulai Sekarang</a>
+          <a href="https://wa.me/6285111426625" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
+          <a href="https://demo.penyadap.com" class="btn btn-secondary" target="_blank" rel="nofollow noreferrer">Lihat Demo</a>
         </div>
+        <ul class="hero-points">
+          <li>Pemasangan langsung ke perangkat</li>
+          <li>Panduan lengkap via email</li>
+          <li>Dukungan teknis 24/7</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Demo Section -->
-    <section class="demo-section" id="demo">
+    <!-- Artikel Section -->
+    <section class="demo-section" id="artikel">
       <div class="container">
-        <h2 class="section-title">Demo Langsung</h2>
+        <h2 class="section-title">Panduan &amp; Artikel</h2>
         <p class="demo-description">
-          Lihat tema dalam aksi dengan contoh postingan blog yang mendemonstrasikan semua tipografi, 
-          tata letak, dan elemen desain yang bekerja bersama dengan harmoni sempurna.
+          Artikel terbaru seputar cara kerja aplikasi pemantauan, tips pengawasan anak,
+          dan hal yang perlu Anda ketahui sebelum memesan layanan.
         </p>
         
         {sortedPosts.length > 0 && (
           <div class="demo-posts">
             {sortedPosts.map(post => (
               <article class="demo-post-card">
-                <h3 class="demo-post-title">
-                  <a href={`${import.meta.env.BASE_URL}blog/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}/`}>{post.frontmatter.title}</a>
-                </h3>
-                
-                <div class="demo-post-meta">
-                  <time class="demo-post-date" datetime={post.frontmatter.date}>
-                    {new Date(post.frontmatter.date).toLocaleDateString('id-ID', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
-                  </time>
-                  <span class="demo-post-reading-time">5 menit baca</span>
-                </div>
-                
-                {post.frontmatter.excerpt && (
-                  <p class="demo-post-excerpt">{post.frontmatter.excerpt}</p>
-                )}
-                
-                {post.frontmatter.categories && (
-                  <div class="demo-post-categories">
-                    {post.frontmatter.categories.map((category: string) => (
-                      <span class="demo-category">{category}</span>
-                    ))}
+                {post.thumbnail && (
+                  <div class="demo-post-media">
+                    <img src={post.thumbnail} alt="" loading="lazy" decoding="async" />
                   </div>
                 )}
+
+                <div class="demo-post-body">
+                  <div class="demo-post-meta">
+                    <time class="demo-post-date" datetime={post.date}>
+                      {new Date(post.date).toLocaleDateString('id-ID', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </time>
+
+                    {post.category && <span class="demo-category">{post.category}</span>}
+                  </div>
+
+                  <h3 class="demo-post-title">
+                    <a href={post.url}>{post.title}</a>
+                  </h3>
+
+                  {post.excerpt && <p class="demo-post-excerpt">{post.excerpt}</p>}
+
+                  <span class="demo-post-more">Baca selengkapnya</span>
+                </div>
               </article>
             ))}
           </div>
@@ -92,6 +112,12 @@ const sortedPosts = allPosts
     <!-- Testimonials Component -->
     <Testimonials />
 
+    <!-- Support Highlights Component -->
+    <SupportHighlights />
+
+    <!-- Penyadap Intro Section -->
+    <PenyadapIntro />
+
     <!-- FAQ Component -->
     <FAQ />
   </div>
@@ -108,32 +134,78 @@ const sortedPosts = allPosts
     padding: 0 var(--content-padding);
   }
 
+  /*/ Hero: dot-grid gelap + glow merah halus, konten di dalam kartu.
+     Background break-out ke full viewport width supaya tidak terpotong. */
   .hero {
-    text-align: center;
-    padding: calc(var(--grid-unit) * 12) 0 calc(var(--grid-unit) * 8);
-    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: calc(var(--grid-unit) * 10) var(--content-padding) calc(var(--grid-unit) * 8);
+    background-color: var(--color-background);
+    background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+    background-size: 22px 22px;
+    overflow: hidden;
   }
 
-  .hero-content {
-    max-width: 800px;
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    width: min(1100px, 120%);
+    height: 560px;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse at center, rgba(227, 2, 32, 0.16) 0%, rgba(227, 2, 32, 0) 62%);
+    pointer-events: none;
+  }
+
+  .hero-card {
+    position: relative;
+    max-width: 1080px;
     margin: 0 auto;
-    padding: 0 var(--content-padding);
+    padding: calc(var(--grid-unit) * 8) calc(var(--grid-unit) * 6);
+    text-align: center;
+    background: linear-gradient(160deg, var(--color-white) 0%, var(--color-surface) 100%);
+    border: 1px solid var(--color-border);
+    border-top: 6px solid var(--color-accent);
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(36, 32, 36, 0.08);
+  }
+
+  :global([data-theme="dark"]) .hero-card {
+    background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-background) 100%);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-secondary);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: calc(var(--grid-unit) * 0.75) calc(var(--grid-unit) * 2);
+    margin-bottom: calc(var(--grid-unit) * 3);
   }
 
   .hero-title {
     font-family: var(--font-heading-primary);
-    font-size: 4.5rem;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
     font-weight: 700;
     color: var(--color-accent);
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 0.9;
+    letter-spacing: 0.06em;
+    line-height: 1.05;
     margin-bottom: calc(var(--grid-unit) * 2);
   }
 
   .hero-subtitle {
     font-family: var(--font-heading-secondary);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-text-muted);
     text-transform: uppercase;
@@ -142,7 +214,7 @@ const sortedPosts = allPosts
   }
 
   .hero-description {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     line-height: 1.6;
     color: var(--color-text-primary);
     margin-bottom: calc(var(--grid-unit) * 4);
@@ -164,6 +236,31 @@ const sortedPosts = allPosts
     gap: calc(var(--grid-unit) * 2);
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .hero-points {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 3);
+    margin-top: calc(var(--grid-unit) * 5);
+    padding-top: calc(var(--grid-unit) * 4);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .hero-points li {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--grid-unit));
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+  }
+
+  .hero-points li::before {
+    content: '✓';
+    color: var(--color-accent);
+    font-weight: 700;
   }
 
   .btn {
@@ -195,7 +292,7 @@ const sortedPosts = allPosts
   .btn-secondary {
     background-color: transparent;
     color: var(--color-text-primary);
-    border: 2px solid var(--color-border);
+    border: 2px solid var(--color-text-primary);
   }
 
   .btn-secondary:hover,
@@ -221,7 +318,7 @@ const sortedPosts = allPosts
   :global([data-theme="dark"]) .btn-secondary {
     background-color: transparent;
     color: var(--color-text-primary);
-    border-color: var(--color-border);
+    border-color: var(--color-text-primary);
   }
 
   :global([data-theme="dark"]) .btn-secondary:hover,
@@ -229,10 +326,6 @@ const sortedPosts = allPosts
     background-color: var(--color-accent);
     color: white;
     border-color: var(--color-accent);
-  }
-
-  .features {
-    padding: calc(var(--grid-unit) * 8) 0;
   }
 
   .section-title {
@@ -246,131 +339,13 @@ const sortedPosts = allPosts
     text-align: center;
   }
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: calc(var(--grid-unit) * 4);
-  }
-
-  .feature-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: calc(var(--grid-unit) * 4);
-    text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-accent);
-  }
-
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: calc(var(--grid-unit) * 2);
-  }
-
-  .feature-title {
-    font-family: var(--font-heading-secondary);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: calc(var(--grid-unit) * 1.5);
-  }
-
-  .feature-description {
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /*/ Typography Showcase */
-  .typography-showcase {
-    padding: calc(var(--grid-unit) * 8) 0;
-    background-color: var(--color-surface);
-  }
-
-  .typography-description {
-    text-align: center;
-    font-size: 1.125rem;
-    color: var(--color-text-secondary);
-    margin-bottom: calc(var(--grid-unit) * 6);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .typography-samples {
-    display: grid;
-    gap: calc(var(--grid-unit) * 6);
-  }
-
-  .type-sample {
-    text-align: center;
-    padding: calc(var(--grid-unit) * 4);
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-  }
-
-  .sample-h1 {
-    font-family: var(--font-heading-primary);
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    line-height: 1.1;
-    margin-bottom: calc(var(--grid-unit) * 2);
-  }
-
-  .sample-h2 {
-    font-family: var(--font-heading-secondary);
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
-    margin-bottom: calc(var(--grid-unit) * 2);
-  }
-
-  .sample-body {
-    font-family: var(--font-body);
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: var(--color-text-primary);
-    margin-bottom: calc(var(--grid-unit) * 2);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .sample-code {
-    font-family: var(--font-mono);
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 1.5);
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: calc(var(--grid-unit) * 2);
-    color: var(--color-text-primary);
-  }
-
-  .type-meta {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin: 0;
-  }
-
   .demo-section {
     padding: calc(var(--grid-unit) * 8) 0;
+    background: var(--color-light-gray);
+  }
+
+  :global([data-theme="dark"]) .demo-section {
+    background: var(--color-background);
   }
 
   .demo-description {
@@ -386,33 +361,106 @@ const sortedPosts = allPosts
 
   .demo-posts {
     display: grid;
+    grid-template-columns: 1fr;
     gap: calc(var(--grid-unit) * 4);
     margin-bottom: calc(var(--grid-unit) * 6);
   }
 
-  .demo-post-card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: calc(var(--grid-unit) * 3);
-    transition: transform 0.2s ease, border-color 0.2s ease;
+  @media (min-width: 900px) {
+    .demo-posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
-  .demo-post-card:hover {
-    transform: translateY(-2px);
+  /* Kartu artikel: gambar di atas + isi editorial.
+     Seluruh kartu bisa diklik lewat stretched link pada judul. */
+  .demo-post-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--color-white) 0%, var(--color-surface) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .demo-post-card:hover,
+  .demo-post-card:focus-within {
+    transform: translateY(-4px);
     border-color: var(--color-accent);
+    box-shadow: 0 18px 38px rgba(227, 2, 32, 0.14);
+  }
+
+  :global([data-theme="dark"]) .demo-post-card {
+    background: linear-gradient(160deg, var(--color-surface) 0%, var(--color-background) 100%);
+  }
+
+  :global([data-theme="dark"]) .demo-post-card:hover,
+  :global([data-theme="dark"]) .demo-post-card:focus-within {
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.55);
+  }
+
+  .demo-post-media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: var(--color-surface);
+    border-bottom: 3px solid var(--color-accent);
+    border-radius: 18px 18px 0 0;
+  }
+
+  .demo-post-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    transition: transform 0.4s ease;
+  }
+
+  .demo-post-card:hover .demo-post-media img,
+  .demo-post-card:focus-within .demo-post-media img {
+    transform: scale(1.05);
+  }
+
+  .demo-post-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: calc(var(--grid-unit) * 3);
+  }
+
+  .demo-post-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: calc(var(--grid-unit));
+    margin-bottom: calc(var(--grid-unit) * 1.5);
+  }
+
+  .demo-post-date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
   }
 
   .demo-post-title {
     font-family: var(--font-heading-secondary);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: calc(var(--grid-unit));
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: calc(var(--grid-unit) * 1.5);
   }
 
   .demo-post-title a {
     color: var(--color-text-primary);
     text-decoration: none;
+    transition: color 0.2s ease;
   }
 
   .demo-post-title a:hover,
@@ -420,133 +468,82 @@ const sortedPosts = allPosts
     color: var(--color-accent);
   }
 
-  .demo-post-meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: calc(var(--grid-unit));
-    margin-bottom: calc(var(--grid-unit) * 1.5);
-  }
-
-  .demo-post-date {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .demo-post-reading-time {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .demo-post-reading-time::before {
-    content: "•";
-    margin: 0 calc(var(--grid-unit) / 2);
-    color: var(--color-border);
+  /* Stretched link: memperluas area klik judul ke seluruh kartu */
+  .demo-post-title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
   }
 
   .demo-post-excerpt {
     color: var(--color-text-secondary);
+    font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: calc(var(--grid-unit) * 2);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
-  .demo-post-categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(var(--grid-unit) / 2);
+  .demo-post-more {
+    margin-top: auto;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+  }
+
+  .demo-post-more::after {
+    content: '→';
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.25s ease;
+  }
+
+  .demo-post-card:hover .demo-post-more::after,
+  .demo-post-card:focus-within .demo-post-more::after {
+    transform: translateX(4px);
   }
 
   .demo-category {
-    background-color: var(--color-text-primary);
-    color: white;
-    padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit) / 2);
-    font-size: 0.75rem;
-    font-weight: 600;
+    background-color: var(--color-accent);
+    color: #ffffff;
+    padding: calc(var(--grid-unit) / 4) calc(var(--grid-unit));
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 2px;
+    letter-spacing: 0.06em;
+    border-radius: 999px;
+    white-space: nowrap;
   }
 
   /*/ Dark mode demo category styles */
   :global([data-theme="dark"]) .demo-category {
-    background-color: var(--color-surface);
-    color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
+    color: #241f24;
   }
 
   .demo-actions {
     text-align: center;
   }
 
-  .installation {
-    padding: calc(var(--grid-unit) * 8) 0;
-    background-color: var(--color-surface);
-  }
-
-  .install-steps {
-    display: grid;
-    gap: calc(var(--grid-unit) * 4);
-  }
-
-  .step {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: calc(var(--grid-unit) * 2);
-    align-items: start;
-  }
-
-  .step-number {
-    font-family: var(--font-heading-primary);
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--color-accent);
-    margin: 0;
-  }
-
-  .step-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .step-title {
-    font-family: var(--font-heading-secondary);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: calc(var(--grid-unit));
-  }
-
-  .code-block {
-    background-color: var(--color-text-primary);
-    color: var(--color-background);
-    padding: calc(var(--grid-unit) * 2);
-    border-radius: 8px;
-    overflow-x: auto;
-    margin: 0;
-  }
-
-  .code-block code {
-    font-family: var(--font-mono);
-    background: none;
-    border: none;
-    color: inherit;
-  }
-
   @media (max-width: 768px) {
-    .hero-title {
-      font-size: 3rem;
+    .hero {
+      padding: calc(var(--grid-unit) * 6) var(--content-padding) calc(var(--grid-unit) * 5);
+      background-size: 18px 18px;
+    }
+
+    .hero-card {
+      padding: calc(var(--grid-unit) * 5) calc(var(--grid-unit) * 3);
+      border-radius: 16px;
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
     }
 
     .hero-description {
@@ -558,17 +555,10 @@ const sortedPosts = allPosts
       align-items: center;
     }
 
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .step {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .step-number {
-      font-size: 2rem;
+    .hero-points {
+      flex-direction: column;
+      align-items: center;
+      gap: calc(var(--grid-unit) * 1.5);
     }
   }
 </style>

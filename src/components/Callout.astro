@@ -2,6 +2,7 @@
 // src/components/Callout.astro
 // Shortcode untuk callout/highlight box
 // Gunakan: <Callout>Konten penting yang ingin disorot</Callout>
+// Warna mengikuti palet Red/Black/White: default (hitam), primary (merah), secondary (merah tua)
 
 interface Props {
   emoji?: string;
@@ -28,43 +29,29 @@ const {
     gap: 1rem;
     padding: 1.25rem;
     margin: 1.5rem 0;
-    border-left: 4px solid;
+    border-left: 4px solid var(--color-text-primary);
     border-radius: 6px;
-    background-color: #f5f5f5;
-  }
-
-  [data-theme="dark"] .callout {
-    background-color: #2a2a2a;
+    background-color: var(--color-surface);
   }
 
   .callout-default {
-    border-left-color: #0066cc;
-    background-color: #e6f2ff;
-  }
-
-  [data-theme="dark"] .callout-default {
-    background-color: #1a3a52;
-    border-left-color: #4da6ff;
+    border-left-color: var(--color-text-primary);
   }
 
   .callout-primary {
-    border-left-color: #28a745;
-    background-color: #e6f9f0;
-  }
-
-  [data-theme="dark"] .callout-primary {
-    background-color: #1a3a2a;
-    border-left-color: #4ade80;
+    border-left-color: var(--color-accent);
   }
 
   .callout-secondary {
-    border-left-color: #fd7e14;
-    background-color: #fff4e6;
+    border-left-color: var(--color-accent-red-strong);
+  }
+
+  [data-theme="dark"] .callout-default {
+    border-left-color: var(--color-gainsboro);
   }
 
   [data-theme="dark"] .callout-secondary {
-    background-color: #3a2a1a;
-    border-left-color: #fb923c;
+    border-left-color: #ffb3b3;
   }
 
   .callout-emoji {
@@ -84,14 +71,5 @@ const {
 
   .callout-content :global(p + p) {
     margin-top: 0.5rem;
-  }
-
-    .callout-primary {
-      background-color: #1a3a2e;
-    }
-
-    .callout-secondary {
-      background-color: #3a2a1a;
-    }
   }
 </style>
