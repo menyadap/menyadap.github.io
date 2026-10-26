@@ -4,7 +4,7 @@ date: 2023-11-15T17:04:15.610Z
 description: daftar tool website untuk hapus background gambar dan foto terbaik
   secara gratis dengan ai, dapat digunakan untuk mempermudah hapus latar
   belakang secara cepat dan profesional
-thumbnail: /uploads/media/remover-image-background-ai-juy8.jpg
+thumbnail: ../../assets/uploads/media/remover-image-background-ai-juy8.jpg
 tags:
   - tool
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "4910"
 ---
-![background remover ai](/uploads/media/remover-image-background-ai-juy8.jpg)
+![background remover ai](../../assets/uploads/media/remover-image-background-ai-juy8.jpg)
 
 
 Berikut adalah daftar situs web untuk penghapus latar belakang foto online gratis terbaik. Terkadang perlu untuk menghapus latar belakang dari gambar untuk berbagai kebutuhan dengan metode yang lebih mudah dan efisien dengan *Artificial Intelligence*.

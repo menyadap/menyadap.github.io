@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
+import rehypeImageSize from './src/utils/rehype-image-size.js';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,6 +14,10 @@ export default defineConfig({
   base: process.env.BASE_PATH || undefined,
   // GitHub Pages requires trailing slash for proper routing
   trailingSlash: 'always',
+  // Halaman /contact/ dihilangkan, dialihkan ke /about/
+  redirects: {
+    '/contact': '/about/',
+  },
   integrations: [
     mdx({
       jsxImportSource: 'astro',
@@ -35,6 +40,9 @@ export default defineConfig({
           rel: ['nofollow', 'noreferrer'],
         },
       ],
+      // Menyisipkan width/height pada gambar konten agar ruangnya sudah
+      // tersedia sebelum gambar dimuat (mencegah Cumulative Layout Shift).
+      rehypeImageSize,
     ],
     shikiConfig: {
       theme: 'github-dark',

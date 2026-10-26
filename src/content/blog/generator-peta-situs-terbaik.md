@@ -4,7 +4,7 @@ date: 2024-03-01T03:29:58.357Z
 description: generator sitemap terbaik untuk perayapan lebih cepat dan
   produktif, untuk format peta situs xml dan html agar mempermudah google
   pencarian
-thumbnail: /uploads/media/generator-peta-situs-terbaik-3820.jpg
+thumbnail: ../../assets/uploads/media/generator-peta-situs-terbaik-3820.jpg
 tags:
   - tool
 categories:
@@ -14,7 +14,7 @@ link_referral:
 draft: false
 toc: true
 ---
-![sitemap generator seo](/uploads/media/generator-peta-situs-terbaik-3820.jpg)
+![sitemap generator seo](../../assets/uploads/media/generator-peta-situs-terbaik-3820.jpg)
 
 # 10 Tool Generator Sitemap Terbaik Untuk SEO
 

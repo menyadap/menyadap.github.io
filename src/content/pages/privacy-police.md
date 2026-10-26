@@ -3,7 +3,7 @@ title: Privacy Policy
 date: 2023-06-22T00:56:09.291Z
 description: Kebijakan Privasi untuk pengunjung blog terkait cookie dan keamanan
   internet, untuk perlindungan pengguna kami
-thumbnail: /uploads/media/default_3.png
+thumbnail: ../../assets/uploads/media/default_3.png
 outputs:
   - html
 draft: false

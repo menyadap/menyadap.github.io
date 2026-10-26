@@ -4,7 +4,7 @@ date: 2023-09-15T03:31:55.594Z
 description: daftar aplikasi desain tshirt untuk android terbaik secara gratis,
   dapat digunakan untuk menunjang kebutuhan desain baju atau kaos secara
   profesional.
-thumbnail: /uploads/media/aplikasi-desain-kaos-android-0.jpg
+thumbnail: ../../assets/uploads/media/aplikasi-desain-kaos-android-0.jpg
 tags:
   - aplikasi
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "4720"
 ---
-![aplikasi android desain kaos](/uploads/media/aplikasi-desain-kaos-android-0.jpg)
+![aplikasi android desain kaos](../../assets/uploads/media/aplikasi-desain-kaos-android-0.jpg)
 
 Berikut adalah daftar **10 aplikasi buat desain kaos gratis untuk Android**, ada berbagai macam cara dimana siapapun dapat desain kaos yang dirancang untuk digunakan bagi pemula, tanpa menggunakan photoshop atau corel draw.
 
@@ -35,7 +35,7 @@ Aplikasi menawarkan berbagai sumber gambar desain termasuk stiker dan item grafi
 
 ## 1. T-Shirt Design Studio - Studio PVS
 
-![T-Shirt Design Studio](/uploads/media/aplikasi-desain-kaos-android-1.jpg)
+![T-Shirt Design Studio](../../assets/uploads/media/aplikasi-desain-kaos-android-1.jpg)
 
 **T-Shirt Design Studio** adalah aplikasi desain kaos gratis untuk Android. Dengan aplikasi ini, Anda dapat mendesain kaos dan download file hasil desain kaos yang akan dicetak dengan sablon atau printing.
 
@@ -57,7 +57,7 @@ https://play.google.com/store/apps/details?id=studio.pvs.t_shirtdesignstudio
 
 ## 2. T-Shirt Maker Pro - Desain Kaos
 
-![](/uploads/media/aplikasi-desain-kaos-android-2.jpg)
+![](../../assets/uploads/media/aplikasi-desain-kaos-android-2.jpg)
 
 **TShirt Design Pro** adalah aplikasi desain kaos gratis untuk Android, juga akan menampilkan berbagai koleksi kaos, yang dapat digunakan dan mengubah varian warna kaos lalu sesuaikan dengan desain mu sendiri.
 
@@ -96,7 +96,7 @@ link mati
 
 ## 4. T-Shirt Pro - Prestige
 
-![T-Shirt Pro](/uploads/media/aplikasi-desain-kaos-android-4.jpg)
+![T-Shirt Pro](../../assets/uploads/media/aplikasi-desain-kaos-android-4.jpg)
 
 **TShirt Design Pro** adalah aplikasi desain kaos gratis lainnya untuk sistem mobile Android, aplikasi ini dapat menampilkan beberapa ide desain kaos yang dapat jelajahi. Kemudian dapat menggunakan aplikasi ini untuk mendesain kaos dan hoodies yang dapat disesuaikan dengan keinginan.
 
@@ -119,7 +119,7 @@ https://play.google.com/store/apps/details?id=prestige.tshirtpro
 
 ## 5. T-Shirt Design - Prestige Studio
 
-![T-Shirt Design](/uploads/media/aplikasi-desain-kaos-android-5.jpg)
+![T-Shirt Design](../../assets/uploads/media/aplikasi-desain-kaos-android-5.jpg)
 
 **T-Shirt Design** adalah aplikasi Android gratis lainnya yang dapat digunakan untuk membuat desain kaos. yang memiliki koleksi stiker dan font face yang siap pakai, dapat menggunakannya untuk membuat desain khusus sendiri atau juga bisa menambahkan foto.
 
@@ -153,7 +153,7 @@ link mati
 
 ## 7. TShirt Design - Kustom Kaos
 
-![TShirt Design](/uploads/media/aplikasi-desain-kaos-android-7.jpg)
+![TShirt Design](../../assets/uploads/media/aplikasi-desain-kaos-android-7.jpg)
 
 TShirt Design adalah aplikasi Android gratis yang dapat digunakan untuk membuat desain kaos yang dapat dipersonalisasi dengan mudah, ini adalah aplikasi sederhana lainnya untuk membuat desain khusus untuk baju, dapat memilih jenis, warna, desain gambar agar lebih menarik untuk dijual ke toko online.
 

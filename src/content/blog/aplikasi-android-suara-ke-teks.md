@@ -4,7 +4,7 @@ date: 2023-09-16T04:08:31.299Z
 description: daftar review aplikasi android untuk merubah suara ke teks atau
   tulisan secara gratis, dapat digunakan untuk kebutuhan personal atau
   profesional
-thumbnail: /uploads/media/aplikasi-android-suara-ke-teks-0.jpg
+thumbnail: ../../assets/uploads/media/aplikasi-android-suara-ke-teks-0.jpg
 tags:
   - konversi
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "5494"
 ---
-![merubah suara ke teks android](/uploads/media/aplikasi-android-suara-ke-teks-0.jpg)
+![merubah suara ke teks android](../../assets/uploads/media/aplikasi-android-suara-ke-teks-0.jpg)
 
 Berikut adalah beberapa **cara merubah suara ke teks gratis terbaik untuk Android**, daftar aplikasi untuk mempermudah konversi setiap ucapan dengan cepat yang memungkinkan menulis teks dengan mendikte setiap ucapan.
 
@@ -35,7 +35,7 @@ Beberapa aplikasi dibawah adalah favorit yang sering saya gunakan, karena dapat 
 
 ## 1. Voice Texter
 
-![aplikasi voice texter](/uploads/media/aplikasi-android-suara-ke-teks-1.jpg)
+![aplikasi voice texter](../../assets/uploads/media/aplikasi-android-suara-ke-teks-1.jpg)
 
 Voice Texter adalah aplikasi mengubah suara ke teks gratis untuk Android. Dengan aplikasi ini, dapat menulis catatan dan blog dengan menggunakan suara.
 
@@ -71,7 +71,7 @@ https://play.google.com/store/apps/details?id=com.mrlabs.voicetexter
 
 ## 2. Voice to Text Text to Voice
 
-![aplikasi voice to text text to voice](/uploads/media/aplikasi-android-suara-ke-teks-2.jpg)
+![aplikasi voice to text text to voice](../../assets/uploads/media/aplikasi-android-suara-ke-teks-2.jpg)
 
 *Voice to text text to voice* adalah aplikasi ucapan ke teks gratis lainnya untuk Android. Melalui aplikasi ini, dapat mengubah suara yang diucapkan menjadi teks secara real-time.
 
@@ -110,7 +110,7 @@ https://play.google.com/store/apps/details?id=com.jesusrojo.voztextotextovoz
 
 ## 3. Voice to text by maruar
 
-![voice to text by maruar](/uploads/media/aplikasi-android-suara-ke-teks-3.jpg)
+![voice to text by maruar](../../assets/uploads/media/aplikasi-android-suara-ke-teks-3.jpg)
 
 *Voice to text by maruar* adalah metode lain yang dapat merubah suara ke teks gratis lainnya untuk Android, dengan menyediakan fitur yang berkelanjutan sehingga Anda dapat menulis catatan panjang dengan mendiktekan ucapan.
 
@@ -145,7 +145,7 @@ https://play.google.com/store/apps/details?id=com.maruar.voicetotext
 
 ## 4. Speech To Text By Xeom Apps
 
-![speech to text by xeom](/uploads/media/aplikasi-android-suara-ke-teks-4.jpg)
+![speech to text by xeom](../../assets/uploads/media/aplikasi-android-suara-ke-teks-4.jpg)
 
 *Speech To Text* adalah satu lagi aplikasi ucapan ke teks gratis untuk Android. Aplikasi ini dirancang khusus untuk membantu menulis teks dengan suara dengan teknologi AI, dengan menggunakan fitur unik, yang dapat mengirimkan hasil data teks dari proses suara yang dibuat ke orang lain.
 
@@ -175,7 +175,7 @@ Cara mengubah ucapan menjadi tulisan menggunakan *Speech To Text*:
 
 ## 5. Speechnotes
 
-![aplikasi speechnotes](/uploads/media/aplikasi-android-suara-ke-teks-5.jpg)
+![aplikasi speechnotes](../../assets/uploads/media/aplikasi-android-suara-ke-teks-5.jpg)
 
 Speechnotes adalah aplikasi untuk merubah suara ke teks gratis lainnya yang dapat digunakan untuk Android. Melalui aplikasi ini, dapat dengan mudah mengubah setiap ucapan dari berbagai bahasa menjadi sebuah tulisan. 
 
@@ -216,7 +216,7 @@ https://play.google.com/store/apps/details?id=co.speechnotes.speechnotes
 
 ## 6. Speech Texter
 
-![aplikasi speech texter](/uploads/media/aplikasi-android-suara-ke-teks-6.jpg)
+![aplikasi speech texter](../../assets/uploads/media/aplikasi-android-suara-ke-teks-6.jpg)
 
 ***Speech Texter*** adalah aplikasi suara ke teks gratis lainnya untuk pengguna Android, adalah aplikasi bagus lain yang dapat digunakan untuk mengubah ucapan yang menjadi tulisan secara real-time.
 

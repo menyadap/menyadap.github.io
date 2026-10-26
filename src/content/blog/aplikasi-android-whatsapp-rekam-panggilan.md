@@ -4,7 +4,7 @@ date: 2023-11-15T17:13:13.883Z
 description: metode untuk rekam panggilan whatsapp secara gratis lewat hp
   android tanpa rooting, dapat digunakan untuk menyimpan riwayat panggilan dari
   wa secara mudah
-thumbnail: /uploads/media/aplikasi-rekam-panggilan-whatsapp-2iu2.jpg
+thumbnail: ../../assets/uploads/media/aplikasi-rekam-panggilan-whatsapp-2iu2.jpg
 tags:
   - perekam
   - panggilan
@@ -18,7 +18,7 @@ toc: true
 id: "6045"
 ---
 
-![rekam panggilan whatsapp](/uploads/media/aplikasi-rekam-panggilan-whatsapp-2iu2.jpg)
+![rekam panggilan whatsapp](../../assets/uploads/media/aplikasi-rekam-panggilan-whatsapp-2iu2.jpg)
 
 Berikut adalah daftar aplikasi perekam panggilan WhatsApp terbaik untuk Android. Dengan menggunakan aplikasi gratis untuk Android, Anda dapat merekam suara dari panggilan WA masuk dan keluar yang dilakukan di aplikasi.
 

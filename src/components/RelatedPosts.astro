@@ -2,6 +2,11 @@
 // RelatedPosts - daftar artikel terkait untuk halaman single post.
 // Keterkaitan dihitung dari irisan `tags` frontmatter; bila skor sama
 // diurutkan berdasarkan tanggal terbaru.
+// Memakai getCollection agar thumbnail (schema `image()` di content config)
+// tersedia sebagai ImageMetadata dan bisa dirender lewat astro:assets.
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+
 interface Props {
   /** Tag milik artikel saat ini, dipakai sebagai dasar pencocokan. */
   tags?: string[];
@@ -15,25 +20,20 @@ interface Props {
 
 const { tags = [], currentSlug = '', title = 'Artikel Terkait', limit = 3 } = Astro.props;
 
-const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
-const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
-const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)] as any[];
+const allPosts = await getCollection('blog');
 
 const base = import.meta.env.BASE_URL;
 const currentTags = tags.map((tag) => tag.toLowerCase());
 
 const related = allPosts
-  .map((post: any) => {
-    const slug = post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '') || '';
-    const postTags: string[] = post.frontmatter.tags || [];
+  .map((post) => {
+    const postTags = post.data.tags ?? [];
     const matched = postTags.filter((tag) => currentTags.includes(tag.toLowerCase())).length;
-    return { post, slug, matched };
+    return { post, matched };
   })
-  .filter(({ slug, matched }) => matched > 0 && slug !== currentSlug)
+  .filter(({ post, matched }) => matched > 0 && post.id !== currentSlug)
   .sort(
-    (a, b) =>
-      b.matched - a.matched ||
-      new Date(b.post.frontmatter.date).getTime() - new Date(a.post.frontmatter.date).getTime()
+    (a, b) => b.matched - a.matched || b.post.data.date.getTime() - a.post.data.date.getTime()
   )
   .slice(0, limit);
 ---
@@ -43,15 +43,17 @@ const related = allPosts
     <h2 class="related-title" id="related-posts-title">{title}</h2>
 
     <div class="related-grid">
-      {related.map(({ post, slug }) => {
-        const postTags: string[] = post.frontmatter.tags || [];
+      {related.map(({ post }) => {
+        const postTags = post.data.tags ?? [];
         return (
           <article class="related-card">
-            {post.frontmatter.thumbnail && (
+            {post.data.thumbnail && (
               <div class="related-media">
-                <img
-                  src={`${base}${String(post.frontmatter.thumbnail).replace(/^\/+/, '')}`}
+                {/* Kotak 84px; 168px agar tetap tajam di layar retina. */}
+                <Image
+                  src={post.data.thumbnail}
                   alt=""
+                  width={168}
                   loading="lazy"
                   decoding="async"
                 />
@@ -59,8 +61,8 @@ const related = allPosts
             )}
 
             <div class="related-body">
-              <time class="related-date" datetime={post.frontmatter.date}>
-                {new Date(post.frontmatter.date).toLocaleDateString('id-ID', {
+              <time class="related-date" datetime={post.data.date.toISOString()}>
+                {post.data.date.toLocaleDateString('id-ID', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric'
@@ -68,12 +70,12 @@ const related = allPosts
               </time>
 
               <h3 class="related-card-title">
-                <a href={`${base}blog/${slug}/`}>{post.frontmatter.title}</a>
+                <a href={`${base}blog/${post.id}/`}>{post.data.title}</a>
               </h3>
 
               {postTags.length > 0 && (
                 <div class="related-tags">
-                  {postTags.slice(0, 3).map((tag: string) => (
+                  {postTags.slice(0, 3).map((tag) => (
                     <span class="related-tag">{tag}</span>
                   ))}
                 </div>

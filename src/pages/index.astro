@@ -1,4 +1,6 @@
 ---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import Layout from '../components/Layout.astro';
 import FeaturesGrid from '../components/FeaturesGrid.astro';
 import PenyadapIntro from '../components/PenyadapIntro.astro';
@@ -7,23 +9,20 @@ import Testimonials from '../components/Testimonials.astro';
 import SupportHighlights from '../components/SupportHighlights.astro';
 import FAQ from '../components/FAQ.astro';
 
-const mdPostsGlob = import.meta.glob('../content/blog/*.md', { eager: true });
-const mdxPostsGlob = import.meta.glob('../content/blog/*.mdx', { eager: true });
-
-const allPosts = [...Object.values(mdPostsGlob), ...Object.values(mdxPostsGlob)] as any[];
+// getCollection dipakai (bukan import.meta.glob) agar thumbnail tersedia
+// sebagai ImageMetadata dari schema `image()` sehingga bisa dioptimasi.
+const allPosts = await getCollection('blog');
 // Data disiapkan di sini supaya markup kartu tetap bersih
 const sortedPosts = allPosts
-  .sort((a: any, b: any) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 3)
-  .map((post: any) => ({
-    title: post.frontmatter.title,
-    url: `${import.meta.env.BASE_URL}blog/${post.file.split('/').pop()?.replace(/\.(md|mdx)$/, '')}/`,
-    date: post.frontmatter.date,
-    excerpt: post.frontmatter.excerpt || post.frontmatter.description,
-    category: post.frontmatter.categories?.[0],
-    thumbnail: post.frontmatter.thumbnail
-      ? `${import.meta.env.BASE_URL}${String(post.frontmatter.thumbnail).replace(/^\/+/, '')}`
-      : undefined,
+  .map((post) => ({
+    title: post.data.title,
+    url: `${import.meta.env.BASE_URL}blog/${post.id}/`,
+    date: post.data.date,
+    excerpt: post.data.excerpt || post.data.description,
+    category: post.data.categories?.[0],
+    thumbnail: post.data.thumbnail,
   }));
 ---
 
@@ -67,7 +66,14 @@ const sortedPosts = allPosts
               <article class="demo-post-card">
                 {post.thumbnail && (
                   <div class="demo-post-media">
-                    <img src={post.thumbnail} alt="" loading="lazy" decoding="async" />
+                    {/* Kartu ±370px di grid 3 kolom; 740px untuk layar retina. */}
+                    <Image
+                      src={post.thumbnail}
+                      alt=""
+                      width={740}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                 )}
 

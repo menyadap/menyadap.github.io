@@ -4,7 +4,7 @@ date: 2023-11-15T16:31:18.441Z
 description: ulasan daftar layanan clipboard atau papan klip untuk android
   terbaik secara gratis, dapat digunakan pintasan untuk menunjang kebutuhan
   produktivitas secara cepat dan mudah digunakan.
-thumbnail: /uploads/media/aplikasi-clipboard-manager-android-1.jpg
+thumbnail: ../../assets/uploads/media/aplikasi-clipboard-manager-android-1.jpg
 tags:
   - aplikasi
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "4928"
 ---
-![clipboard manager](/uploads/media/aplikasi-clipboard-manager-android-1.jpg)
+![clipboard manager](../../assets/uploads/media/aplikasi-clipboard-manager-android-1.jpg)
 
 Berikut adalah daftar aplikasi clipboard manager gratis terbaik khusus untuk Android. Papan klip adalah program atau aplikasi yang secara otomatis menyimpan semua konten teks yang disalin pengguna selama jangka waktu tertentu melalui sistem mobile. 
 

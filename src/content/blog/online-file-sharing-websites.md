@@ -3,7 +3,7 @@ title: "9 Cloud File Sharing: Kirim dan Berbagi File Online"
 date: 2023-11-15T17:03:25.250Z
 description: daftar ulasan website file sharing terbaik secara gratis, dapat
   digunakan untuk mengirim beragam file secara cepat dan profesional.
-thumbnail: /uploads/media/kirim-file-online-sharing-server-h2j6.jpg
+thumbnail: ../../assets/uploads/media/kirim-file-online-sharing-server-h2j6.jpg
 tags:
   - tool
 categories:
@@ -14,7 +14,7 @@ draft: false
 toc: true
 id: "5038"
 ---
-![file sharing online](/uploads/media/kirim-file-online-sharing-server-h2j6.jpg)
+![file sharing online](../../assets/uploads/media/kirim-file-online-sharing-server-h2j6.jpg)
 
 Berikut adalah daftar situs yang dapat kirim file gratis terbaik secara online. Melalui situs file sharing, pengguna dapat mengirim atau transfer file dan data berukuran besar ke pengguna mana pun melalui internet.
 

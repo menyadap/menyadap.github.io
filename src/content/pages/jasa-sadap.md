@@ -7,12 +7,12 @@ date: 2023-06-01T04:49:59.958Z
 description: Jasa Hack Aplikasi Data Telegram, WhatsApp, Line, Skype, Instagram,
   Facebook Messenger, Snpachat, Tinder, Tantan, TikTok, atau aplikasi sosial
   media lainnya
-thumbnail: /uploads/media/jasa-hack-sosmed-738ussb.png
+thumbnail: ../../assets/uploads/media/jasa-hack-sosmed-738ussb.png
 outputs:
   - HTML
   - RSS
 ---
-![Jasa Hack WA, Facebook dan Instagram](/uploads/media/jasa-hack-sosmed-738ussb.png)
+![Jasa Hack WA, Facebook dan Instagram](../../assets/uploads/media/jasa-hack-sosmed-738ussb.png)
 
 
 ## Jasa Hack Sosial Media

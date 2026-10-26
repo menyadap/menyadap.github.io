@@ -4,7 +4,7 @@ date: 2023-11-15T17:15:42.177Z
 description: ulasan daftar untuk merubah web blog menjadi aplikasi android dan
   ios online terbaik secara gratis, dapat digunakan untuk pengguna mobile secara
   profesional.
-thumbnail: /uploads/media/ubah-situs-ke-aplikasi-je38.jpg
+thumbnail: ../../assets/uploads/media/ubah-situs-ke-aplikasi-je38.jpg
 tags:
   - aplikasi
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "2596"
 ---
-![ubah website ke aplikasi](/uploads/media/ubah-situs-ke-aplikasi-je38.jpg)
+![ubah website ke aplikasi](../../assets/uploads/media/ubah-situs-ke-aplikasi-je38.jpg)
 
 Berikut adalah daftar layanan untuk merubah Situs Web atau blog menjadi aplikasi Android (APK) online gratis terbaik. Membuat sebuah aplikasi Android memerlukan pemahaman tentang berbagai bahasa pemrograman dan pengetahuan tentang ***Android Studio***, jika memiliki website / blog dan ingin mengubahnya menjadi aplikasi Android, beberapa layanan online dibawah dapat membantu.
 

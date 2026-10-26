@@ -3,7 +3,7 @@ title: Tentang Kami
 date: 2022-03-25T00:55:08.587Z
 description: Gambaran lengkap layanan pemantauan ponsel menyadap.github.io, fitur yang
   disediakan, proses pemesanan, serta ketentuan layanan yang berlaku.
-thumbnail: /uploads/media/default_2.png
+thumbnail: ../../assets/uploads/media/default_2.png
 outputs:
   - html
 draft: false

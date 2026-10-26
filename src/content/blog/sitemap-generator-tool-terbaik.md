@@ -3,7 +3,7 @@ title: "9 Sitemap Generator Terbaik: Optimasi SEO"
 date: 2024-03-01T03:03:56.077Z
 description: generator peta situs gratis terbaik untuk buat file html dan xml
   secara mudah agar dapat cepat di index google seo serp
-thumbnail: /uploads/media/sitemap-generator-tool-terbaik.jpg
+thumbnail: ../../assets/uploads/media/sitemap-generator-tool-terbaik.jpg
 tags:
   - tool
 categories:
@@ -13,7 +13,7 @@ link_referral:
 draft: false
 toc: true
 ---
-![sitemap generator](/uploads/media/sitemap-generator-tool-terbaik.jpg)
+![sitemap generator](../../assets/uploads/media/sitemap-generator-tool-terbaik.jpg)
 
 Jika mencari generator sitemap gratis, sudah mampir di tempat yang tepat! Dalam panduan praktis dari *menyadap.github.io*, kami membagikan beberapa alat untuk pembuat sitemap untuk situs web / blog dan menjelaskan nilai sitemap untuk hasil pencarian secara keseluruhan.
 

@@ -10,26 +10,18 @@
     "astro": "astro",
     "check": "astro check",
     "lint": "eslint . --ext .js,.ts,.astro",
-    "format": "prettier --write .",
-    "generate-screenshots": "node generate-screenshots.js",
-    "test:features": "playwright test"
+    "format": "prettier --write ."
   },
-  "author": "@jdrhyne",
+  "author": "menyadap.github.io",
   "license": "MIT",
-  "homepage": "https://github.com/jdrhyne/volks-typo",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jdrhyne/volks-typo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jdrhyne/volks-typo/issues"
-  },
+  "homepage": "https://menyadap.github.io",
   "keywords": [
     "astro",
     "blog",
-    "theme",
-    "minimal",
-    "typography"
+    "keamanan-digital",
+    "monitoring",
+    "parental-control",
+    "indonesia"
   ],
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
@@ -38,7 +30,8 @@
     "@fontsource/oswald": "^5.2.6",
     "@fontsource/roboto-condensed": "^5.2.6",
     "@fontsource/work-sans": "^5.2.6",
-    "astro": "^5.9.1"
+    "astro": "^5.9.1",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.3",

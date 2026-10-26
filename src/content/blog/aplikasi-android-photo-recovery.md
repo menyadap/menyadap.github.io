@@ -4,7 +4,7 @@ date: 2023-11-15T17:06:08.305Z
 description: aplikasi recovery cara terbaik kembalikan file foto yang terhapus
   secara gratis tanpa harus rooting, dapat digunakan untuk melihat data yang
   sudah dihapus secara cepat dan profesional.
-thumbnail: /uploads/media/aplikasi-recovery-file-terhapus-h38e.jpg
+thumbnail: ../../assets/uploads/media/aplikasi-recovery-file-terhapus-h38e.jpg
 tags:
   - aplikasi
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "6023"
 ---
-![recovery file terhapus](/uploads/media/aplikasi-recovery-file-terhapus-h38e.jpg)
+![recovery file terhapus](../../assets/uploads/media/aplikasi-recovery-file-terhapus-h38e.jpg)
 
 Berikut adalah daftar aplikasi pemulihan foto yang terhapus untuk Android gratis tanpa rooting. Terkadang kita secara tidak sengaja menghapus atau kehilangan beberapa foto penting dari smartphone dan kemudian ingin mengembalikannya.
 

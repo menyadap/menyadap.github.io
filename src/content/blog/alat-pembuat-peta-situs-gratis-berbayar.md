@@ -3,7 +3,7 @@ title: 8 Tool Sitemap Generator Jutaan Halaman (Gratis & Berbayar)
 date: 2024-03-01T02:37:31.724Z
 description: alat pembuat peta situs terbaik gratis dan berbayar, untuk membuat
   sitemap dengan ratusan ribu halaman dengan mudah dan cepat
-thumbnail: /uploads/media/alat-pembuat-peta-situs-gratis-berbayar.jpg
+thumbnail: ../../assets/uploads/media/alat-pembuat-peta-situs-gratis-berbayar.jpg
 tags:
   - software
 categories:
@@ -13,7 +13,7 @@ link_referral:
 draft: false
 toc: true
 ---
-![tool generator sitemap](/uploads/media/alat-pembuat-peta-situs-gratis-berbayar.jpg)
+![tool generator sitemap](../../assets/uploads/media/alat-pembuat-peta-situs-gratis-berbayar.jpg)
 
 Sitemap XML adalah file berisi instruksi yang menunjukkan kepada mesin pencari (seperti Google, Bing) halaman terpenting di situs web / blog.
 

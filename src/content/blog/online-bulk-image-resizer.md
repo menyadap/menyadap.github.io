@@ -4,7 +4,7 @@ date: 2023-11-15T13:40:04.192Z
 description: ulasan cara mudah merubah ukuran gambar secara masal dengan tool
   online terbaik, dapat digunakan untuk merubah ukuran ribuan gambar secara
   cepat dan profesional.
-thumbnail: /uploads/media/tool-resize-image-massal-online-293j.jpg
+thumbnail: ../../assets/uploads/media/tool-resize-image-massal-online-293j.jpg
 tags:
   - tool
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "4608"
 ---
-![resize image massal](/uploads/media/tool-resize-image-massal-online-293j.jpg)
+![resize image massal](../../assets/uploads/media/tool-resize-image-massal-online-293j.jpg)
 
 Berikut adalah daftar situs web online untuk ***mengubah ukuran gambar / foto secara massal*** gratis terbaik. Terkadang resolusi atau ukuran gambar perlu diubah untuk menyesuaikan proyek yang diinginkan.
 

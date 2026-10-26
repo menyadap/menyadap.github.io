@@ -4,7 +4,7 @@ date: 2023-11-15T17:18:39.813Z
 description: daftar ulasan website tool online untuk merubah file csv ke json
   dengan mudah secara gratis, dapat digunakan untuk merubah file dari csv ke
   json secara cepat dan profesional.
-thumbnail: /uploads/media/tool-csv-ke-json-online-293j.jpg
+thumbnail: ../../assets/uploads/media/tool-csv-ke-json-online-293j.jpg
 tags:
   - tool
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "4674"
 ---
-![csv ke json](/uploads/media/tool-csv-ke-json-online-293j.jpg)
+![csv ke json](../../assets/uploads/media/tool-csv-ke-json-online-293j.jpg)
 
 
 

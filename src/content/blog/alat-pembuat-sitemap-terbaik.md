@@ -4,7 +4,7 @@ date: 2024-03-01T01:43:50.804Z
 description: alat pembuat peta situs teratas, dengan beberapa tool sitemap
   generator terbaik untuk blogger dari platform wordpress atau blogspot, file
   xml dan blogger
-thumbnail: /uploads/media/alat-pembuat-sitemap-terbaik.jpg
+thumbnail: ../../assets/uploads/media/alat-pembuat-sitemap-terbaik.jpg
 tags:
   - software
 categories:
@@ -14,7 +14,7 @@ link_referral:
 draft: false
 toc: true
 ---
-![alat sitemap generator](/uploads/media/alat-pembuat-sitemap-terbaik.jpg)
+![alat sitemap generator](../../assets/uploads/media/alat-pembuat-sitemap-terbaik.jpg)
 
 Tool sitemap generator adalah daftar semua halaman di situs web / blog. Sitemap normalnya menggunakan file XML, yang khusus ditujukan untuk mesin telusur, membantu Googlebot menemukan konten baru dan terkini.
 
@@ -51,7 +51,7 @@ Tool sitemap generator
 
 ## 1. XML-Sitemaps.com (Tool Online)
 
-![xml-sitemaps](/uploads/media/tool-xml-sitemaps-generator.jpg)
+![xml-sitemaps](../../assets/uploads/media/tool-xml-sitemaps-generator.jpg)
 
 Tool sitemap generator XML gratis terbaik untuk pemula, cocok buat situs statis.
 
@@ -100,7 +100,7 @@ XML-Sitemaps menawarkan dua opsi langganan :
 
 ## 2. Yoast SEO (Plugin WordPress)
 
-![yoast sitemap](/uploads/media/tool-yoast-xml-sitemap.jpg)
+![yoast sitemap](../../assets/uploads/media/tool-yoast-xml-sitemap.jpg)
 
 **Terbaik untuk mengelola sitemap XML dengan mudah untuk situs WordPress.**
 
@@ -147,7 +147,7 @@ https://yoast.com/wordpress/plugins/seo/
 
 ## 3. Sitemap Generator XML untuk Google
 
-![sitemap generator xml google](/uploads/media/tool-google-xml-sitemaps.jpg)
+![sitemap generator xml google](../../assets/uploads/media/tool-google-xml-sitemaps.jpg)
 
 **Tool Terbaik untuk menghasilkan sitemap XML dengan konfigurasi lanjutan di website dengan WordPress.**
 

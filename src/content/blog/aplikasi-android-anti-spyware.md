@@ -4,7 +4,7 @@ date: 2023-11-15T17:23:10.406Z
 description: daftar aplikasi terbaik anti spyware agar hp android tidak dapat di
   sadap secara gratis, dapat digunakan untuk melindungi privasi lewat komunikasi
   online
-thumbnail: /uploads/media/aplikasi-anti-sadap-hp-3js8.jpg
+thumbnail: ../../assets/uploads/media/aplikasi-anti-sadap-hp-3js8.jpg
 tags:
   - aplikasi
 categories:
@@ -15,7 +15,7 @@ draft: false
 toc: true
 id: "5106"
 ---
-![anti sadap wa hp](/uploads/media/aplikasi-anti-sadap-hp-3js8.jpg)
+![anti sadap wa hp](../../assets/uploads/media/aplikasi-anti-sadap-hp-3js8.jpg)
 
 Berikut adalah daftar ***aplikasi anti-spyware gratis*** terbaik untuk Android, spyware dapat dikenal sebagai jenis program jahat yang diam-diam transfer data dari hp ke hacker.
 
