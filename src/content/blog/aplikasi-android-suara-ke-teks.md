@@ -243,7 +243,7 @@ Speech texter adalah aplikasi ucapan ke tulisan yang mudah digunakan untuk Andro
 
 https://www.speechtexter.com
 
-https://play.google.com/store/apps/details?id=com.speechtexter.speechtexter
+link mati
 
 
 
@@ -307,4 +307,4 @@ Setelah pidato konversi, dapat menyalin teks dan juga mengedit teks jika Anda ma
 
 *Speak to Text* adalah aplikasi merubah ucapan ke tulisan lain yang mudah digunakan untuk Android yang dapat digunakan secara gratis dengan mudah.
 
-https://play.google.com/store/apps/details?id=dev.shahzadshah.speach.totext.app
+link mati

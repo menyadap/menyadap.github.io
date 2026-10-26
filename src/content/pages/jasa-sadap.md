@@ -17,11 +17,11 @@ outputs:
 
 ## Jasa Hack Sosial Media
 
-Memantau sebuah perangkat smartphone & tablet, dengan menyediakan software sadap sosial media dengan fitur yang super lengkap untuk [pengawasan ponsel pasangan](/sadap/10-sadap-hp-tersembunyi-suami-selingkuh-13a3b/) dan anak remaja, agar ada memastikan keamanan penggunaan sosial media dan aplikasi chat dari gadget Android / iOS *(curiga dapat menguras waktu dan energi)*.
+Memantau sebuah perangkat smartphone & tablet, dengan menyediakan software sadap sosial media dengan fitur yang super lengkap untuk [pengawasan ponsel pasangan](/blog/10-sadap-hp-tersembunyi-suami-selingkuh-13a3b/) dan anak remaja, agar ada memastikan keamanan penggunaan sosial media dan aplikasi chat dari gadget Android / iOS *(curiga dapat menguras waktu dan energi)*.
 
-kami akan membantu untuk menyelesaikan masalah terkait ***[jasa hack wa dan sosial media](/sadap/12-aplikasi-sadap-wa-gratis-tanpa-ketahuan-5117c/)*** lainnya, dengan cara paling mudah dan terpercaya.
+kami akan membantu untuk menyelesaikan masalah terkait ***[jasa hack wa dan sosial media](/blog/12-aplikasi-sadap-wa-gratis-tanpa-ketahuan-5117c/)*** lainnya, dengan cara paling mudah dan terpercaya.
 
-> Apakah jasa hack / [aplikasi sadap](/sadap/9-sadap-hp-pacar-tanpa-ketahuan-bdb42/) dapat berjalan ***tanpa harus sentuh hp atau hanya dengan nomor saja?*** layanan semacam itu, saya pastikan omong kosong, untuk melakukan bajak data atau *[hack wa](/sadap/10-aplikasi-social-spy-sadap-wa-014c687/)* dari smartphone android & iphone memerlukan pemasangan langsung ke gadget seseorang, tanpa harus sentuh saya ***pastikan scam***.
+> Apakah jasa hack / [aplikasi sadap](/blog/9-sadap-hp-pacar-tanpa-ketahuan-bdb42/) dapat berjalan ***tanpa harus sentuh hp atau hanya dengan nomor saja?*** layanan semacam itu, saya pastikan omong kosong, untuk melakukan bajak data atau *[hack wa](/blog/10-aplikasi-social-spy-sadap-wa-014c687/)* dari smartphone android & iphone memerlukan pemasangan langsung ke gadget seseorang, tanpa harus sentuh saya ***pastikan scam***.
 
 
 
@@ -37,7 +37,7 @@ Hai, *yuk mulai tanya sekarang* dan kami akan respon dengan cepat, terkait produ
 
 
 
-Secara otomatis akan diarahkan ke aplikasi WhatsApp, untuk pengguna PC / Laptop, gunakan WhatsApp berbasis web [https://web.whatsapp.com.](https://web.whatsapp.com/)
+Secara otomatis akan diarahkan ke aplikasi WhatsApp, untuk pengguna PC / Laptop, gunakan WhatsApp berbasis web [https://web.whatsapp.com](https://web.whatsapp.com/)
 
 
 **(Mohon dibaca terlebih dahulu)**
@@ -99,7 +99,7 @@ Anda juga setuju bahwa Anda bertanggungjawab sepenuhnya dan berani menanggung se
 2. **GPS Real-time**: Monitoring lokasi seseorang dengan menggunakan teknologi navigasi satelit GPS, melacak lokasi dengan cara akurat.
 3. **Akses Kamera**: Akses fitur kamera dari hp seseorang untuk memastikan lingkungan sekitar hp secara live, dan akan dikirim ke server dan ditampilkan ke aplikasi monitoring.
 4. **Rekam Panggilan Suara**: Rekam hasil panggilan suara yang dapat dilakukan secara jarak jauh, dengan aplikasi setelah melakukan pemasangan.
-5. **Remote File Manager**: Fitur ini dapat [melihat setiap file foto & video](/sadap/aplikasi-sadap-safespy/) di folder internal hp seseorang, juga dapat diambil secara jarak jauh.
+5. **Remote File Manager**: Fitur ini dapat [melihat setiap file foto & video](/blog/aplikasi-sadap-safespy/) di folder internal hp seseorang, juga dapat diambil secara jarak jauh.
 6. **Sadap Pesan**: Menyadap semua data SMS, iMessage *(hanya iOS)*, Gmail, dapat mengambil semua pesan teks yang dikirim dan diterima, dan dapat dilihat dari dalam software monitoring yang sudah disediakan.
 
 
@@ -112,15 +112,15 @@ Anda juga setuju bahwa Anda bertanggungjawab sepenuhnya dan berani menanggung se
 
 ![Cara Mudah Buktikan Pasangan Selingkuh](/images/1-pasangan-selingkuh.png)
 
-Jasa hack wa, instagram dan [hack facebook](/sadap/penyadap-pasangan-selingkuh-xnspy/) yang memiliki banyak manfaat untuk beberapa pengguna, layanan aplikasi ini akan sangat berguna untuk [memantau pasangan](/sadap/sadap-hp-gratis-istri-selingkuh-29f9f/), yang curiga dengan sikapnya.
+Jasa hack wa, instagram dan [hack facebook](/blog/penyadap-pasangan-selingkuh-xnspy/) yang memiliki banyak manfaat untuk beberapa pengguna, layanan aplikasi ini akan sangat berguna untuk [memantau pasangan](/blog/sadap-hp-gratis-istri-selingkuh-29f9f/), yang curiga dengan sikapnya.
 
-[Program sadap](/sadap/sadap-hp-mspy/) akan banyak membantu mencari info rahasia lewat data HP dengan lebih efisien, dengan perangkat dengan fitur mode sembunyi agar pasangan tidak curiga. 
+[Program sadap](/blog/sadap-hp-mspy/) akan banyak membantu mencari info rahasia lewat data HP dengan lebih efisien, dengan perangkat dengan fitur mode sembunyi agar pasangan tidak curiga. 
 
 Salah satu permintaan paling sering di antara pengguna yang ingin memata-matai pasangannya, dari antara semuanya kendala apakah target tahu ponsel sedang hp dia sedang di sadap, perangkat ini adalah salah satu yang paling fleksibel untuk mengawasi tanpa menampilkan icon di menu.
 
 Beberapa situasi terjadi saat pasangan bersikap aneh & acuh, akibatnya pasangan saling curiga dalam beberapa hal.
 
-Dan statistik mengatakan bahwa persentase [perselingkuhan lewat sosial media](/sadap/aplikasi-sadap-spyic/) tidak tergantung berapa lamanya sebuah hubungan seperti pernikahan, pasangan bisa mulai melirik pria / wanita lain setelah merasa tidak cocok / bahagia dengan pernikahannya, dalam kasus lain, orang dapat menjaga kesetiaan sangatlah sulit di era digital.
+Dan statistik mengatakan bahwa persentase [perselingkuhan lewat sosial media](/blog/aplikasi-sadap-spyic/) tidak tergantung berapa lamanya sebuah hubungan seperti pernikahan, pasangan bisa mulai melirik pria / wanita lain setelah merasa tidak cocok / bahagia dengan pernikahannya, dalam kasus lain, orang dapat menjaga kesetiaan sangatlah sulit di era digital.
 
 Jadi untuk membantu apa yang terjadi ketika pasangan pergi keluar kota secara mendadak? menggunakan perangkat penyadap hp terbaik solusi lain yang mungkin sangat efektif.
 
@@ -134,7 +134,7 @@ Jadi untuk membantu apa yang terjadi ketika pasangan pergi keluar kota secara me
 
 ![Mengawasi Gadget Anaka Remaja](/images/1-awasi-pergaulan-remaja.png)
 
-Ada beberapa langkah sederhana yang dapat dilakukan untuk [monitoring aktivitas ponsel anak](/sadap/aplikasi-teensafe/), *tentu saja!* remaja  mungkin akan menolak / tidak nyaman dengan mengawasi kegiatan mereka dari sosial media dan aplikasi chat.
+Ada beberapa langkah sederhana yang dapat dilakukan untuk [monitoring aktivitas ponsel anak](/blog/aplikasi-teensafe/), *tentu saja!* remaja  mungkin akan menolak / tidak nyaman dengan mengawasi kegiatan mereka dari sosial media dan aplikasi chat.
 
 Dengan perangkat sadap ini dapat cari tahu? dengan mudah apa yang mereka lakukan lewat smartphone, menurut banyak ahli mengawasi anak tidak melanggar hukum apabila masih dibawah umur.
 

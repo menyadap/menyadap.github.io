@@ -211,4 +211,4 @@ Cara mengubah ukuran gambar secara massal secara online menggunakan Smartresize:
 
 Smartresize adalah situs online pengubah ukuran gambar massal lainnya yang mampu juga digunakan untuk mengubah *rasio aspek, kualitas,* dan *area pemotongan* gambar.
 
-* https://www.smartresize.com/
+* link mati

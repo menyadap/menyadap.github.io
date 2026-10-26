@@ -63,7 +63,7 @@ Aplikasi ini juga memungkinkan pengguna untuk merekam panggilan selular.
 
 Ini adalah aplikasi yang berguna dan mudah digunakan untuk merekam panggilan WhatsApp dan panggilan telepon di perangkat Android Anda.
 
-https://play.google.com/store/apps/details?id=com.shaikhutech.whatscallvideorecorder
+link mati
 
 ## 2. Cube ACR - Perekam Panggilan WA
 

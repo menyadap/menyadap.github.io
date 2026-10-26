@@ -167,7 +167,7 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
     gap: calc(var(--grid-unit) / 2);
     margin-top: calc(var(--grid-unit) * 2);
     padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 2);
-    background-color: #25d366;
+    background-color: var(--color-wa);
     color: #ffffff;
     font-family: var(--font-heading-secondary);
     font-weight: 700;
@@ -181,7 +181,7 @@ const categories = [...new Set(allPosts.flatMap((post: any) => post.frontmatter.
 
   .wa-button:hover,
   .wa-button:focus {
-    background-color: #1ebe5b;
+    background-color: var(--color-wa-hover);
     color: #ffffff;
     text-decoration: none;
     transform: translateY(-2px);

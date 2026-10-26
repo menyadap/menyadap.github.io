@@ -58,7 +58,7 @@ Fitur lain:
 
 ***Photo Recovery App, Deleted*** adalah salah satu aplikasi pemulihan foto Android gratis terbaik yang dapat digunakan untuk memulihkan foto yang terhapus dan juga menghapus foto secara permanen dari perangkat Android.
 
-* http://happyappsfree.com/
+* link mati
 * https://play.google.com/store/apps/details?id=com.photo.recovery.deleted.video.recovery.recoverdeleted.photo
 
 ## 2. DiskDigger
@@ -107,7 +107,7 @@ Fitur lain:
 
 DiskDigger adalah aplikasi pemulihan foto Android bagus lainnya yang dapat dengan mudah memulihkan semua foto yang terhapus.
 
-https://play.google.com/store/apps/details?id=com.solab.recoverdeletephotos
+link mati
 
 ## 4. Photo Recovery-Restore
 
@@ -202,5 +202,5 @@ Fitur tambahan:
 
 Photo Recovery adalah aplikasi pemulihan foto Android mumpuni lainnya yang dapat digunakan siapa saja untuk memulihkan kembali foto yang terhapus.
 
-* https://hdteam-pro.weebly.com/
+* link mati
 * https://play.google.com/store/apps/details?id=com.hd.restoreimage.photorecovery

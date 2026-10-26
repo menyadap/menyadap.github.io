@@ -19,6 +19,12 @@
   /* Accent Color */
   --color-accent-red: var(--color-spanish-red);
   --color-accent-red-strong: var(--color-guardsman-red);
+  /* Aksen untuk teks kecil di latar terang (WCAG AA: kontras >= 4.5:1) */
+  --color-accent-text: var(--color-guardsman-red);
+
+  /* CTA WhatsApp — hijau digelapkan agar teks putih lolos WCAG AA (>= 4.5:1) */
+  --color-wa: #0f7b3d;
+  --color-wa-hover: #0a5c2c;
 
   /* Semantic Colors */
   --color-background: var(--color-white);
@@ -54,6 +60,8 @@
   /* Accent Color - Spanish Red versi terang agar kontras di latar gelap */
   --color-accent-red: #ff5252;
   --color-accent-red-strong: var(--color-spanish-red);
+  /* Aksen untuk teks kecil di latar gelap (WCAG AA: kontras >= 4.5:1) */
+  --color-accent-text: #ff8a99;
 
   /* Semantic Colors - Dark Mode */
   --color-background: var(--color-raisin-black);

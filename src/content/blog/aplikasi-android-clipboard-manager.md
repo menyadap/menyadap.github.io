@@ -49,7 +49,7 @@ Clipboard Actions & Notes adalah aplikasi clipboard manager gratis untuk Android
 
 Halfreal adalah salah satu aplikasi pengelola papan klip gratis terbaik untuk Android yang menawarkan semua alat pengelolaan papan klip dengan fitur penting dan canggih.
 
-* https://play.google.com/store/apps/details?id=de.halfreal.clipboardactions
+* link mati
 
 ## 2. Devdnua
 
@@ -92,7 +92,7 @@ Setelah itu, pengguna dapat mengakses salah satu frasa tersebut dan menggunakann
 
 Multi Clipboard Manager adalah aplikasi pengelola papan klip bagus lainnya untuk Android di mana pengguna dapat dengan mudah mengelola konten dan catatan papan klip.
 
-* https://play.google.com/store/apps/details?id=com.cv.copybubble
+* link mati
 
 
 
@@ -174,7 +174,7 @@ Pengguna dapat mengakses daftar clipboard dan menyalin data apa pun dengan mudah
 
 Copy Paste Anywhere adalah aplikasi pengelola papan klip berbasis gerakan yang dirancang dengan indah yang membantu pengguna memelihara dan mengakses banyak konten dari papan klip.
 
-* https://play.google.com/store/apps/details?id=com.rubbishcollector.clipboardhistory
+* link mati
 
 ## 8. Nkming
 
@@ -194,7 +194,7 @@ Selain itu, pengguna dapat dengan mudah mengakses data clipboard yang disimpan d
 
 Nkming adalah developer yang membuat aplikasi pengelola papan klip yang sederhana namun sangat bagus yang dapat digunakan siapa saja tanpa kerumitan.
 
-* https://play.google.com/store/apps/details?id=com.nkming.clipboard
+* link mati
 
 ## 9. CopyClip
 
@@ -211,7 +211,7 @@ Dengan masuk ke daftar clipboard, pengguna dapat melihat serta menyalin kembali 
 
 CopyClip adalah aplikasi pengelola papan klip bagus lainnya khusus untuk Android di mana pengguna dapat dengan mudah mengelola setiap teks yang disalin.
 
-* https://play.google.com/store/apps/details?id=com.copyclip
+* link mati
 
 ## 10. Jguerropedev
 
@@ -231,7 +231,7 @@ Pengguna dapat mengakses semua item clipboard dari bagian Superclipboard. Sekara
 
 ***Super Clipboard*** adalah aplikasi pengelola salinan teks yang bagus lainnya yang menawarkan fitur papan klip penting untuk mengakses data yang sudah di salin sebelumnya.
 
-* https://play.google.com/store/apps/details?id=com.jguererope.superclipboard
+* link mati
 
 ## 11. Derwin Dark
 
@@ -249,7 +249,7 @@ Selain itu, ini juga memudahkan pengguna untuk mengambil data yang diperlukan da
 
 \*Clipborad Manager dari **derwin*** adalah aplikasi pengelola papan klip yang dirancang untuk efisiensi membalas chat  berulang dengan cepat untuk Android, yang dapat digunakan siapa saja tanpa banyak drama.
 
-* https://play.google.com/store/apps/details?id=derwin.clipboard.manager
+* link mati
 
 ## 12. My Clipboard Manager
 
@@ -264,7 +264,7 @@ My Clipboard Manager adalah aplikasi pengelola clipboard gratis lainnya yang dap
 
 My Clipboard Manager adalah aplikasi pengelola papan klip yang dirancang dengan baik untuk Android yang menawarkan fitur untuk memudahkan menyimpan data hasil copy.
 
-* https://play.google.com/store/apps/details?id=com.punedev.clipboard.manager
+* link mati
 
 ## 13. MKR Solutions
 
@@ -278,4 +278,4 @@ Clipboard Manager adalah aplikasi pengelola clipboard gratis terakhir untuk Andr
 
 Aplikasi Clipboard Manager ini adalah salah satu aplikasi pengelola data copy paste paling sederhana untuk Android yang menawarkan fitur manajemen papan klip dasar saja.
 
-* https://play.google.com/store/apps/details?id=com.mkr.clipboardmanager
+* link mati

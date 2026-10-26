@@ -125,7 +125,7 @@ Perusahaan perangkat lunak situs web ini menawarkan sitemap generator XML yang s
 Tool ini berjalan di PC *(Windows)*. Pengguna dapat menjadwalkan pembuatan sitemap dan menerima pemberitahuan email ketika peta situs selesai, dan juga mendapatkan sitemap dalam berbagai format – gambar, video, dll.
 
 * **Harga** : Inspyder menawarkan uji coba gratis sehingga dapat mencobanya sebelum membeli. bisa mendapatkan paket Inspyder dengan harga sekitar $39,95 per tahun.
-* **Web** : https://www.inspyder.com
+* **Web** : link mati
 
 
 

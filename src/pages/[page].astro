@@ -174,7 +174,7 @@ const tocHeadings = filterHeadingsForTOC(extractHeadings(rawContent));
   /* CTA WhatsApp yang dipakai di dalam konten markdown */
   .page-content :global(.wa-cta) {
     display: inline-block;
-    background-color: #25d366;
+    background-color: var(--color-wa);
     color: #ffffff;
     font-family: var(--font-heading-secondary);
     font-weight: 700;
@@ -188,7 +188,7 @@ const tocHeadings = filterHeadingsForTOC(extractHeadings(rawContent));
 
   .page-content :global(.wa-cta:hover),
   .page-content :global(.wa-cta:focus) {
-    background-color: #1ebe5b;
+    background-color: var(--color-wa-hover);
     color: #ffffff;
     text-decoration: none;
     transform: translateY(-2px);

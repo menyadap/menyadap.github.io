@@ -61,4 +61,4 @@ Hai, *yuk mulai tanya sekarang* dan kami akan merespons dengan cepat terkait pro
 
 <a class="wa-cta" href="https://wa.me/6285111426625" target="_blank" rel="noopener noreferrer">Hubungi Kami</a>
 
-Secara otomatis Anda akan diarahkan ke aplikasi WhatsApp. Untuk pengguna PC / Laptop, gunakan WhatsApp berbasis web [https://web.whatsapp.com.](https://web.whatsapp.com/)
+Secara otomatis Anda akan diarahkan ke aplikasi WhatsApp. Untuk pengguna PC / Laptop, gunakan WhatsApp berbasis web [https://web.whatsapp.com](https://web.whatsapp.com/)

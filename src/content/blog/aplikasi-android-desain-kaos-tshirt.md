@@ -92,7 +92,7 @@ Anda dapat menggunakan 500+ font yang ditawarkan aplikasi ini untuk menambahkan 
 * Tambahkan Tekstur ke kaos (teks busur dan teks melengkung, tekstur pada teks, tet 3D, dll.)
 * Tambahkan background khusus untuk menjual kaos ke marketplace
 
-https://play.google.com/store/apps/details?id=com.picklesfox.shirtdesign
+link mati
 
 ## 4. T-Shirt Pro - Prestige
 
@@ -149,7 +149,7 @@ Setelah itu, bisa menjelajahi koleksi stiker untuk menambahkan grafis pada kaos.
 * Tambahkan Gambar Stiker (Stiker populer di 50+ kategori)
 * Tambahkan Beragam Tekstur (teks busur dan teks melengkung, dll.)
 
-https://play.google.com/store/apps/details?id=com.planetsstudio.tshirtmaker
+link mati
 
 ## 7. TShirt Design - Kustom Kaos
 
@@ -190,7 +190,7 @@ Selain itu, juga dapat menambahkan teks dengan koleksi font dan warna lengkap. A
 * Tambahkan Stiker
 * Tambahkan Koleksi Tekstur (teks busur dan teks melengkung, tekstur pada teks, dll.)
 
-https://play.google.com/store/apps/details?id=prestige.tshirtdesign.gamingtshirts
+link mati
 
 ## 9. Tshirt Maker - Present Solutions
 
@@ -209,7 +209,7 @@ Anda dapat membuat teks dengan beberapa objek, menambahkan tekstur dengan menggu
 * Tambahkan Stiker ke kaos (banyak koleksi stiker populer)
 * Tambahkan Teks ke kaos (teks busur dan teks melengkung, tekstur pada teks, dll.)
 
-https://play.google.com/store/apps/details?id=com.presentsolutions.tshirtmaker
+link mati
 
 ## 10. Tshirt Design Pro - Free
 

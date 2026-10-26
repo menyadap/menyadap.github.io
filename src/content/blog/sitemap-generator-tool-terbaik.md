@@ -105,7 +105,7 @@ Tool sitemap Inspyder memiliki versi uji coba gratis hingga 25 halaman. Jika tid
 
 Inspyder juga menawarkan alat analisis situs web gratis, seperti HTTP Header Viewer, HTML/URL Encoder, dan Sitemap Validator (untuk memeriksa kesalahan pada sitemap XML).
 
-https://www.inspyder.com/
+link mati
 
 
 

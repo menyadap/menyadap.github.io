@@ -25,7 +25,7 @@ Aplikasi ini dapat membaca seluruh file dan aplikasi dari perangkat Android, set
 
 Beberapa aplikasi tersebut juga dapat mendeteksi dan menghapus berbagai jenis virus, dan malware dengan mudah. Proses memindai perangkat Android melalui aplikasi juga cukup sederhana karena pengguna hanya perlu mengetuk tombol **Pindai** / **Scan**.
 
-Meskipun demikian, beberapa aplikasi tidak secara otomatis menghapus spyware yang terdeteksi sementara, semua aplikasi anti-sadap memerlukan izin keamanan pengguna untuk menghapus aplikasi sadap dan program berbahaya lainnya agar tidak dapat [hack / sadap wa](/sadap/10-aplikasi-social-spy-sadap-wa-014c687/).
+Meskipun demikian, beberapa aplikasi tidak secara otomatis menghapus spyware yang terdeteksi sementara, semua aplikasi anti-sadap memerlukan izin keamanan pengguna untuk menghapus aplikasi sadap dan program berbahaya lainnya agar tidak dapat [hack / sadap wa](/blog/10-aplikasi-social-spy-sadap-wa-014c687/).
 
 Dengan mulai dari beberapa aplikasi dibawah pengguna juga dapat mendeteksi aplikasi mencurigakan yang mungkin berisi program berbahaya atau tidak.
 
@@ -76,7 +76,7 @@ Kekurangan:
 Anti Spy ini adalah aplikasi anti-spyware bagus lainnya yang menawarkan berbagai fitur penting untuk mendeteksi dan menghapus spyware dan ancaman keamanan.
 
 * https://www.protectstar.com/en/
-* https://play.google.com/store/apps/details?id=com.protectstar.antispy
+* link mati
 
 ## 3. Anti Spy Mobile Free
 
@@ -94,7 +94,7 @@ Fitur:
 
 Anti Spy Mobile Free adalah aplikasi anti-spyware sederhana dan efektif yang dapat dengan cepat mendeteksi dan menghapus aplikasi sadap hp.
 
-* https://play.google.com/store/apps/details?id=com.antispycell.free
+* link mati
 
 ## 4. Cyber Tor
 
@@ -167,7 +167,7 @@ Kekurangan:
 
 Aplikasi anti spyware dari Brain Tube yang memungkinkan pengguna melindungi perangkat Android dari spyware, baik itu berupa file dan aplikasi yang terpasang secara sengaja atau sebaliknya.
 
-https://play.google.com/store/apps/details?id=com.erase.anti.spa.call
+link mati
 
 ## 7. Certo Mobile Security
 
@@ -234,4 +234,4 @@ Fitur lain:
 
 Cyber Security adalah aplikasi anti-sadap hp yang cukup bagus, yang memungkinkan penggunanya memindai dan menghapus spyware dari perangkat Android dengan mudah.
 
-* https://cybersecuritysoft.blogspot.com/
+* link mati

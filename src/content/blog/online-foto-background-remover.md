@@ -219,7 +219,7 @@ Fitur tambahan:
 
 inPixioadalah salah satu situs penghapus latar belakang foto online paling sederhana dan akurat.
 
-www.inpixio.com/Fremove-background/
+link mati
 
 ## 10. Experte
 
