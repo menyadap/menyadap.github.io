@@ -21,10 +21,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      # Versi pnpm diambil otomatis dari field "packageManager" di package.json.
+      # Jangan menambahkan key "version" di sini agar tidak terjadi konflik versi.
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
       
       - name: Setup Node
         uses: actions/setup-node@v4
