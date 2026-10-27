@@ -1,7 +1,15 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const blog = defineCollection({
-  type: 'content',
+  // Nama berkas tanpa ekstensi dipakai sebagai slug URL, sama seperti route di
+  // src/pages/blog/[...slug].astro. Tanpa `generateId` ini, `entry.id` masih
+  // membawa ".md"/".mdx" sehingga link yang dibangun dari `post.id` jadi 404.
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/blog',
+    generateId: ({ entry }) => entry.replace(/\.(md|mdx)$/, ''),
+  }),
   // `image()` membuat Astro meng-import berkas gambar dari path relatif di
   // frontmatter, sehingga thumbnail dapat diproses lewat pipeline astro:assets.
   schema: ({ image }) =>
