@@ -39,7 +39,16 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- favicon.ico memuat 3 ukuran (16/32/48), jadi `sizes` sengaja tidak ditulis -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="menyadap.github.io" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Warna UI browser mengikuti tema situs; `theme_color` di manifest jadi fallback -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#242024" media="(prefers-color-scheme: dark)" />
     <script is:inline src="/theme-init.js"></script>
     <script is:inline>
       // Normalize internal /blog/.../ links by adding trailing slash if missing
