@@ -264,6 +264,15 @@ const publishedTime = frontmatter.date ? new Date(frontmatter.date).toISOString(
     color: var(--color-text-secondary);
   }
 
+  /* Link di dalam blockquote berdiri di atas latar abu (--color-surface) bersama
+     teks abu-abu, jadi hanya bisa dibedakan dari warnanya (WCAG 1.4.1) padahal
+     aksen penuh cuma ~4.4:1. Pakai aksen versi teks (>= 4.5:1) + garis bawah. */
+  .post-content :global(blockquote a) {
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   .post-content :global(pre) {
     background-color: #000000;
     color: #ffffff;

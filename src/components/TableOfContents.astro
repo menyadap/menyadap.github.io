@@ -36,7 +36,9 @@ const { headings } = Astro.props;
     font-family: var(--font-heading-secondary);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-accent);
+    /* PANEL TOC berlatar --color-surface; aksen penuh hanya ~4.4:1 di situ.
+       Pakai aksen versi teks agar kontras >= 4.5:1 (WCAG AA). */
+    color: var(--color-accent-text);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: calc(var(--grid-unit) * 2);
@@ -78,7 +80,7 @@ const { headings } = Astro.props;
 
   .toc-link:hover,
   .toc-link:focus {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     transform: translateX(4px);
   }
 
@@ -94,7 +96,7 @@ const { headings } = Astro.props;
 
   .toc-level-3 .toc-link:hover,
   .toc-level-3 .toc-link:focus {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
   }
 
   @media (max-width: 768px) {
@@ -165,7 +167,7 @@ const { headings } = Astro.props;
 
 <style>
   .toc-link.active {
-    color: var(--color-accent);
+    color: var(--color-accent-text);
     font-weight: 600;
   }
 

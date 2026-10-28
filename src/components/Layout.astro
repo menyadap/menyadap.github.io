@@ -1,17 +1,21 @@
 ---
-import '@fontsource/oswald/300.css';
-import '@fontsource/oswald/400.css';
-import '@fontsource/oswald/500.css';
-import '@fontsource/oswald/600.css';
-import '@fontsource/oswald/700.css';
-import '@fontsource/roboto-condensed/300.css';
-import '@fontsource/roboto-condensed/400.css';
-import '@fontsource/roboto-condensed/700.css';
-import '@fontsource/work-sans/400.css';
-import '@fontsource/work-sans/500.css';
-import '@fontsource/work-sans/600.css';
-import '@fontsource/jetbrains-mono/400.css';
-import '@fontsource/jetbrains-mono/700.css';
+// Impor varian `latin-*.css` (bukan `*.css`) supaya berkas @font-face tidak
+// memuat subset cyrillic/greek/vietnamese/latin-ext yang tidak pernah dipakai
+// konten berbahasa Indonesia. Sebagian subset kecil ikut di-inline sebagai
+// base64 di dalam CSS bersama sehingga wajib diunduh setiap halaman.
+import '@fontsource/oswald/latin-300.css';
+import '@fontsource/oswald/latin-400.css';
+import '@fontsource/oswald/latin-500.css';
+import '@fontsource/oswald/latin-600.css';
+import '@fontsource/oswald/latin-700.css';
+import '@fontsource/roboto-condensed/latin-300.css';
+import '@fontsource/roboto-condensed/latin-400.css';
+import '@fontsource/roboto-condensed/latin-700.css';
+import '@fontsource/work-sans/latin-400.css';
+import '@fontsource/work-sans/latin-500.css';
+import '@fontsource/work-sans/latin-600.css';
+import '@fontsource/jetbrains-mono/latin-400.css';
+import '@fontsource/jetbrains-mono/latin-700.css';
 import '../styles/global.css';
 
 import Header from './Header.astro';

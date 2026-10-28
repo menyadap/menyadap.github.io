@@ -124,6 +124,15 @@ const tocHeadings = filterHeadingsForTOC(extractHeadings(rawContent));
     color: var(--color-accent);
   }
 
+  /* Link di dalam blockquote berdiri di atas latar abu (--color-surface) bersama
+     teks abu-abu, jadi hanya bisa dibedakan dari warnanya (WCAG 1.4.1) padahal
+     aksen penuh cuma ~4.4:1. Pakai aksen versi teks (>= 4.5:1) + garis bawah. */
+  .page-content :global(blockquote a) {
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   .page-content :global(ul),
   .page-content :global(ol) {
     margin-bottom: calc(var(--grid-unit) * 3);
