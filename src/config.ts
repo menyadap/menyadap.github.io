@@ -14,6 +14,10 @@ export interface SiteConfig {
     email?: string;
   };
   siteUrl: string;
+  /** Kode bahasa HTML & locale Open Graph, mis. "id" */
+  language: string;
+  /** Kode negara untuk locale Open Graph, mis. "ID" */
+  country: string;
 }
 
 export const config: SiteConfig = {

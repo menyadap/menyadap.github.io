@@ -1,0 +1,225 @@
+﻿================================================================================
+DAFTAR REQUEST PENGINDEKSAN GOOGLE
+Google Search Console > Inspeksi URL (URL Inspection) > Minta Pengindeksan
+================================================================================
+Situs          : https://menyadap.github.io
+Sitemap        : https://menyadap.github.io/sitemap-index.xml
+Dibuat         : 28 Oktober 2026
+Diperbarui     : 29 Oktober 2026
+Total URL      : 127  (7 halaman statis + 4 halaman kategori + 116 artikel blog)
+Belum diminta  : 116 URL
+Sudah diminta  : 11 URL  (kategori "bajak": 1 halaman kategori + 10 artikel)
+
+--------------------------------------------------------------------------------
+PRIORITAS PENGERJAAN
+--------------------------------------------------------------------------------
+P1 Prioritas Tinggi : 34 URL  (23 belum diminta + 11 sudah diminta)
+P2 Prioritas Sedang : 22 URL  (semua belum diminta)
+P3 Prioritas Rendah : 71 URL  (semua belum diminta)
+
+RUMUS SKOR ARTIKEL (0 - 100), dihitung otomatis dari jumlah & kualitas artikel
+   40% panjang artikel   -> 2.500 kata = skor penuh (maks 40)
+   20% jumlah gambar     -> 5 gambar = skor penuh (maks 20)
+   20% jumlah sub-judul  -> 5 heading H2/H3 = skor penuh (maks 20)
+   15% jumlah link dalam -> 5 link internal = skor penuh (maks 15)
+    5% ada blok FAQ
+   Skor >= 70 = P1   |   50 - 69 = P2   |   < 50 = P3
+   Halaman statis & kategori dinilai dari peran strategisnya, bukan skor konten.
+   Angka dalam tanda kurung pada setiap baris artikel = skor artikel tersebut.
+
+CARA PAKAI
+1. Buka Google Search Console > Inspeksi URL.
+2. Kerjakan berurutan dari atas: selesaikan P1 dulu, baru P2, terakhir P3.
+3. Salin satu URL dari daftar di bawah (klik dua kali pada URL untuk memilih).
+4. Klik "Minta Pengindeksan" / "Request Indexing".
+5. Tandai baris yang sudah selesai: ubah "BELUM DIMINTA" menjadi "SUDAH DIMINTA"
+   (di Notepad tekan Ctrl+H untuk ganti semua sekaligus).
+
+KETERANGAN
+- P1 / P2 / P3  : prioritas pengerjaan (lihat rumus di atas).
+- BELUM DIMINTA : belum diajukan lewat Request Indexing.
+- SUDAH DIMINTA : sudah diajukan lewat Request Indexing.
+
+FORMAT BARIS
+<nomor>. <url> | <prioritas> | <status> | <judul halaman>
+================================================================================
+
+
+--------------------------------------------------------------------------------
+BAGIAN 1 - HALAMAN STATIS  (7 URL - P1: 3, P2: 1, P3: 3)
+--------------------------------------------------------------------------------
+1. https://menyadap.github.io/ | P1 | BELUM DIMINTA | Beranda - Jasa Install Aplikasi XNspy Pengawas HP Anak
+2. https://menyadap.github.io/jasa-sadap/ | P1 | BELUM DIMINTA | Jasa Menyadap WA, FB IG untuk iOS dan Android | Social Spy
+3. https://menyadap.github.io/sadap-wa/ | P1 | BELUM DIMINTA | Pemantau WhatsApp Jarak Jauh Alternatif WhatsApp Web
+4. https://menyadap.github.io/blog/ | P2 | BELUM DIMINTA | Blog
+5. https://menyadap.github.io/about/ | P3 | BELUM DIMINTA | Tentang Kami
+6. https://menyadap.github.io/ketentuan-layanan/ | P3 | BELUM DIMINTA | Ketentuan Layanan
+7. https://menyadap.github.io/privacy-police/ | P3 | BELUM DIMINTA | Privacy Policy
+
+
+--------------------------------------------------------------------------------
+BAGIAN 2 - HALAMAN KATEGORI  (4 URL - P1: 2, P2: 2)
+--------------------------------------------------------------------------------
+1. https://menyadap.github.io/categories/penyadap/ | P1 | BELUM DIMINTA | Kategori penyadap
+2. https://menyadap.github.io/categories/bajak/ | P1 | SUDAH DIMINTA | Kategori bajak
+3. https://menyadap.github.io/categories/ | P2 | BELUM DIMINTA | Kategori - Categories
+4. https://menyadap.github.io/categories/ulasan/ | P2 | BELUM DIMINTA | Kategori ulasan
+
+
+--------------------------------------------------------------------------------
+BAGIAN 3 - ARTIKEL KATEGORI "PENYADAP"  (92 URL - P1: 16, P2: 12, P3: 64)
+Diurutkan dari prioritas tertinggi ke terendah.
+--------------------------------------------------------------------------------
+1. https://menyadap.github.io/blog/highster-mobile/ | P1 (93) | BELUM DIMINTA | Cara Mudah Sadap Aplikasi Telegram Dengan Highster Mobile
+2. https://menyadap.github.io/blog/penyadap-hp-pasangan-selingkuh/ | P1 (93) | BELUM DIMINTA | Cara Akses Kamera Android / iPhone Secara Jarak Jauh
+3. https://menyadap.github.io/blog/flexispy-penyadap-hp-iphone/ | P1 (86) | BELUM DIMINTA | Cara Sadap iPhone dan Android Yang Terkunci (Password)
+4. https://menyadap.github.io/blog/mobile-spy/ | P1 (85) | BELUM DIMINTA | Aplikasi Hack DM Akun Instagram Lewat HP (Mobile Spy)
+5. https://menyadap.github.io/blog/penyadap-pasangan-selingkuh-xnspy/ | P1 (82) | BELUM DIMINTA | Software Hack Facebook Messenger dengan XNSpy
+6. https://menyadap.github.io/blog/perangkat-sadap-trackmyfone/ | P1 (82) | BELUM DIMINTA | Cara Mudah Sadap Aplikasi SnapChat Free TrackMyFone
+7. https://menyadap.github.io/blog/penyadap-thetruthspy/ | P1 (82) | BELUM DIMINTA | Aplikasi Sadap Chat dan Panggilan LINE Free (TheTruthSpy)
+8. https://menyadap.github.io/blog/ownspy-penyadap-hp-pasangan/ | P1 (81) | BELUM DIMINTA | Aplikasi Sadap Chat & Call Skype (OwnSpy)
+9. https://menyadap.github.io/blog/kidsguard-pro/ | P1 (81) | BELUM DIMINTA | Cara Mudah Hack Akun Gmail Tanpa Password [100% Work]
+10. https://menyadap.github.io/blog/sadap-hp-mspy/ | P1 (80) | BELUM DIMINTA | Bajak Chat & Panggilan WA, Aplikasi mSpy FREE TRIAL
+11. https://menyadap.github.io/blog/hack-spy-wa-whatsapp-teman-pacar-87/ | P1 (79) | BELUM DIMINTA | 17 Tool Bajak WA Teman / Orang Lain Aplikasi Gratis
+12. https://menyadap.github.io/blog/aplikasi-sadap-spyzie/ | P1 (79) | BELUM DIMINTA | Cara Sadap iPhone Tanpa Sentuh Modal ID iCloud
+13. https://menyadap.github.io/blog/aplikasi-sadap-spyic/ | P1 (75) | BELUM DIMINTA | 8 Cara Buktikan Pasangan Selingkuh Lewat Sosial Media
+14. https://menyadap.github.io/blog/aplikasi-sadap-safespy/ | P1 (75) | BELUM DIMINTA | Cara Akses File Manager Android dan iPhone Jarak Jauh
+15. https://menyadap.github.io/blog/aplikasi-teensafe/ | P1 (74) | BELUM DIMINTA | Cara Mudah Mengawasi Sosial Media Remaja Lewat Gadget
+16. https://menyadap.github.io/blog/penyadap-fonemonitor/ | P1 (73) | BELUM DIMINTA | Cara Mudah Buktikan Kecurangan Rekan Kerja dan Karyawan
+17. https://menyadap.github.io/blog/hack-akun-instagram-android-86/ | P2 (67) | BELUM DIMINTA | 26 Tool Hack Akun IG Pasangan Selingkuh
+18. https://menyadap.github.io/blog/sadap-android-tanpa-root-80/ | P2 (67) | BELUM DIMINTA | 20 Cara Hack HP dengan Aplikasi Sadap Tanpa Root
+19. https://menyadap.github.io/blog/hack-lacak-lokasi-android-98/ | P2 (67) | BELUM DIMINTA | 8 Aplikasi Untuk Lacak Lokasi Nomor HP
+20. https://menyadap.github.io/blog/hack-facebook-tanpa-aplikasi-29/ | P2 (67) | BELUM DIMINTA | 9 Cara Hack Facebook Terbaru [Social Spy]
+21. https://menyadap.github.io/blog/aplikasi-android-anti-spyware/ | P2 (65) | BELUM DIMINTA | 9 Aplikasi Anti Sadap HP Android Terbaik
+22. https://menyadap.github.io/blog/menyadap-whatsapp-tanpa-verifikasi-29/ | P2 (65) | BELUM DIMINTA | 13 Cara Sadap WA Tanpa Kode Verifikasi SMS
+23. https://menyadap.github.io/blog/aplikasi-hacking-android-95/ | P2 (63) | BELUM DIMINTA | 22+ Daftar Aplikasi Android untuk Hacker
+24. https://menyadap.github.io/blog/cara-hack-password-twitter-69/ | P2 (60) | BELUM DIMINTA | 4 Cara Hack Akun Twitter Lewat HP [HTML]
+25. https://menyadap.github.io/blog/cara-hack-email-google-75/ | P2 (57) | BELUM DIMINTA | 4 Cara Hack Akun Google Gmail Orang Lain
+26. https://menyadap.github.io/blog/whatsapp-social-spy-tool-apk-24/ | P2 (53) | BELUM DIMINTA | Official Tool WhatsApp Spy Download Apk FREE (Bajak WA)
+27. https://menyadap.github.io/blog/hack-wa-social-spy-whatsapp-87/ | P2 (51) | BELUM DIMINTA | 15 Aplikasi Hack Pesan Rahasia WA Terbaik Gratis
+28. https://menyadap.github.io/blog/tool-social-spy-whatsapp-71/ | P2 (51) | BELUM DIMINTA | Download Apk Social Spy WhatsApp Pro Hack v3 Free
+
+29. https://menyadap.github.io/blog/sadap-kamera-hp-86/ | P3 (46) | BELUM DIMINTA | 10 Aplikasi Sadap, Remote Kamera HP Jarak Jauh
+
+30. https://menyadap.github.io/blog/mengetahui-akun-fb-di-bajak-90/ | P3 (46) | BELUM DIMINTA | Cara Mengetahui Akun Facebook di Bajak / Hack
+31. https://menyadap.github.io/blog/cara-sadap-wa-dengan-kode-21/ | P3 (45) | BELUM DIMINTA | Sadap WA dengan Kode 515 Tanpa Aplikasi
+32. https://menyadap.github.io/blog/hack-data-instagram-96/ | P3 (45) | BELUM DIMINTA | 13 Cara Hack DM Aplikasi Instagram (Hacking Tool)
+33. https://menyadap.github.io/blog/cara-cek-whatsapp-disadap-27/ | P3 (44) | BELUM DIMINTA | Cara Mencegah WA Di Sadap Orang Terdekat Kita
+34. https://menyadap.github.io/blog/mengetahui-yang-hack-wa-35/ | P3 (43) | BELUM DIMINTA | 11 Cara Mengetahui Siapa Yang Hack WA Kita
+35. https://menyadap.github.io/blog/hack-kamera-cctv-private-75/ | P3 (42) | BELUM DIMINTA | Cara Hack CCTV Sekitar Lewat HP Android dan PC
+36. https://menyadap.github.io/blog/sadap-hp-istri-tanpa-diketahui-24/ | P3 (42) | BELUM DIMINTA | Sadap HP Istri Tanpa Diketahui Jarak Jauh 100%
+37. https://menyadap.github.io/blog/menyadap-hp-suami-jarak-jauh-78/ | P3 (42) | BELUM DIMINTA | Cara Sadap HP Suami Jarak Jauh tanpa Diketahui
+38. https://menyadap.github.io/blog/ispyoo-sadap-whatsapp-apk-80/ | P3 (41) | BELUM DIMINTA | Aplikasi iSpyoo Sadap WhatsApp APK Gratis
+39. https://menyadap.github.io/blog/mengetahui-chat-whatsapp-dihapus-23/ | P3 (41) | BELUM DIMINTA | 12 Cara Cek Chat WA yang Sudah Dihapus (HP Pasangan)
+40. https://menyadap.github.io/blog/panduan-sadap-hp-termux-45/ | P3 (41) | BELUM DIMINTA | Panduan Hack HP Orang Lain dengan Metasploit Termux
+41. https://menyadap.github.io/blog/hack-sadap-hp-android-jarak-jauh-20/ | P3 (41) | BELUM DIMINTA | 12 Cara Hack HP Orang tanpa Diketahui dari Jarak Jauh
+42. https://menyadap.github.io/blog/login-instagram-tanpa-diketahui-53/ | P3 (41) | BELUM DIMINTA | Cara Login Instagram Tanpa Diketahui di HP Lain
+43. https://menyadap.github.io/blog/sadap-whatsapp-kali-linux-89/ | P3 (41) | BELUM DIMINTA | Cara Sadap WhatsApp Dengan Kali Linux
+44. https://menyadap.github.io/blog/meretas-bobol-facebook-83/ | P3 (40) | BELUM DIMINTA | 15 Cara Hack Akun Sosmed (FB. IG. WA. TELEGRAM)
+45. https://menyadap.github.io/blog/melihat-pesan-messenger-dihapus-83/ | P3 (40) | BELUM DIMINTA | Cara Lihat Pesan Facebook Messenger yang Dihapus
+46. https://menyadap.github.io/blog/tool-pointszone-net-v2-whatshack-83/ | P3 (40) | BELUM DIMINTA | Tool Pointszone.net V2 Whatshack (Sadap WA)
+47. https://menyadap.github.io/blog/bajak-wa-getcontact-39/ | P3 (40) | BELUM DIMINTA | 13 Cara Bajak WA Seseorang Lewat Getcontact
+48. https://menyadap.github.io/blog/mengendalikan-hp-android-jarak-jauh-87/ | P3 (40) | BELUM DIMINTA | 12 Cara Mengendalikan HP Android Jarak Jauh
+49. https://menyadap.github.io/blog/panduan-line-login-via-email/ | P3 (40) | BELUM DIMINTA | Cara Login Line Via Email (Panduan Lengkap)
+50. https://menyadap.github.io/blog/sadap-pesan-tanpa-pinjam-hp-76/ | P3 (40) | BELUM DIMINTA | 13 Cara Sadap SMS Tanpa Pinjam HP Target
+51. https://menyadap.github.io/blog/link-sadap-wa-88/ | P3 (40) | BELUM DIMINTA | 13 Link Download Aplikasi Sadap WA Terbaru
+52. https://menyadap.github.io/blog/hack-instagram-dengan-sql-injection-25/ | P3 (40) | BELUM DIMINTA | Hack Account Instagram Via SQL Injection
+53. https://menyadap.github.io/blog/cara-sadap-wa-lewat-imei-71/ | P3 (39) | BELUM DIMINTA | Panduan Sadap WA Via Nomor IMEI (Jarak Jauh)
+54. https://menyadap.github.io/blog/tips-telegram-kena-hack-23/ | P3 (39) | BELUM DIMINTA | Cara Cek Akun Telegram yang di Hack
+55. https://menyadap.github.io/blog/backdoor-metasploit-termux-76/ | P3 (39) | BELUM DIMINTA | Cara Bikin Backdoor Metasploit Termux
+56. https://menyadap.github.io/blog/sadap-hp-lewat-akun-google-71/ | P3 (38) | BELUM DIMINTA | Sadap HP Istri Dengan Akun Gmail Tanpa Aplikasi
+57. https://menyadap.github.io/blog/aplikasi-keyologger-android-41/ | P3 (38) | BELUM DIMINTA | 3 Aplikasi Keylogger Android Gratis Tanpa Root
+58. https://menyadap.github.io/blog/hack-wa-terminal-emulator-apk-41/ | P3 (37) | BELUM DIMINTA | 14 Cara Mudah Hack WA Dengan Emulator Android
+59. https://menyadap.github.io/blog/fitur-aplikasi-sadap-xnspy-74/ | P3 (37) | BELUM DIMINTA | Cek Fitur Aplikasi Sadap XNSPY, HP iPhone [FREE]
+60. https://menyadap.github.io/blog/cara-sadap-nomor-31/ | P3 (37) | BELUM DIMINTA | 12 Cara Sadap Pesan SMS (Nomor XL)
+61. https://menyadap.github.io/blog/tool-hack-pointszone-whatsapp-v2/ | P3 (37) | BELUM DIMINTA | Download APK Pointszone WhatsApp Hack v2
+62. https://menyadap.github.io/blog/fitur-aplikasi-appspy-90/ | P3 (37) | BELUM DIMINTA | Daftar Aplikasi untuk Sadap HP iPhone / iPad (Gratis)
+63. https://menyadap.github.io/blog/tips-cek-tiktok-lagi-disadap-39/ | P3 (37) | BELUM DIMINTA | Apakah TikTok Bisa Disadap? Ini Cara Mengetahui
+64. https://menyadap.github.io/blog/hack-hp-orang-via-hotspot-92/ | P3 (36) | BELUM DIMINTA | 12 Cara Hack HP Orang Lain Lewat WiFi Kita
+65. https://menyadap.github.io/blog/hack-wa-dengan-cmd-74/ | P3 (36) | BELUM DIMINTA | 12 Cara Hack Pesan WA dengan CMD Jarak Jauh
+66. https://menyadap.github.io/blog/fitur-aplikasi-social-spy-02/ | P3 (36) | BELUM DIMINTA | 11 Cara Mengendalikan HP Orang Lain Jarak Jauh
+67. https://menyadap.github.io/blog/tips-hack-kamera-hp-termux-45/ | P3 (36) | BELUM DIMINTA | 13 Cara Hack Kamera HP Via Termux (Android)
+68. https://menyadap.github.io/blog/hack-whatsapp-airdroid-33/ | P3 (36) | BELUM DIMINTA | 13 Cara Hack WhatsApp Lewat Airdroid APK Gratis
+69. https://menyadap.github.io/blog/cara-hack-admin-grup-whatsapp-94/ | P3 (36) | BELUM DIMINTA | 14 Cara Hack Admin Grup WA Tanpa Diketahui
+70. https://menyadap.github.io/blog/cara-sadap-nomor-35/ | P3 (36) | BELUM DIMINTA | Cara Hack Data SMS (Nomor Telkomsel)
+71. https://menyadap.github.io/blog/fakta-termux-sering-digunakan-hacker-23/ | P3 (35) | BELUM DIMINTA | 5 Fakta Tentang Termux, Sering Digunakan Hacker!
+72. https://menyadap.github.io/blog/tutorial-whatsdog-apk-73/ | P3 (35) | BELUM DIMINTA | Download Whatsdog Apk v2 untuk Sadap WhatsApp
+73. https://menyadap.github.io/blog/tool-hack-pegasus-whatsapp-apk-23/ | P3 (35) | BELUM DIMINTA | Aplikasi Sadap Pegasus WhatsApp Hack APK Free
+74. https://menyadap.github.io/blog/sadap-whatsapp-dengan-termux-32/ | P3 (33) | BELUM DIMINTA | Script Untuk Sadap Aplikasi WA (Tool Hack Termux)
+75. https://menyadap.github.io/blog/sadap-wa-dengan-vpn-84/ | P3 (33) | BELUM DIMINTA | Cara Menyadap WA Menggunakan HP Gratis
+76. https://menyadap.github.io/blog/hack-whatsapp-extension-chrome-65/ | P3 (33) | BELUM DIMINTA | 15 Tool Hack WhatsApp Lewat Browser Chrome (Extension)
+77. https://menyadap.github.io/blog/cara-whatsapp-tidak-disadap-53/ | P3 (33) | BELUM DIMINTA | Cara Amankan WA Agar Tidak Disadap
+78. https://menyadap.github.io/blog/hack-messenger-facebook-orang-lain-62/ | P3 (32) | BELUM DIMINTA | Sadap Facebook Messenger Pacar Tanpa Sentuh HP
+79. https://menyadap.github.io/blog/akses-whatsapp-komputer-laptop-28/ | P3 (32) | BELUM DIMINTA | Cara Akses WA WEB3 di Laptop / PC
+80. https://menyadap.github.io/blog/sadap-hp-pacar-ldr-61/ | P3 (32) | BELUM DIMINTA | Cara Sadap WA Pacar yang sedang LDR
+81. https://menyadap.github.io/blog/cara-hack-telegram-89/ | P3 (29) | BELUM DIMINTA | 3 Aplikasi Sadap Untuk Hack Telegram dari HP
+82. https://menyadap.github.io/blog/hack-android-tanpa-root-31/ | P3 (29) | BELUM DIMINTA | 13 Hack Aplikasi yang Terkunci / Disembunyikan (Android)
+83. https://menyadap.github.io/blog/kembalikan-sms-hilang-di-android-51/ | P3 (29) | BELUM DIMINTA | Cara Mengembalikan Aplikasi Pesan Hilang / Terhapus (Android)
+84. https://menyadap.github.io/blog/tool-darknet-sadap-whatsapp-24/ | P3 (28) | BELUM DIMINTA | Panduan Termux Social Darknet Sadap WA (Gratis)
+85. https://menyadap.github.io/blog/cara-hack-akun-sosial-media-85/ | P3 (28) | BELUM DIMINTA | 2 Cara Hack TikTok Tanpa Pinjam HP
+86. https://menyadap.github.io/blog/termux-android-untuk-hacking-76/ | P3 (25) | BELUM DIMINTA | Cara Hack Android Menggunakan Aplikasi Termux
+87. https://menyadap.github.io/blog/hack-chat-whatsapp-pacar-email-64/ | P3 (24) | BELUM DIMINTA | Cara Hack Aplikasi WA Menggunakan Email
+88. https://menyadap.github.io/blog/fitur-smartphonelog-apk-82/ | P3 (23) | BELUM DIMINTA | Aplikasi Sadap HP Smartphonelog APK Versi Lama
+89. https://menyadap.github.io/blog/hack-sidik-jari-smartphone-63/ | P3 (20) | BELUM DIMINTA | 13 Cara Hack Sidik Jari HP VIVO dan OPPO
+90. https://menyadap.github.io/blog/install-kali-nethunter-termux-67/ | P3 (19) | BELUM DIMINTA | Cara Install Kali Nethunter, Lewat Termux Android
+91. https://menyadap.github.io/blog/sadap-whatsapp-pacar-via-kode-21/ | P3 (18) | BELUM DIMINTA | Cara Sadap WhatsApp Pacar dengan Kode 21
+92. https://menyadap.github.io/blog/hack-whatsapp-ss7-40/ | P3 (18) | BELUM DIMINTA | Cara Hack WhatsApp dengan SS7 Attack (Alternatif)
+
+
+--------------------------------------------------------------------------------
+BAGIAN 4 - ARTIKEL KATEGORI "ULASAN"  (14 URL - P1: 3, P2: 7, P3: 4)
+Diurutkan dari prioritas tertinggi ke terendah.
+--------------------------------------------------------------------------------
+1. https://menyadap.github.io/blog/alat-pembuat-sitemap-terbaik/ | P1 (88) | BELUM DIMINTA | 8 Sitemap Generator Blog Blogger, WordPress (XML & HTML)
+2. https://menyadap.github.io/blog/aplikasi-android-suara-ke-teks/ | P1 (88) | BELUM DIMINTA | 7+ Aplikasi Android Ubah Suara Ke Teks / Tulisan
+3. https://menyadap.github.io/blog/aplikasi-android-desain-kaos-tshirt/ | P1 (84) | BELUM DIMINTA | 10 Aplikasi Android Desain Kaos / Tshirt Printing
+4. https://menyadap.github.io/blog/aplikasi-android-clipboard-manager/ | P2 (65) | BELUM DIMINTA | 13 Aplikasi Clipboard Manager Untuk Android
+5. https://menyadap.github.io/blog/online-foto-background-remover/ | P2 (62) | BELUM DIMINTA | 12 Alat Online Hapus Background Foto Dengan AI
+6. https://menyadap.github.io/blog/online-file-sharing-websites/ | P2 (59) | BELUM DIMINTA | 9 Cloud File Sharing: Kirim dan Berbagi File Online
+7. https://menyadap.github.io/blog/online-bulk-image-resizer/ | P2 (58) | BELUM DIMINTA | 8 Tool Online Resize Ukuran Gambar Secara Massal
+8. https://menyadap.github.io/blog/online-converter-csv-ke-json/ | P2 (57) | BELUM DIMINTA | 8 Tool Ubah File CSV Ke JSON Web Online
+9. https://menyadap.github.io/blog/aplikasi-android-photo-recovery/ | P2 (53) | BELUM DIMINTA | 7 Aplikasi Recovery: Kembalikan Foto Yang Terhapus
+10. https://menyadap.github.io/blog/alat-pembuat-peta-situs-gratis-berbayar/ | P2 (53) | BELUM DIMINTA | 8 Tool Sitemap Generator Jutaan Halaman (Gratis & Berbayar)
+11. https://menyadap.github.io/blog/sitemap-generator-tool-terbaik/ | P3 (49) | BELUM DIMINTA | 9 Sitemap Generator Terbaik: Optimasi SEO
+12. https://menyadap.github.io/blog/generator-peta-situs-terbaik/ | P3 (49) | BELUM DIMINTA | 10 Generator Sitemap Perayapan Google Lebih Cepat
+13. https://menyadap.github.io/blog/aplikasi-android-whatsapp-rekam-panggilan/ | P3 (43) | BELUM DIMINTA | 3+ Cara Rekam Panggilan WA Untuk Android
+14. https://menyadap.github.io/blog/aplikasi-android-converter-dari-website/ | P3 (40) | BELUM DIMINTA | 4 Cara Ubah Situs Web Menjadi Aplikasi (iOS dan Android)
+
+
+--------------------------------------------------------------------------------
+BAGIAN 5 - ARTIKEL KATEGORI "BAJAK"  (10 URL - semua P1, semua SUDAH DIMINTA)
+Pengindeksan untuk kategori ini sudah diajukan; tetap dicantumkan sebagai catatan.
+Diurutkan dari skor tertinggi ke terendah.
+--------------------------------------------------------------------------------
+1. https://menyadap.github.io/blog/cara-hack-akun-instagram-lupa-password-1dc/ | P1 (95) | SUDAH DIMINTA | 11 Cara Mudah Hack Akun IG, Lupa Password
+2. https://menyadap.github.io/blog/10-sadap-hp-tersembunyi-suami-selingkuh-13a3b/ | P1 (88) | SUDAH DIMINTA | 10 Aplikasi Sadap HP Tersembunyi untuk Suami Selingkuh
+3. https://menyadap.github.io/blog/12-aplikasi-sadap-wa-gratis-tanpa-ketahuan-5117c/ | P1 (87) | SUDAH DIMINTA | 12 Aplikasi Sadap WA Gratis Tanpa Ketahuan (100% Work)
+4. https://menyadap.github.io/blog/sadap-hp-gratis-istri-selingkuh-29f9f/ | P1 (83) | SUDAH DIMINTA | 13 Aplikasi Sadap HP Gratis, Buktikan Istri Selingkuh
+5. https://menyadap.github.io/blog/10-aplikasi-social-spy-sadap-wa-014c687/ | P1 (79) | SUDAH DIMINTA | 10 Aplikasi Social Spy, Sadap WA Gratis Selamanya
+6. https://menyadap.github.io/blog/sadap-iphone-ipad-dengan-itunes-977c1/ | P1 (76) | SUDAH DIMINTA | 14 Aplikasi Sadap iPhone & iPad Gratis, Dengan iTunes
+7. https://menyadap.github.io/blog/9-sadap-hp-pacar-tanpa-ketahuan-bdb42/ | P1 (76) | SUDAH DIMINTA | 9 Aplikasi Sadap HP Pacar, Dijamin Gak Ketahuan!
+8. https://menyadap.github.io/blog/cara-hack-akun-facebook-lupa-password/ | P1 (75) | SUDAH DIMINTA | 11 Cara Hack Akun Facebook, Lupa Password
+9. https://menyadap.github.io/blog/sadap-iphone-android-tanpa-pinjam/ | P1 (74) | SUDAH DIMINTA | 9+ Cara Sadap iPhone & Android, Tanpa Pinjam HP
+10. https://menyadap.github.io/blog/sadap-android-gratis-tanpa-rooting-d04c/ | P1 (73) | SUDAH DIMINTA | 11 + Aplikasi Sadap Android Gratis (Tanpa Rooting)
+
+
+================================================================================
+REKAP
+--------------------------------------------------------------------------------
+Halaman statis      :  7  (P1: 3, P2: 1, P3: 3)     belum diminta: 7
+Halaman kategori    :  4  (P1: 2, P2: 2)            belum diminta: 3, sudah diminta: 1
+Artikel "penyadap"  : 92  (P1: 16, P2: 12, P3: 64)  belum diminta: 92
+Artikel "ulasan"    : 14  (P1: 3, P2: 7, P3: 4)     belum diminta: 14
+Artikel "bajak"     : 10  (P1: 10)                  sudah diminta: 10
+--------------------------------------------------------------------------------
+TOTAL               : 127 URL  |  belum diminta: 116  |  sudah diminta: 11
+P1: 34 URL  |  P2: 22 URL  |  P3: 71 URL
+
+URUTAN PENGERJAAN YANG DISARANKAN
+1. P1 halaman statis   : /, /jasa-sadap/, /sadap-wa/   (3 URL)
+2. P1 halaman kategori : /categories/penyadap/          (1 URL, bajak sudah)
+3. P1 artikel          : 29 URL (10 "bajak" sudah diminta + 19 belum diminta)
+4. P2                  : 22 URL
+5. P3                  : 71 URL
+Rata-rata skor 116 artikel: 48,8  |  rata-rata panjang: 1.183 kata
+================================================================================

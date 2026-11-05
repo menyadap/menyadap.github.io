@@ -68,7 +68,7 @@ const { title, description, showSidebar = true, image, type, publishedTime, cano
                 u.pathname = u.pathname + '/';
                 a.href = u.toString();
               }
-            } catch (e) {
+            } catch {
               // ignore malformed URLs
             }
           });
